@@ -255,7 +255,9 @@ Reading time ~1 minute
     </div><!-- /.entry-content -->
     
     
-     <section class="post-footer-item comment"></section>
+     <section class="post-footer-item comment">
+       <div id="gitalk-container"></div>
+     </section>
     
     <div class="read-more">
   
@@ -278,32 +280,25 @@ Reading time ~1 minute
   <footer role="contentinfo">
     <span>&copy; 2019 JY罗杰. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span>
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
-
   </footer>
 </div><!-- /.footer-wrapper -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
-
-
-
-
-
-
   <script>
     var gitalk = new Gitalk({
-      clientID: 52212c6d3cde5576b6ea,
-      clientSecret: 585c874db9658555128cd7b97c9f1226cc51bfa7,
-      repo: yyjplus.github.io,
-      owner: yyjplus,
-      admin: yyjplus,
+      clientID: '52212c6d3cde5576b6ea',
+      clientSecret: '585c874db9658555128cd7b97c9f1226cc51bfa7',
+      repo: 'yyjplus.github.io',
+      owner: 'yyjplus',
+      admin: 'yyjplus',
       id: location.pathname,
       distractionFreeMode: false
     })
-    gitalk.render('gitalk_container')
+    gitalk.render('gitalk-container')
   </script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
 
 
 
