@@ -1,413 +1,397 @@
 <!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<title>Latest Posts &#8211; JY罗杰的小书房</title>
-<meta name="description" content="JY罗杰的个人网站">
-<meta name="keywords" content="Jekyll, theme, themes, responsive, blog, modern">
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>JY罗杰的小书房</title>
+<meta name="description" content="An amazing website.">
 
 
 
-<!-- Open Graph -->
-<meta property="og:locale" content="en_US">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Latest Posts">
-<meta property="og:description" content="JY罗杰的个人网站">
-<meta property="og:url" content="/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="JY罗杰的小书房">
+<meta property="og:title" content="JY罗杰的小书房">
+<meta property="og:url" content="/">
 
 
 
+
+  <meta property="og:image" content="/assets/images/JYSelfie.jpg">
+
+
+
+
+
+
+
+
+
+  
+
+  
 
 
 <link rel="canonical" href="/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": null,
+      "logo": "/assets/images/JYSelfie.jpg"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "JY罗杰",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="JY罗杰的小书房 Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<!-- Webfonts -->
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 
-<meta http-equiv="cleartype" content="on">
-
-<!-- Load Modernizr -->
-<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
-
-<!-- Icons -->
-<!-- 16x16 -->
-<link rel="shortcut icon" href="/favicon.ico">
-<!-- 32x32 -->
-<link rel="shortcut icon" href="/favicon.png">
-<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
-<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
-<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
-<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
 
 
 
-</head>
+    <!-- start custom head snippets -->
 
-<body id="post-index" class="feature">
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
 
-<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
-<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
-	<button class="dl-trigger">Open Menu</button>
-	<ul class="dl-menu">
-		<li><a href="/">Home</a></li>
-		<li>
-			<a href="#">About</a>
-			<ul class="dl-submenu">
-				<li>
-					<img src="/images/JYSelfie.jpg" alt="JY罗杰 photo" class="author-photo">
-					<h4>JY罗杰</h4>
-					<p>做个有趣的人。</p>
-				</li>
-				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
-				<li>
-					<a href="mailto:yyjplus@163.com"><i class="fa fa-fw fa-envelope"></i> Email</a>
-				</li>
-				
-				
-				
-				
-				
-				
-				
-				
-				
-			</ul><!-- /.dl-submenu -->
-		</li>
-		<li>
-			<a href="#">Posts</a>
-			<ul class="dl-submenu">
-				<li><a href="/posts/">All Posts</a></li>
-				<li><a href="/tags/">All Tags</a></li>
-			</ul>
-		</li>
-		
-	    
-	    <li><a href="/theme-setup/" >Theme Setup</a></li>
-	  
-	    
-	    <li><a href="http://mademistakes.com" target="_blank">External Link</a></li>
-	  
-	</ul><!-- /.dl-menu -->
-</nav><!-- /.dl-menuwrapper -->
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--home">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">JY罗杰的小书房</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/sitemap/" >Sitemap</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tag</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/" >Year</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
 
 
-<div class="entry-header">
-  <div class="image-credit">Image source: <a href="http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/">dargadgetz</a></div><!-- /.image-credit -->
-  
-    <div class="entry-image">
-      <img src="/images/abstract-1.jpg" alt="Latest Posts">
-    </div><!-- /.entry-image -->
-  
-  <div class="header-title">
-    <div class="header-title-wrap">
-      <h1>JY罗杰的小书房</h1>
-      <h2>Latest Posts</h2>
-    </div><!-- /.header-title-wrap -->
-  </div><!-- /.header-title -->
-</div><!-- /.entry-header -->
+    <div class="initial-content">
+      
+
+
 
 <div id="main" role="main">
   
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2019-03-08T00:00:00+00:00"><a href="/ev1/">March 08, 2019</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About JY罗杰">JY罗杰</a></span></span>
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
       
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
+
+      
+        <img src="/assets/images/JYSelfie.jpg" alt="JY罗杰" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">JY罗杰</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        正在修炼
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">关注</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">还在地球上</span>
+        </li>
+      
+
+      
         
-Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/ev1/" rel="bookmark" title="电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？" itemprop="url">电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    <p><strong>宣传中出现的燃油车都在塞车然后烟雾缭绕</strong>
-<img src="/images/fuelVehicle.jpg" alt="宣传中出现的燃油车都在塞车然后烟雾缭绕" /></p>
-
-<p><strong>电动车的充电问题被放在环保之后</strong>
-<img src="/images/teslaCharging.jpg" alt="电动车的充电问题被放在环保之后" /></p>
-
-<h1 id="全球政府纷纷出台禁售燃油车时间表">全球政府纷纷出台禁售燃油车时间表</h1>
-<h2 id="各国燃油车禁售时间表">各国燃油车禁售时间表</h2>
-<p><img src="/images/各国燃油车禁售时间表.png" alt="各国燃油车禁售时间表" /></p>
-
-<p><a href="https://zh.wikipedia.org/wiki/%E7%A6%81%E5%94%AE%E7%87%83%E6%B2%B9%E8%BB%8A#cite_note-CNNMoney-1">Wiki的禁售燃油车</a></p>
-
-<p>禁售时间表一说，曾经一石激起千层浪，现在也众说纷纭。</p>
-
-<p>那现在来搜集情报，分析一下，到底各国政府发布了什么政策，真的到了这个时间表之后就无法购买燃油车了吗？燃油车要灭绝了吗？</p>
-
-<h2 id="中国"><strong>中国</strong></h2>
-
-<p><a href="https://tech.ifeng.com/c/7jWzZxHX5i3">重磅！我国禁售燃油车时间表已出，新能源车将进入爆发期——凤凰网</a></p>
-
-<p><em>JY罗杰：其实是海南省率先推出的时间表，全国目前并没有具体确定的时间。而海南的计划是：<strong>海南省近日发文宣布将于2019年3月1日起逐步禁止销售燃油汽车，并预计将在2030年全岛实现禁售燃油汽车</strong>。</em></p>
-
-<p><a href="http://finance.sina.com.cn/chanjing/2017-12-28/doc-ifyqcwaq5235118.shtml">关于停止生产燃料消耗量未达标车型的通知</a></p>
-
-<p><em>JY罗杰：这个文件被wiki当成中国禁售燃油车的资料来源，但实际上，这不过是<strong>禁售不符合排放标准的那部分车型</strong>。</em></p>
-
-<h2 id="法国"><strong>法国</strong></h2>
-
-<p><a href="https://www.theguardian.com/business/2017/jul/06/france-ban-petrol-diesel-cars-2040-emmanuel-macron-volvo" title="france">Nicolas Hulot, the country’s new ecology minister, said: “We are announcing an end to the sale of petrol and diesel cars by 2040.”</a></p>
-
-<p>这段话是法国新能源部长Nicolas Hulot说的，“我们宣布2040年之前，停止销售燃油车。”</p>
-
-<p><em>JY罗杰：虽然一个部长这样说，可信度很高。<strong>但也不能全信，毕竟，连美国总统说的话，都很少实现。更何况，下个总统一上任，可能马上将前任的诺言推翻。</strong></em></p>
-
-<h2 id="英国"><strong>英国</strong></h2>
-
-<p><a href="https://money.cnn.com/2017/07/26/news/uk-bans-gasoline-diesel-engines-2040/index.html?iid=EL">Britain will ban sales of new gasoline and diesel cars starting in 2040 as part of a bid to clean up the country’s air.</a></p>
-
-<p>这个标题很明确，但是文章内容却不是这样。</p>
-
-<p>首先，英国政府官员的发言原文是这样：”We can’t carry on with diesel and petrol cars,” U.K. environment secretary Michael Gove told the BBC on Wednesday. “There is no alternative to embracing new technology.”</p>
-
-<p>大意是“我们无法继续依赖燃油车，我们只能拥抱新技术。”</p>
-
-<p><em>JY罗杰：但是对于具体计划和政策，英国政府看起来暂时没有明确发布。</em></p>
-
-<h1 id="电动汽车发展现状">电动汽车发展现状</h1>
-<h2 id="技术状态"><strong>技术状态</strong></h2>
-<ul>
-  <li>电动汽车驱动来源于电动机，能源是电池，有电控系统来统一协调整辆车的各个控制机构。</li>
-  <li>电动机驱动平稳，比发动机结构简单，控制也更为容易。
-    <ul>
-      <li>最大的优点是转速-扭矩特性平稳，无需依靠变速箱进行变速。</li>
-      <li>缺点是同样体积下，驱动力比发动机弱，爬坡、高速段较发动机无力。</li>
-    </ul>
-  </li>
-  <li>电池能循环充放电，输送能量更快，还能将刹车的动能转化成电能。
-    <ul>
-      <li>对用户来说的最大优点，是单次使用费便宜。特斯拉Model 3百公里电耗15度，充电效率85%，相当于10元/百公里。作为对比，常见燃油车油耗7L/百公里，约45元/百公里。</li>
-      <li>缺点是电池体积大质量重，充电没有加油方便。</li>
-    </ul>
-  </li>
-  <li>电控系统更多更先进，更擅长利用辅助驾驶和自动驾驶的成果。
-    <ul>
-      <li>能够使用高科技，难怪受到大家的喜爱。</li>
-      <li>燃油车并不是不能使用高科技，事实上，所有辅助驾驶的技术都来源于燃油车。</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="发展前景"><strong>发展前景</strong></h2>
-<ul>
-  <li>环保。所以全球在温室效应的威胁下，努力在减少尾气排放。导致取代燃油车成为热点话题。</li>
-  <li>石油危机。目前大力发展电动汽车的国家，多为石油消费大国，他们都希望减少这种对外依赖。无论电动汽车市场占比多少，通过这个政策，首先能实现的是，石油油价不会轻易上涨，甚至还能下跌。</li>
-  <li>中国市场。国内普通认为（起码政府和国内车企），电动汽车是“弯道超车”的机会，对垄断燃油车技术上百年的那些汽车集团的唯一挑战机会。为了帮助国内车企而采取了几十年的“合资才能进入中国市场”政策，也没能帮助国内车企进入国际汽车业的一线。</li>
-</ul>
-
-<h2 id="存在问题"><strong>存在问题</strong></h2>
-<ul>
-  <li>电池方面
-    <ul>
-      <li>电池存在寿命一说。参考智能手机的电池，使用两年之后多数都只剩下80%的寿命。所以对应的”续航里程”，也会随着用车时间而减少。</li>
-      <li>温度限制。低温及高温环境下，可用电量大幅减少。</li>
-      <li>稳定性较差，更容易出现自燃事故。</li>
-    </ul>
-  </li>
-  <li>使用便利性
-    <ul>
-      <li>续航里程的一半就是这辆车的活动范围，目前在200公里以内，大部分在100公里内。</li>
-      <li>充电不像加油站，几分钟搞定。慢充需要一晚，快充也起码一个小时以上，而且快充站国内非常少，主要在一线城市。</li>
-    </ul>
-  </li>
-  <li>使用限制
-    <ul>
-      <li>积水多的地方不能用。无论是漏电还是为了防止漏电，都会进入停机状态。比燃油车对积水稍微敏感一些。</li>
-      <li>不适宜用于越野、军工等领域。参考我在知乎上的回答：<a href="https://www.zhihu.com/question/264685171/answer/615820769">新能源的汽车不会轻易变成军用车辆</a></li>
-    </ul>
-  </li>
-  <li>保值及二手出售
- <img src="http://www.ecar168.cn/upfiles/2018/07/25/2018072510005622875.jpeg" alt="电动汽车保值率" />
-    <ul>
-      <li>如上，三年的电动车就只能半价出售了。燃油车的保值率大家都知道，远比这个高。而且电动车每过一年贬值都很大。</li>
-      <li>而实际上，不但很少车主购买二手电动汽车，由于贬值过快，二手车行担心压手亏本，并不怎么收购二手电动汽车。</li>
-      <li>PS：电动汽车每年贬值大，也是由于电动汽车每年的提升都很高，从这个角度，电动汽车难怪被各国看好。</li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="总结">总结</h1>
-<ul>
-  <li>对于盛传的“燃油车马上被电动汽车取代”一说，根据搜集的情报来看，不属实。数据显示，电动汽车目前依然是潜力股，并不是主力股。</li>
-  <li>各国都有人在说XX年禁售燃油车，但要不就是非官方的言论，要不就是部分官员的主张。对于明确的禁售时间，各国政府，包括中国政府，都十分谨慎。汽车行业毕竟是一个超级巨无霸，不能说变就变。</li>
-  <li>电动汽车的优势和劣势情报看了过后，买不买，什么时候买，你决定了吗？</li>
-</ul>
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2019-03-07T00:00:00+00:00"><a href="/novel1/">March 07, 2019</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About JY罗杰">JY罗杰</a></span></span>
-      
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        
-Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/novel1/" rel="bookmark" title="最后一个魔女生还者" itemprop="url">最后一个魔女生还者</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-<p><br />
-第一章 一个陷阱<br />
-　　十八世纪的伦敦，仍处于教会的绝对统治下，无人违逆。教会通过圣术的神迹，控制人心，消灭异己，没有其他力量可以抵挡。<br />
-　　除了魔法。<br />
-　　教会名为红光教，也被称为太阳神教，信奉唯一神——太阳神阿波罗。<br />
-　　教会的历史，已一千年。但百年前的文献却一本都找不到，据教会的传道，是因为在十七世纪发生了世界大战——人类和魔法生物的终极大战。而所有古代文献都在那场大战中遭到销毁。<br />
-　　而，这也就是十八世纪开始，世界上已无魔法生物的原因。<br />
-　　但这不过是表面的情况。在教会和民众的赶尽杀绝之下，仍有魔法生物的生还者。<br />
-　　距离教会总部所在地伦敦很遥远的东方边境，有座无人踏足的神秘黑森林。黑森林发生鬼火现象已经吸引了教会的注意，而黑森林的居住者却毫不知情。<br />
-  ————《鳄鱼大王有个冒险》<br />
-　　————————————————-<br />
-　　我的名字？<br />
-　　我是布尔·罗斯切尔，是一名魔女。魔女一族在这个岛国有着很悠久的历史，分散在全国各地。从最东方的黑森林到最西方的黄沙海，从最北方的白冰原到最南方的绿沼泽，我们骑着飞行扫把一天内往返各地进行魔法交流。到十七世纪还是这样。<br />
-　　现在是1810年，世人已经认为魔女之类的魔法生物，只存在于过去的故事之中。而我，也已经是最后一个生还的魔女，躲在最东方的的黑森林里，生活了十七年。我的父母当然都是魔女一族，但在我三岁的时候已经离世，我是在精灵尼古拉斯的照顾下独自在黑森林长大的。<br />
-　　而今天，是我17岁的生日，我偷偷跑到中央森林领地与西边草原领地的边界地带探索神奇动物。<br />
-　　“通通显形！”我抽出插在腰间的一条27cm长的木质魔杖，对着周围的灌木丛施放了一个显形咒。<br />
-　　“嘶~”一个蛇头缓慢抬了起来，却依然让我吓了一跳。这是一条迷彩毒蛇，它的隐藏色跟灌木的深绿色一样，藏在里面等待经过的敌人，然后突然咬一口，把锋利的毒牙里的毒液注射到敌人体内，它的毒液能在七步内毒死一个成年人。<br />
-　　“焚烧殆尽。”我把魔杖对着迷彩毒蛇，毒蛇忽然全身从内部冒出炽热的火焰，毒蛇在一瞬间就化成了焦炭。<br />
-　　“呼！真危险，幸好我知道这种地方一般有危险，虽然大多数时候都很浪费魔力。”我把魔杖插回腰间，继续往前。<br />
-　　“小火，你跑去哪了？今天一定要让你答应做我的宠物！”拨开挡路的灌木，来到了一块空地，中央是一块岩石。<br />
-　　“这里是小火最喜欢的空地，能够嗮太阳，怎么今天不见影了？”我躲在树下，观察起来。小火是一头巨大的变色龙，但不止如此，它是我在黑森林发现的除我和尼古拉斯外的头一个魔法生物。<br />
-　　“哼哼，原来如此！通通显形！”我对着空无一物的空地施放魔法。<br />
-　　“吼~”<br />
-　　空地那块巨大的岩石突然爆出一声怒吼，就像雪花飘散融化一样，岩石一格一格地消退了石头的灰色，露出的是火红的鳞片。<br />
-　　“哟！小火，今天又被我抓到你了。”我得意地跟巨型变色龙打招呼，然后我赶紧往一旁跳开。<br />
-　　小火抬起头，嘴巴鼓了起来，对我喷出一口炽热的火球，恰好被我躲开，火球打在地面，露出一个小凹坑。<br />
-　　小火的见面礼总是这样。<br />
-　　“火球！”我也拿出魔杖，对着敌人射出。火球眼看就要射在它身上，忽然一个黑影闪过，火球在半空被拍散消失。<br />
-　　是它的尾巴，火红色的尾巴能够将我的魔法直接打散，而它本身一丝伤痕都没有。<br />
-　　“吼啊~”巨大的嘴巴再次鼓起，同时两侧竟然发出白色的光。<br />
-　　我心道不好，它来真的了！<br />
-　　“移形换影！”<br />
-　　一个白色火球被射向我原来的位置，那背后的一棵树被正面击中，来不及燃烧就变成了黑炭，风吹过后飘散掉了。<br />
-　　“好险！小火，我下次再来找你玩！”出现在它背后的我，马上狂奔起来，朝西方领地跑去。这头变色龙太可怕了，不过正因如此，才能成为珍贵的战斗力！<br />
-　　“我还会再来的！”我不忘发出宣言。<br />
-　　忽然，脚下一空。<br />
-　　“啊！！！！！！”<br />
-　　脖子好痛！腰也很痛！<br />
-　　我抬起头，看着那变得遥远的天空，的确原来也很遥远，可现在更加遥远，“真倒霉，怎么会有个地洞？”<br />
-　　掉落土洞的时候，我双手还抓掉很多泥巴，湿润的褐色泥土里竟然还爬着蚯蚓。我马上扔掉了这些土，拍打双手，试图把手弄干净一些，但我没在身上的衣服擦，因为这样只会把自己弄的更脏。<br />
-　　“怎么爬上去？算了，还是用浮空吧。”<br />
-　　“浮空。”<br />
-　　然而什么都没有发生。<br />
-　　“浮空！”<br />
-　　忽然出现一股强大的气流，但不是往上而是往下，我身上像突然背了两个人一样，压得我膝盖都弯了。<br />
-　　“怎么回事？”我感觉到魔力的紊乱，这是一个很简单的魔法，平常一直在用，现在突然失灵？<br />
-　　“喂～有人吗？”头顶传来陌生的声音。<br />
-　　“有人～我掉下来了，你能帮个忙把我弄上去吗？”我赶紧回应。<br />
-　　“好的，你等等，我把绳子绑好就放下去给你。”那人这么说，声音变小，大概走开了。<br />
-　　绳子？哪来的绳子，这人话说是哪里来的，这片森林怎么会有人进来？<br />
-　　“好了，你抓紧了，我把你拉上来。”那人的声音很快就再度响起，带点磁性，似乎年纪不大，听着很舒服。是我多想了吧，先上去再说。<br />
-　　我抓住放下来的麻绳，踩着泥土往上爬，那人也把绳子往上拉，他的力气很大，拉的很快，不一会儿我就见到了地洞口。<br />
-　　也见到了他。<br />
-　　金色的头发，翡翠一样的眼睛，看起来很小孩的脸。他伸出了手，我抓住，然后他用力一拉，把我拉到地面上。<br />
-　　“嗯，谢谢你，帮大忙了。”我松开手，站在他跟前，才发现他比我矮了半个头。<br />
-　　“不客气，就算我不出手，你朋友也马上就会把你救上来。”他收起麻绳，一卷一卷地在手肘上缠绕，在他还没收好之前，我就感觉到了尼古拉斯的接近。<br />
-　　“少爷，尼古拉斯保护不周。可有大碍？”尼古拉斯一出现就抓住我的双肩，仔细观察起来，“还好，没受伤，只是弄脏了，要赶紧回去清洗！”<br />
-　　尼古拉斯是我的契约精灵，可这一点不能让这个突然出现的人知道，魔法生物在现在这个教会统治的时代，是一种禁忌。<br />
-　　不对，这个不是人？<br />
-　　我再仔细看了一下，怎么今天的魔力似乎怪怪的，连感知都迟钝了，眼前这个哪里是普通人，这是魔人啊！<br />
-　　“魔女一族的小哥哥，怎么称呼呢？我是里昂·布里奇，是一名魔人。”自报姓名的里昂布里奇伸出右手，自我介绍道。<br />
-　　魔女一族的小哥哥？这是什么称呼，等一下，魔女？他怎么知道我是魔女一族的，我不自觉用了魔法被他看见了？<br />
-　　“等，等一下！谁告诉你我是魔女了，别乱说。”我赶紧澄清，虽然是事实，可这是能轻易承认的事情吗？这名魔人，虽然看起来是挺可爱的小弟弟，可说话还真直中要害。<br />
-　　“我听说，魔女都能感知到魔力，所以能轻易分辩出魔女和魔人这两个种族的身份。而我作为魔人，肯定已经被你发现了，所以我才自报家门啊！嘿嘿。魔女哥哥，我也可以看到你的魔力，这就是我的魔人之力——魔力感知。”里昂露出牙齿笑着看着我和尼古拉斯，说道。<br />
-　　的确，这样就说得通了，而且他知道的也很多，看来没办法隐瞒我的身份了。<br />
-　　“好吧，你知道的真多。”我抿嘴道，“你在救我之前就发现了？”<br />
-　　“嘿嘿，是啊。”<br />
-　　“那你还救我？”<br />
-　　“为什么不救呢？不过多半是我多管闲事，你的魔力这么强大，怎么需要我的帮忙呢？更何况还有厉害的精灵先生在。”<br />
-　　他指的是尼古拉斯。而他说的都没错，除了我的一身魔力，现在出了问题，使用不能。这一点还是不告诉他了，回去再想清楚到底是什么问题。<br />
-　　“嗯，不过还是谢谢你。你怎么会来这里？我以前没见有人进来过，你还是头一个。”我转移话题，打听起他来这里的原因。<br />
-　　“嘿嘿，我是在进行一次冒险！村长说黑森林自古生活着很多神奇的生物，但很危险，没一个人敢来，学校里的同学也都不敢一起来。其实也没什么嘛！环境挺好的，下次我把他们也带上。”里昂得意说道。<br />
-　　“尼古拉斯？”我转头看向我的契约精灵尼古拉斯，守护黑森林是他的职责。<br />
-　　“少爷，迷幻法阵还在正常工作中。”尼古拉斯平静地回复道。<br />
-　　正常工作中？这叫正常啊？这哪里正常了！一个大活人跑进来了！<br />
-　　“迷幻法阵？原来有这个东西。不管啦，你也没事了，而我的冒险也差不多，就先回去咯。下次再见的时候，告诉我你的名字，不知道名字很难称呼的。”他向我眨了眨眼睛，挥手告别。<br />
-　　“小火呢？”里昂的身影没入树林后，我想起刚才那头巨型变色龙，里昂走的这个方向好像是它所在的位置？<br />
-　　“哇，好大的变色龙！靠！还会喷火，别，别烧我，哇靠，都说别烧我了……”<br />
-　　声音逐渐遥远，哈，小火一般不会真的伤害普通动物，除非它饿了。<br />
-　　“我们回去吧！对了，尼古拉斯，我的魔力好像出了问题。”<br />
-　　“的确，少爷，你的魔力紊乱失控，再不处理随时会爆炸。”尼古拉斯平静的语气说，他跟在我身后慢慢走着。<br />
-　　“这么危险！要怎么处理？”<br />
-　　“只能用封印术，通过封印魔法消除暴动的魔力来源，魔力自然会逐渐平复下来。”<br />
-　　“封印了岂不是不能用魔法了？”<br />
-　　“是的，魔力之所以暴动失控，似乎是一种专门针对魔法生物的毒药的作用，毒药的效果只是暂时的，消退之后，就可以解除封印。”<br />
-　　“怎么突然在黑森林里面出现？这种人为的陷阱加上针对魔法生物的毒药，是教会发现我们了？”我最担心就是教会对黑森林出手，到时不但会对付我和尼古拉斯，连变色龙小火，甚至不是魔法生物的其他动物都受到牵连。<br />
-　　“少爷，看来不能继续在黑森林修炼魔法了。不说教会这次失手后会采取什么行动，这种镇对魔法生物的毒药，我必须找出来毁掉！”尼古拉斯作为一名魔法生物，对这种毒药深恶痛绝。<br />
-　　“尼古拉斯，我突然腿软。”由于体内的魔力暴动，我感到魔力在迅速流失。<br />
-　　“少爷，魔力再继续流失，你马上就会昏迷不醒然后再也不会醒来的。”尼古拉斯语气平静地说。<br />
-　　“尼古拉斯！不要把死掉说得这么轻描淡写！封印殆尽！”我马上使用了封印，将自身的魔法暂时封印起来，这是一个强力魔法，能够将一切魔力波动封锁。<br />
-  “少爷，你做什么？”尼古拉斯对突然藏在他背后的我问道。<br />
-  “我不能用魔法了。”我义正言辞地说。<br />
-  “我知道这个，那你为什么抓着我的衣服？”尼古拉斯转过头，低头看着我。<br />
-  “躲避危险啊！你看这世上危险这么多，有毒蛇、狮子，还有会喷火把人烧成黑炭的巨型变色龙，地上还有地洞陷阱。。。”<br />
-  尼古拉斯阻止我继续数下去，他把我移到身旁，说，“少爷，你可是世上最强大的生物之一，将来要成为魔导王，你现在这个样子，万一被记入史册怎么办？”<br />
-  “可用不了魔法的魔导王，也不强大吧？”我嘀咕道。<br />
-  “不，正好趁这个机会，让少爷锻炼一下身体能力。每一个魔导王，同时也是一个武道高手。接下来，我会开始教你使用各种武器！”尼古拉斯露出了微笑。<br />
-  虽然这么说，可失去魔法让我感到恐惧，我强忍着躲到尼古拉斯身后的冲动，点了点头。<br />
-  “少爷，魔力被封印期间，暂时会无法使用魔法，难道你打算躲起来等待解除封印吗？”尼古拉斯问了个有趣的问题，难道趁着自己最弱的时候，跑去陌生的世界，陌生即是危险，我似乎应该留在安全的地方等待魔力的恢复吧？<br />
-  等等，“安全的地方？”我想起这个黑森林已经被教会盯上了，作为这世界的统治者——教会的敌人，我的存在一旦被确定，这世上就再无安全的地方。<br />
-　　必须趁教会行动之前，先发制人。<br />
-　　尽管恐惧没有消失，但理智告诉我明天就应该去最近的人类村庄打探情况。<br />
-　　目标有两个。<br />
-　　其一，最后一个魔女生还者的存在是否已被教会得知。<br />
-　　其二，找到并销毁全部魔力毒药。<br />
-<br /></p>
-
-
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-
-
-
-</div><!-- /#main -->
-
-<div class="footer-wrapper">
-  <footer role="contentinfo">
-    <span>&copy; 2019 JY罗杰. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span>
-  </footer>
-</div><!-- /.footer-wrapper -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="/assets/js/scripts.min.js"></script>
-
-
-
           
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
 
-</body>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title"></h1>
+    
+    
+
+<h3 class="archive__subtitle">最新文章</h3>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ev1/" rel="permalink">电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  少于 1 分钟读完
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">宣传中出现的燃油车都在塞车然后烟雾缭绕
+
+
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/novel1/" rel="permalink">最后一个魔女生还者
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  少于 1 分钟读完
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+  </div>
+</div>
+    </div>
+    
+    
+
+    <div class="page__footer">
+      <footer>
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 JY罗杰. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+    
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+  </body>
 </html>

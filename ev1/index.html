@@ -1,146 +1,310 @@
 <!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<head>
-<meta charset="utf-8">
-<title>电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？ &#8211; JY罗杰的小书房</title>
-<meta name="description" content="从各国政策，发展现状，未来趋势搜集数据来分析这个命题。">
-<meta name="keywords" content="汽车">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？ - JY罗杰的小书房</title>
+<meta name="description" content="宣传中出现的燃油车都在塞车然后烟雾缭绕">
 
 
 
-<!-- Open Graph -->
-<meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？">
-<meta property="og:description" content="从各国政策，发展现状，未来趋势搜集数据来分析这个命题。">
-<meta property="og:url" content="/ev1/">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="JY罗杰的小书房">
+<meta property="og:title" content="电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？">
+<meta property="og:url" content="/ev1/">
+
+
+  <meta property="og:description" content="宣传中出现的燃油车都在塞车然后烟雾缭绕">
 
 
 
+  <meta property="og:image" content="/assets/images/JYSelfie.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2019-03-08T00:00:00+08:00">
+
+
+
+
+
+  
+
+  
 
 
 <link rel="canonical" href="/ev1/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": null,
+      "logo": "/assets/images/JYSelfie.jpg"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "JY罗杰",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="JY罗杰的小书房 Feed">
 
-<!-- http://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<!-- Webfonts -->
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 
-<meta http-equiv="cleartype" content="on">
-
-<!-- Load Modernizr -->
-<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
-
-<!-- Icons -->
-<!-- 16x16 -->
-<link rel="shortcut icon" href="/favicon.ico">
-<!-- 32x32 -->
-<link rel="shortcut icon" href="/favicon.png">
-<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
-<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
-<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
-<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
 
 
 
+    <!-- start custom head snippets -->
 
-<style type="text/css">body {background-image:url(/images/triangular.png);}</style>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">JY罗杰的小书房</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/sitemap/" >Sitemap</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tag</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/" >Year</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
 
 
-</head>
-
-<body id="post" >
-
-<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
-<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
-	<button class="dl-trigger">Open Menu</button>
-	<ul class="dl-menu">
-		<li><a href="/">Home</a></li>
-		<li>
-			<a href="#">About</a>
-			<ul class="dl-submenu">
-				<li>
-					<img src="/images/JYSelfie.jpg" alt="JY罗杰 photo" class="author-photo">
-					<h4>JY罗杰</h4>
-					<p>做个有趣的人。</p>
-				</li>
-				<li><a href="/about/"><span class="btn btn-inverse">Learn More</span></a></li>
-				<li>
-					<a href="mailto:yyjplus@163.com"><i class="fa fa-fw fa-envelope"></i> Email</a>
-				</li>
-				
-				
-				
-				
-				
-				
-				
-				
-				
-			</ul><!-- /.dl-submenu -->
-		</li>
-		<li>
-			<a href="#">Posts</a>
-			<ul class="dl-submenu">
-				<li><a href="/posts/">All Posts</a></li>
-				<li><a href="/tags/">All Tags</a></li>
-			</ul>
-		</li>
-		
-	    
-	    <li><a href="/theme-setup/" >Theme Setup</a></li>
-	  
-	    
-	    <li><a href="http://mademistakes.com" target="_blank">External Link</a></li>
-	  
-	</ul><!-- /.dl-menu -->
-</nav><!-- /.dl-menuwrapper -->
-
+    <div class="initial-content">
+      
 
 
 
 <div id="main" role="main">
-  <article class="hentry">
-    <header class="header-title">
-      <div class="header-title-wrap">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/JYSelfie.jpg" alt="JY罗杰" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">JY罗杰</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        正在修炼
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">关注</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">还在地球上</span>
+        </li>
+      
+
+      
         
-          <h1 class="entry-title"><a href="/ev1/" rel="bookmark" title="电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？">电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？</a></h1>
-        
-        <h2><span class="entry-date date published"><time datetime="2019-03-08T00:00:00+00:00">March 08, 2019</time></span></h2>
-        
-        <p class="entry-reading-time">
-          <i class="fa fa-clock-o"></i>
           
-Reading time ~1 minute
-        </p><!-- /.entry-reading-time -->
         
-      </div><!-- /.header-title-wrap -->
-    </header>
-    <div class="entry-content">
-      <p><strong>宣传中出现的燃油车都在塞车然后烟雾缭绕</strong>
-<img src="/images/fuelVehicle.jpg" alt="宣传中出现的燃油车都在塞车然后烟雾缭绕" /></p>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？">
+    <meta itemprop="description" content="宣传中出现的燃油车都在塞车然后烟雾缭绕">
+    <meta itemprop="datePublished" content="March 08, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  少于 1 分钟读完
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><strong>宣传中出现的燃油车都在塞车然后烟雾缭绕</strong>
+<img src="/assets/images/fuelVehicle.jpg" alt="宣传中出现的燃油车都在塞车然后烟雾缭绕" /></p>
 
 <p><strong>电动车的充电问题被放在环保之后</strong>
-<img src="/images/teslaCharging.jpg" alt="电动车的充电问题被放在环保之后" /></p>
+<img src="/assets/images/teslaCharging.jpg" alt="电动车的充电问题被放在环保之后" /></p>
 
 <h1 id="全球政府纷纷出台禁售燃油车时间表">全球政府纷纷出台禁售燃油车时间表</h1>
 <h2 id="各国燃油车禁售时间表">各国燃油车禁售时间表</h2>
-<p><img src="/images/各国燃油车禁售时间表.png" alt="各国燃油车禁售时间表" /></p>
+<p><img src="/assets/images/各国燃油车禁售时间表.png" alt="各国燃油车禁售时间表" /></p>
 
 <p><a href="https://zh.wikipedia.org/wiki/%E7%A6%81%E5%94%AE%E7%87%83%E6%B2%B9%E8%BB%8A#cite_note-CNNMoney-1">Wiki的禁售燃油车</a></p>
 
@@ -247,67 +411,173 @@ Reading time ~1 minute
   <li>电动汽车的优势和劣势情报看了过后，买不买，什么时候买，你决定了吗？</li>
 </ul>
 
-      <footer class="entry-meta">
-        <span class="entry-tags"><a href="/tags/#汽车" title="Pages tagged 汽车" class="tag"><span class="term">汽车</span></a></span>
         
-        <div class="social-share">
-  <ul class="socialcount socialcount-small inline-list">
-    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/ev1/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/ev1/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-    <li class="googleplus"><a href="https://plus.google.com/share?url=/ev1/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
-  </ul>
-</div><!-- /.social-share -->
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 标签: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#%E6%B1%BD%E8%BD%A6" class="page__taxonomy-item" rel="tag">汽车</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time datetime="2019-03-08T00:00:00+08:00">March 08, 2019</time></p>
+        
       </footer>
-    </div><!-- /.entry-content -->
-    
-    
-     <section class="post-footer-item comment">
-       <div id="gitalk-container"></div>
-     </section>
-    
-    <div class="read-more">
+
+      <section class="page__share">
   
-    <div class="read-more-header">
-      <a href="/novel1/" class="read-more-btn">Read More</a>
-    </div><!-- /.read-more-header -->
-    <div class="read-more-content">
-      <h3><a href="/novel1/" title="最后一个魔女生还者">最后一个魔女生还者</a></h3>
-      <p>Sample post with a background image CSS override. <a href="/novel1/">Continue reading</a></p>
-    </div><!-- /.read-more-content -->
+    <h4 class="page__share-title">分享</h4>
   
-  <div class="read-more-list">
+
+  <a href="https://twitter.com/intent/tweet?text=%E7%94%B5%E5%8A%A8%E6%B1%BD%E8%BD%A6%E7%9C%9F%E7%9A%84%E4%BC%9A%E5%AE%8C%E5%85%A8%E6%9B%BF%E4%BB%A3%E7%87%83%E6%B2%B9%E8%BD%A6%E5%90%97%EF%BC%9F%E7%8E%B0%E5%9C%A8%E8%BF%98%E8%A6%81%E4%B8%8D%E8%A6%81%E4%B9%B0%E7%87%83%E6%B2%B9%E8%BD%A6%EF%BC%9F%20%2Fev1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fev1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fev1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="分享 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
     
-  </div><!-- /.read-more-list -->
-</div><!-- /.read-more -->
+      <a href="/novel1/" class="pagination--pager" title="最后一个魔女生还者
+">向前</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">向后</a>
+    
+  </nav>
+
+    </div>
+
+    
   </article>
-</div><!-- /#main -->
 
-<div class="footer-wrapper">
-  <footer role="contentinfo">
-    <span>&copy; 2019 JY罗杰. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/hpstr-jekyll-theme/" rel="nofollow">HPSTR Theme</a>.</span>
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-  </footer>
-</div><!-- /.footer-wrapper -->
-  <script>
-    var gitalk = new Gitalk({
-      clientID: '52212c6d3cde5576b6ea',
-      clientSecret: '585c874db9658555128cd7b97c9f1226cc51bfa7',
-      repo: 'yyjplus.github.io',
-      owner: 'yyjplus',
-      admin: 'yyjplus',
-      id: location.pathname,
-      distractionFreeMode: false
-    })
-    gitalk.render('gitalk-container')
-  </script>
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">猜您还喜欢</h4>
+      <div class="grid__wrapper">
+        
+          
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="/assets/js/scripts.min.js"></script>
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/novel1/" rel="permalink">最后一个魔女生还者
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
 
 
 
 
+  少于 1 分钟读完
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
 
-</body>
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+     <section class="post-footer-item comment">
+    <div id="gitalk-container"></div> </section> 
+    
+
+    <div class="page__footer">
+      <footer>
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 JY罗杰. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+    
+    <script>
+      var gitalk = new Gitalk({
+        clientID: '52212c6d3cde5576b6ea',
+        clientSecret: '585c874db9658555128cd7b97c9f1226cc51bfa7',
+        repo: 'yyjplus.github.io',
+        owner: 'yyjplus',
+        admin: 'yyjplus',
+        id: location.pathname,
+        distractionFreeMode: false
+      })
+      gitalk.render('gitalk-container')
+    </script>
+    
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+  </body>
 </html>
