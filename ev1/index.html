@@ -6,7 +6,7 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <html lang="zh" class="no-js">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
   <head>
     <meta charset="utf-8">
 
@@ -513,13 +513,11 @@
 </div>
 
     </div>
-     <section class="post-footer-item comment">
-    <div id="gitalk-container"></div> </section> 
+
     
 
     <div class="page__footer">
       <footer>
-        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
@@ -553,26 +551,35 @@
 
       </footer>
     </div>
-    
-    <script>
-      var gitalk = new Gitalk({
-        clientID: '52212c6d3cde5576b6ea',
-        clientSecret: '585c874db9658555128cd7b97c9f1226cc51bfa7',
-        repo: 'yyjplus.github.io',
-        owner: 'yyjplus',
-        admin: 'yyjplus',
-        id: location.pathname,
-        distractionFreeMode: false
-      })
-      gitalk.render('gitalk-container')
-    </script>
-    
+
     
   <script src="/assets/js/main.min.js"></script>
   <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
 
 
 
+
+
+
+
+    <!-- start custom comments snippet -->
+<div id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '52212c6d3cde5576b6ea',
+    clientSecret: '585c874db9658555128cd7b97c9f1226cc51bfa7',
+    repo: 'yyjplus.github.io',
+    owner: 'yyjplus',
+    admin: 'yyjplus',
+    id:location.pathname,
+    distractionFreeMode: false
+  })
+  gitalk.render('gitalk-container')
+  </script>
+<!-- end custom comments snippet -->
 
 
 
