@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Posts by Year - JY罗杰的小书房</title>
+<!-- begin _includes/seo.html --><title>中央情报局（CIA） - JY罗杰的小书房</title>
 <meta name="description" content="An amazing website.">
 
 
@@ -18,8 +18,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="JY罗杰的小书房">
-<meta property="og:title" content="Posts by Year">
-<meta property="og:url" content="/year-archive/">
+<meta property="og:title" content="中央情报局（CIA）">
+<meta property="og:url" content="/_pages/CIA/">
 
 
 
@@ -39,7 +39,7 @@
   
 
 
-<link rel="canonical" href="/year-archive/">
+<link rel="canonical" href="/_pages/CIA/">
 
 
 
@@ -129,7 +129,7 @@
 
   </head>
 
-  <body class="layout--posts">
+  <body class="layout--default">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -163,213 +163,82 @@
 
 
     <div class="initial-content">
-      
+      <form id="form1">
+  <input id="name" name="name" type="text" />
+  <input type="submit" value="Search" />
+ </form>
+<!-- 百度 -->
+<figure style="width: 100px">
+ <img src="https://www.baidu.com/img/baidu_jgylogo3.gif" />
+</figure>
+<div style="width:700px;height:150px;overflow:hidden;">
+ <iframe id="aa1" style="position:relative;top:-140px;left:-1px;width:1000px;height:9999px;"></iframe>
+ </div>
+<script type="text/javascript">
+ document.getElementById("aa1").src="https://www.baidu.com/s?wd="+$.getUrlParam('name');
+ document.getElementById("name").value=$.getUrlParam('name');
+ </script>
 
-
-
-<div id="main" role="main">
-  
-  <div class="sidebar sticky">
-  
-
-
-<div itemscope itemtype="https://schema.org/Person">
-
-  
-    <div class="author__avatar">
-      
-
-      
-        <img src="/assets/images/JYSelfie.jpg" alt="JY罗杰" itemprop="image">
-      
-    </div>
-  
-
-  <div class="author__content">
-    
-      <h3 class="author__name" itemprop="name">JY罗杰</h3>
-    
-    
-      <p class="author__bio" itemprop="description">
-        正在修炼
-      </p>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">关注</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">还在地球上</span>
-        </li>
-      
-
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
+<!-- 百度图片 -->
+<figure style="width: 100px">
+ <img src="https://img0.bdstatic.com/static/searchresult/img/logo-2X_32a8193.png" />
+</figure>
+<div style="width:700px;height:150px;overflow:hidden;">
+<iframe id="aa2" style="position:relative;top:-170px;left:-1px;width:1000px;height:9999px;"></iframe>
 </div>
+<script type="text/javascript">
+document.getElementById("aa2").src="https://image.baidu.com/search/index?tn=baiduimage&ipn=r&ct=201326592&cl=2&lm=-1&st=-1&fm=result&fr=&sf=1&fmq=1552899808603_R&pv=&ic=0&nc=1&z=&hd=&latest=&copyright=&se=1&showtab=0&fb=0&width=&height=&face=0&istype=2&ie=utf-8&word="+$.getUrlParam('name');
+</script>
 
-  
+<!-- 百度视频 -->
+<figure style="width: 100px">
+ <img src="https://www.baidu.com/img/baidu_jgylogo3.gif" />
+</figure>
+<div style="width:700px;height:100px;overflow:hidden;">
+<iframe id="aa3" style="position:relative;top:-100px;left:-1px;width:1000px;height:9999px;"></iframe>
+</div>
+<script type="text/javascript">
+document.getElementById("aa3").src="https://www.baidu.com/sf/vsearch?pd=video&tn=vsearch&ie=utf-8&wrsv_spt=10&wd="+$.getUrlParam('name');
+</script>
+
+<!-- 知乎 -->
+<figure style="width: 100px">
+ <img src="/assets/images/zhihulogo.jpg" />
+</figure>
+<div style="width:700px;height:150px;overflow:hidden;">
+ <iframe id="aa4" style="position:relative;top:-140px;left:-1px;width:1000px;height:9999px;"></iframe>
+ </div>
+<script type="text/javascript">
+ document.getElementById("aa4").src="https://www.baidu.com/s?&wd="+$.getUrlParam('name')+"%20site%3Azhihu.com&ie=utf-8&ie=utf-8";
+ </script>
+
+<p><!-- 起点 --></p>
+<figure style="width: 100px">
+  <img src="/assets/images/qidianlogo.jpg" />
+ </figure>
+<div style="width:700px;height:150px;overflow:hidden;">
+  <iframe id="aa5" style="position:relative;top:-140px;left:-1px;width:1000px;height:9999px;"></iframe>
   </div>
+<script type="text/javascript">
+  document.getElementById("aa5").src="https://www.baidu.com/s?&wd="+$.getUrlParam('name')+"%20site%3Aqidian.com&ie=utf-8&ie=utf-8";
+  </script>
+
+<script type="text/javascript">
+
+  // function changeFrameHeight(){
+  //     var ifm= document.getElementById("aa1");
+  //     ifm.height=document.documentElement.clientHeight;
+  //
+  // }
+  //
+  // window.onresize=function(){
+  //      changeFrameHeight();
+  //
+  // }
+  document.getElementById("aa3","aa1").width=document.documentElement.clientWidth;
+  </script>
 
 
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title">Posts by Year</h1>
-    
-    
-
-
-<ul class="taxonomy__index">
-  
-  
-    <li>
-      <a href="#2019">
-        <strong>2019</strong> <span class="taxonomy__count">2</span>
-      </a>
-    </li>
-  
-</ul>
-
-
-
-  <section id="2019" class="taxonomy__section">
-    <h2 class="archive__subtitle">2019</h2>
-    <div class="entries-list">
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/ev1/" rel="permalink">电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  少于 1 分钟读完
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">宣传中出现的燃油车都在塞车然后烟雾缭绕
-
-
-</p>
-  </article>
-</div>
-
-      
-        
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/novel1/" rel="permalink">最后一个魔女生还者
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-第一章 一个陷阱
-　　十八世纪的伦敦，仍处于教会的绝对统治下，无人违逆。教会通过圣术的神迹，控制人心，消灭异己，没有其他力量可以抵挡。
-　　除了魔法。
-　　教会名为红光教，也被称为太阳神教，信奉唯一神——太阳神阿波罗。
-　　教会的历史，已一千年。但百年前的文献却一本都找不到，据教会的传道，是因为在十七世纪发生...</p>
-  </article>
-</div>
-
-      
-    </div>
-    <a href="#page-title" class="back-to-top">返回顶部 &uarr;</a>
-  </section>
-
-
-  </div>
-</div>
     </div>
 
     

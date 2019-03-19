@@ -8,9 +8,4 @@ var store = [{
         "excerpt":"宣传中出现的燃油车都在塞车然后烟雾缭绕 电动车的充电问题被放在环保之后 全球政府纷纷出台禁售燃油车时间表 各国燃油车禁售时间表 Wiki的禁售燃油车 禁售时间表一说，曾经一石激起千层浪，现在也众说纷纭。 那现在来搜集情报，分析一下，到底各国政府发布了什么政策，真的到了这个时间表之后就无法购买燃油车了吗？燃油车要灭绝了吗？ 中国 重磅！我国禁售燃油车时间表已出，新能源车将进入爆发期——凤凰网 JY罗杰：其实是海南省率先推出的时间表，全国目前并没有具体确定的时间。而海南的计划是：海南省近日发文宣布将于2019年3月1日起逐步禁止销售燃油汽车，并预计将在2030年全岛实现禁售燃油汽车。 关于停止生产燃料消耗量未达标车型的通知 JY罗杰：这个文件被wiki当成中国禁售燃油车的资料来源，但实际上，这不过是禁售不符合排放标准的那部分车型。 法国 Nicolas Hulot, the country’s new ecology minister, said: “We are announcing an end to the sale of petrol and diesel cars by 2040.” 这段话是法国新能源部长Nicolas Hulot说的，“我们宣布2040年之前，停止销售燃油车。” JY罗杰：虽然一个部长这样说，可信度很高。但也不能全信，毕竟，连美国总统说的话，都很少实现。更何况，下个总统一上任，可能马上将前任的诺言推翻。 英国 Britain will ban sales of new gasoline and diesel cars...","categories": [],
         "tags": ["汽车"],
         "url": "/ev1/",
-        "teaser":null},{
-        "title": "中央情报局（CIA）",
-        "excerpt":"                                                                      ","categories": [],
-        "tags": ["CIA"],
-        "url": "/CIA/",
         "teaser":null}]
