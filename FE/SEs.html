@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Sitemap - JY罗杰的小书房</title>
+<!-- begin _includes/seo.html --><title>找到一切 de 聚集搜索引擎结果 - JY罗杰的小书房</title>
 <meta name="description" content="An amazing website.">
 
 
@@ -18,8 +18,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="JY罗杰的小书房">
-<meta property="og:title" content="Sitemap">
-<meta property="og:url" content="/sitemap/">
+<meta property="og:title" content="找到一切 de 聚集搜索引擎结果">
+<meta property="og:url" content="/FE/SEs">
 
 
 
@@ -39,7 +39,7 @@
   
 
 
-<link rel="canonical" href="/sitemap/">
+<link rel="canonical" href="/FE/SEs">
 
 
 
@@ -294,253 +294,90 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Sitemap</h1>
+      <h1 id="page-title" class="page__title">找到一切 de 聚集搜索引擎结果</h1>
     
-    <!-- A list of all the posts and pages found on the site. For you robots out there is an [XML version](/sitemap.xml) available for digesting as well. -->
+    <script>
+var searchText = $.getUrlParam('q');
+//baidu
+var resultAddrNo1= "https://www.baidu.com/s?wd="+ searchText;
+var resultImgNo1 = "https://www.baidu.com/img/baidu_jgylogo3.gif";
+var resultStyleNo1 = "top:-140px;left:-80px";
+//bing cn
+var resultAddrNo2= "https://cn.bing.com/search?ensearch=0&q="+ searchText;
+var resultImgNo2 = "https://tse2-mm.cn.bing.net/th?id=OIP.UDfrxxtm5yamizWcAn7OXgAAAA&w=227&h=106&c=7&o=5&pid=1.7";
+var resultStyleNo2 = "top:-190px;left:-80px";
+//bing en
+var resultAddrNo3= "https://cn.bing.com/search?ensearch=1&q="+ searchText;
+var resultImgNo3 = "https://tse2-mm.cn.bing.net/th?id=OIP.F714JC_Yqnw0GNto5jK4fgHaFj&w=220&h=165&c=7&o=5&pid=1.7";
+var resultStyleNo3 = "top:-200px;left:-80px";
+// //google hk
+// var resultAddrNo4= "https://www.google.com.hk/search?q="+ searchText;
+// var resultImgNo4 = "https://www.google.com.hk/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png";
+// var resultStyleNo4 = "top:-200px;left:-80px";
 
-<h2>Pages</h2>
+</script>
 
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/CIA/" rel="permalink">中央情报局（CIA）</a>
-      
-    </h2>
-    
-    
-  </article>
+<style type="text/css">
+.flogo {width: 100px;height:13px}
+.search_result {width:700px;height:237px;overflow-y:scroll;overflow-x:hidden}
+.search_iframe {position:relative;width:700px;height:9999px; border:none}
+</style>
+
+<form id="searchForm">
+  <input id="searchFormInput" name="q" type="text" />
+  <input type="submit" value="Search" /> ^_^ 点击Logo打开原网页
+  <script>
+  document.getElementById("searchFormInput").value= searchText ;
+  </script>
+</form>
+
+<!-- Result Area No1 Start -->
+<figure class="flogo">
+<a id="logoLinkNo1" target="_blank"><img id="logoImgNo1" /></a>
+</figure>
+<div class="search_result">
+<iframe id="resultNo1" scrolling="no" class="search_iframe"></iframe>
 </div>
+<script type="text/javascript">
+document.getElementById("resultNo1").src = resultAddrNo1;
+document.getElementById("resultNo1").style = resultStyleNo1;
+document.getElementById("logoLinkNo1").href= resultAddrNo1;
+document.getElementById("logoImgNo1").src = resultImgNo1;
+</script>
 
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/CIA/m" rel="permalink">中央情报局-手机版</a>
-      
-    </h2>
-    
-    
-  </article>
+<!-- Result Area No1 End -->
+
+<!-- Result Area No2 Start -->
+<figure class="flogo">
+<a id="logoLinkNo2" target="_blank"><img id="logoImgNo2" /></a>
+</figure>
+<div class="search_result">
+<iframe id="resultNo2" scrolling="no" class="search_iframe"></iframe>
 </div>
+<script type="text/javascript">
+document.getElementById("resultNo2").src = resultAddrNo2;
+document.getElementById("resultNo2").style = resultStyleNo2;
+document.getElementById("logoLinkNo2").href= resultAddrNo2;
+document.getElementById("logoImgNo2").src = resultImgNo2;
+</script>
 
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/FE/SEs" rel="permalink">找到一切 de 聚集搜索引擎结果</a>
-      
-    </h2>
-    
-    
-  </article>
+<!-- Result Area No2 End -->
+
+<!-- Result Area No3 Start -->
+<figure class="flogo">
+<a id="logoLinkNo3" target="_blank"><img id="logoImgNo3" /></a>
+</figure>
+<div class="search_result">
+<iframe id="resultNo3" scrolling="no" class="search_iframe"></iframe>
 </div>
+<script type="text/javascript">
+document.getElementById("resultNo3").src = resultAddrNo3;
+document.getElementById("resultNo3").style = resultStyleNo3;
+document.getElementById("logoLinkNo3").href= resultAddrNo3;
+document.getElementById("logoImgNo3").src = resultImgNo3;
+</script>
 
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/FE/SEsG" rel="permalink">找到一切 de 聚集搜索引擎结果</a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/" rel="permalink"></a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/assets/js/lunr/lunr-en.js" rel="permalink"></a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/assets/js/lunr/lunr-gr.js" rel="permalink"></a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/assets/js/lunr/lunr-store.js" rel="permalink"></a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/assets/css/main.css" rel="permalink"></a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/sitemap/" rel="permalink">Sitemap</a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/tags/" rel="permalink">Posts by Tag</a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/year-archive/" rel="permalink">Posts by Year</a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/sitemap.xml" rel="permalink"></a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/robots.txt" rel="permalink"></a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/feed.xml" rel="permalink"></a>
-      
-    </h2>
-    
-    
-  </article>
-</div>
-
-<h2>Posts</h2>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/ev1/" rel="permalink">电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  少于 1 分钟读完
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">宣传中出现的燃油车都在塞车然后烟雾缭绕
-
-
-</p>
-  </article>
-</div>
-
-<div class="list__item">
-  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/novel1/" rel="permalink">最后一个魔女生还者
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-第一章 一个陷阱
-　　十八世纪的伦敦，仍处于教会的绝对统治下，无人违逆。教会通过圣术的神迹，控制人心，消灭异己，没有其他力量可以抵挡。
-　　除了魔法。
-　　教会名为红光教，也被称为太阳神教，信奉唯一神——太阳神阿波罗。
-　　教会的历史，已一千年。但百年前的文献却一本都找不到，据教会的传道，是因为在十七世纪发生...</p>
-  </article>
-</div>
+<!-- Result Area No3 End -->
 
 
   </div>

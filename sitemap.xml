@@ -15,6 +15,12 @@
 <loc>/CIA/m</loc>
 </url>
 <url>
+<loc>/FE/SEs</loc>
+</url>
+<url>
+<loc>/FE/SEsG</loc>
+</url>
+<url>
 <loc>/</loc>
 </url>
 <url>
@@ -22,9 +28,6 @@
 </url>
 <url>
 <loc>/tags/</loc>
-</url>
-<url>
-<loc>/gs.html</loc>
 </url>
 <url>
 <loc>/year-archive/</loc>
