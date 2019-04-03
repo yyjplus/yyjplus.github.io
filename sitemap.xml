@@ -15,6 +15,9 @@
 <loc>/CIA/m</loc>
 </url>
 <url>
+<loc>/OneSearch</loc>
+</url>
+<url>
 <loc>/FE/SEs</loc>
 </url>
 <url>
@@ -22,6 +25,9 @@
 </url>
 <url>
 <loc>/</loc>
+</url>
+<url>
+<loc>/searchonceforall/</loc>
 </url>
 <url>
 <loc>/sitemap/</loc>
@@ -38,6 +44,10 @@
 </url>
 <url>
 <loc>/google8223947cfa7aa02f.html</loc>
+<lastmod>2019-03-15T11:34:31+08:00</lastmod>
+</url>
+<url>
+<loc>/searchonceforall/google8223947cfa7aa02f.html</loc>
 <lastmod>2019-03-15T11:34:31+08:00</lastmod>
 </url>
 </urlset>
