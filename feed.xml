@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-04-03T13:31:17+08:00</updated><id>/feed.xml</id><title type="html">JY罗杰的小书房</title><subtitle>An amazing website.</subtitle><author><name>JY罗杰</name><email>yyjplus@163.com</email></author><entry><title type="html">电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？</title><link href="/ev1/" rel="alternate" type="text/html" title="电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？" /><published>2019-03-08T00:00:00+08:00</published><updated>2019-03-08T00:00:00+08:00</updated><id>/ev1</id><content type="html" xml:base="/ev1/">&lt;p&gt;&lt;strong&gt;宣传中出现的燃油车都在塞车然后烟雾缭绕&lt;/strong&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-05-02T14:22:17+08:00</updated><id>/feed.xml</id><title type="html">JY罗杰的小书房</title><subtitle>An amazing website.</subtitle><author><name>JY罗杰</name><email>yyjplus@163.com</email></author><entry><title type="html">提升搜索效率【Search Once For All】——【只搜一次】</title><link href="/searchonceforall/" rel="alternate" type="text/html" title="提升搜索效率【Search Once For All】——【只搜一次】" /><published>2019-05-02T00:00:00+08:00</published><updated>2019-05-02T00:00:00+08:00</updated><id>/searchonceforall</id><content type="html" xml:base="/searchonceforall/">&lt;p&gt;&lt;strong&gt;&lt;em&gt;有目标和没目标的人生，时间的流速是不一样的。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;——某人&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;既要抓紧时间实现目标，也要放松时间平衡人生。无论是想要什么生活，中国古人智慧让我们要保持“中庸之道”。&lt;/p&gt;
+
+&lt;p&gt;而无论偏左还是偏右，关于节约时间提高效率，总是没错的。&lt;/p&gt;
+
+&lt;p&gt;今天分享一个提高搜索效率的工具——Search Once For All.&lt;/p&gt;
+
+&lt;p&gt;想查个新热点，百度一下出来一堆的网页不知看哪个，要是能同时出现“图片，视频，还有知乎的认真回答”就好了。&lt;/p&gt;
+
+&lt;p&gt;想看视频，可现在版权管得严，在Bilibili搜一次，发现没有，再去爱奇艺搜，也没有，最后发现，《权力的游戏》竟然是腾讯视频独播的！要是能“同时搜索所有视频网站”就好了。&lt;/p&gt;
+
+&lt;p&gt;想买个新鲜玩意，网页搜一下出来太多广告，图片再搜一下看看那东西长什么样，再去淘宝搜一下哪里有卖的。&lt;/p&gt;
+
+&lt;p&gt;搜索引擎太多，而且各有所长，为了查文献，为了找免费电子书，为了找下载链接，在“百度”搜一下，“必应”搜一下，甚至科学上网去了“谷歌”，连不常用的“360”和“搜狗”都搜过了，终于找到了“那个东西”。要是能一次过“得到所有搜索引擎的结果”就好了。&lt;/p&gt;
+
+&lt;p&gt;抱着这种想法的伙伴，【Search Once For All】——【只搜一次】网站或许能帮到你。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://searchonceforall.github.io/&quot;&gt;https://searchonceforall.github.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/searchOnceForAll/1.jpg&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;【Fact Checker】：提供网页，图片，视频，还有知乎的搜索结果。&lt;/p&gt;
+
+&lt;p&gt;【Many Engines】：提供谷歌（可选），百度，必应，360，搜狗的搜索结果。&lt;/p&gt;
+
+&lt;p&gt;【Videos】：提供Bilibili，爱奇艺，腾讯视频的搜索结果。&lt;/p&gt;
+
+&lt;p&gt;【Shops】：提供淘宝和图片结果。&lt;/p&gt;
+
+&lt;p&gt;【Fun】：提供视频，知乎，小说的结果。&lt;/p&gt;
+
+&lt;p&gt;如果你可以科学上网，勾选搜索按钮右侧的【Google】选项，所有搜索中都将可以看见谷歌的绝妙搜索排序结果。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/searchOnceForAll/2.jpg&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;点击各个搜索结果的Logo，还能在新页面中打开对应的原生搜索页面~&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/searchOnceForAll/3.jpg&quot; alt=&quot;3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;更多隐藏使用等你发掘。&lt;/p&gt;
+
+&lt;p&gt;而且，竟然！在手机中也能使用了！&lt;/p&gt;
+
+&lt;p&gt;简洁的页面，没有广告的情怀，大家方便就好。&lt;/p&gt;
+
+&lt;p&gt;点击右上角快捷链接【Search Once For All】，可以直达网站（在微信中打开会被可恶地弹窗，建议在使用浏览器打开使用）。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://searchonceforall.github.io/&quot;&gt;https://searchonceforall.github.io/&lt;/a&gt;&lt;/p&gt;</content><author><name>JY罗杰</name><email>yyjplus@163.com</email></author><category term="工具" /><summary type="html">有目标和没目标的人生，时间的流速是不一样的。</summary></entry><entry><title type="html">电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？</title><link href="/ev1/" rel="alternate" type="text/html" title="电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？" /><published>2019-03-08T00:00:00+08:00</published><updated>2019-03-08T00:00:00+08:00</updated><id>/ev1</id><content type="html" xml:base="/ev1/">&lt;p&gt;&lt;strong&gt;宣传中出现的燃油车都在塞车然后烟雾缭绕&lt;/strong&gt;
 &lt;img src=&quot;/assets/images/fuelVehicle.jpg&quot; alt=&quot;宣传中出现的燃油车都在塞车然后烟雾缭绕&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;电动车的充电问题被放在环保之后&lt;/strong&gt;
