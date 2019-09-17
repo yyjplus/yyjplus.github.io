@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>JY罗杰的小书房</title>
+<!-- begin _includes/seo.html --><title>3 search engines + Google - JY罗杰的小书房</title>
 <meta name="description" content="An amazing website.">
 
 
@@ -18,8 +18,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="JY罗杰的小书房">
-<meta property="og:title" content="JY罗杰的小书房">
-<meta property="og:url" content="/">
+<meta property="og:title" content="3 search engines + Google">
+<meta property="og:url" content="/FE/SEsG">
 
 
 
@@ -39,7 +39,7 @@
   
 
 
-<link rel="canonical" href="/">
+<link rel="canonical" href="/FE/SEsG">
 
 
 
@@ -129,7 +129,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--archive">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -295,150 +295,115 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title"></h1>
+      <h1 id="page-title" class="page__title">3 search engines + Google</h1>
     
-    
+    <script>
+var searchText = $.getUrlParam('q');
+//baidu
+var resultAddrNo1= "https://www.baidu.com/s?wd="+ searchText;
+var resultImgNo1 = "https://www.baidu.com/img/baidu_jgylogo3.gif";
+var resultStyleNo1 = "top:-140px;left:-80px";
+//bing cn
+var resultAddrNo2= "https://cn.bing.com/search?ensearch=0&q="+ searchText;
+var resultImgNo2 = "https://tse2-mm.cn.bing.net/th?id=OIP.UDfrxxtm5yamizWcAn7OXgAAAA&w=227&h=106&c=7&o=5&pid=1.7";
+var resultStyleNo2 = "top:-190px;left:-80px";
+//bing en
+var resultAddrNo3= "https://cn.bing.com/search?ensearch=1&q="+ searchText;
+var resultImgNo3 = "https://tse2-mm.cn.bing.net/th?id=OIP.F714JC_Yqnw0GNto5jK4fgHaFj&w=220&h=165&c=7&o=5&pid=1.7";
+var resultStyleNo3 = "top:-200px;left:-80px";
+// //google hk
+// var resultAddrNo4= "https://www.google.com.hk/search?q="+ searchText;
+// var resultImgNo4 = "https://www.google.com.hk/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png";
+// var resultStyleNo4 = "top:-200px;left:-80px";
 
-<h3 class="archive__subtitle">最新文章</h3>
+</script>
 
+<style type="text/css">
+.flogo {width: 100px;height:13px}
+.search_result {width:700px;height:237px;overflow-y:scroll;overflow-x:hidden}
+.search_iframe {position:relative;width:700px;height:9999px; border:none}
+</style>
 
-  
+<form id="searchForm">
+  <input id="searchFormInput" name="q" type="text" />
+  <input type="submit" value="Search" /> ^_^ 点击Logo打开原网页
+  <script>
+  document.getElementById("searchFormInput").value= searchText ;
+  </script>
+</form>
 
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/musicapp/" rel="permalink">选个听音乐的APP
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">“ 虽说各有各好，但我喜欢用惯的。”
-
-
-</p>
-  </article>
+<!-- Result Area Google Start -->
+<figure class="flogo">
+<a id="logoLinkGoogle" target="_blank">
+<img src="https://www.google.com.hk/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" /></a>
+</figure>
+<div style="width:700px;height:350px;overflow-y:scroll;overflow-x:hidden">
+<script>
+  (function() {
+    var cx = '004290002975220320617:fldcm2ka8mi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchresults-only></gcse:searchresults-only>
 </div>
+<script type="text/javascript">
+document.getElementById("logoLinkGoogle").href= "https://www.google.com.hk/search?q="+ searchText;
+</script>
 
+<!-- Result Area Google End -->
 
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/maichexian/" rel="permalink">买汽车保险
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  少于 1 分钟读完
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">在中国开车，是不能不买保险的，其中分成给车买的【车损险】，给人买的【第三者险】和【座位险】，等等。
-
-</p>
-  </article>
+<!-- Result Area No1 Start -->
+<figure class="flogo">
+<a id="logoLinkNo1" target="_blank"><img id="logoImgNo1" /></a>
+</figure>
+<div class="search_result">
+<iframe id="resultNo1" scrolling="no" class="search_iframe"></iframe>
 </div>
+<script type="text/javascript">
+document.getElementById("resultNo1").src = resultAddrNo1;
+document.getElementById("resultNo1").style = resultStyleNo1;
+document.getElementById("logoLinkNo1").href= resultAddrNo1;
+document.getElementById("logoImgNo1").src = resultImgNo1;
+</script>
 
+<!-- Result Area No1 End -->
 
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/searchonceforall/" rel="permalink">提升搜索效率【Search Once For All】——【只搜一次】
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  少于 1 分钟读完
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">有目标和没目标的人生，时间的流速是不一样的。
-
-</p>
-  </article>
+<!-- Result Area No2 Start -->
+<figure class="flogo">
+<a id="logoLinkNo2" target="_blank"><img id="logoImgNo2" /></a>
+</figure>
+<div class="search_result">
+<iframe id="resultNo2" scrolling="no" class="search_iframe"></iframe>
 </div>
+<script type="text/javascript">
+document.getElementById("resultNo2").src = resultAddrNo2;
+document.getElementById("resultNo2").style = resultStyleNo2;
+document.getElementById("logoLinkNo2").href= resultAddrNo2;
+document.getElementById("logoImgNo2").src = resultImgNo2;
+</script>
 
+<!-- Result Area No2 End -->
 
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/ev1/" rel="permalink">电动汽车真的会完全替代燃油车吗？现在还要不要买燃油车？
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  少于 1 分钟读完
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">宣传中出现的燃油车都在塞车然后烟雾缭绕
-
-
-</p>
-  </article>
+<!-- Result Area No3 Start -->
+<figure class="flogo">
+<a id="logoLinkNo3" target="_blank"><img id="logoImgNo3" /></a>
+</figure>
+<div class="search_result">
+<iframe id="resultNo3" scrolling="no" class="search_iframe"></iframe>
 </div>
+<script type="text/javascript">
+document.getElementById("resultNo3").src = resultAddrNo3;
+document.getElementById("resultNo3").style = resultStyleNo3;
+document.getElementById("logoLinkNo3").href= resultAddrNo3;
+document.getElementById("logoImgNo3").src = resultImgNo3;
+</script>
 
-
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/novel1/" rel="permalink">最后一个魔女生还者
-</a>
-      
-    </h2>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-第一章 一个陷阱
-　　十八世纪的伦敦，仍处于教会的绝对统治下，无人违逆。教会通过圣术的神迹，控制人心，消灭异己，没有其他力量可以抵挡。
-　　除了魔法。
-　　教会名为红光教，也被称为太阳神教，信奉唯一神——太阳神阿波罗。
-　　教会的历史，已一千年。但百年前的文献却一本都找不到，据教会的传道，是因为在十七世纪发生...</p>
-  </article>
-</div>
-
-
-
-
+<!-- Result Area No3 End -->
 
 
   </div>
