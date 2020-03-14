@@ -1,0 +1,9 @@
+.current { color: orange; }
+
+.chapterList { width: 90%; margin: auto; table-layout: fixed; }
+
+.chapterList td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+p { text-indent: 2em; }
+
+/*# sourceMappingURL=post.css.map */

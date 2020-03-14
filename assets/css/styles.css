@@ -1,0 +1,7 @@
+.current { color: orange; }
+
+.chapterList { width: 90%; margin: auto; table-layout: fixed; }
+
+.chapterList td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/*# sourceMappingURL=styles.css.map */

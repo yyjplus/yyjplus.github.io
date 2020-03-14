@@ -1,0 +1,17 @@
+.current { color: orange; }
+
+.chapterList { width: 90%; margin: auto; table-layout: fixed; }
+
+.chapterList td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+p { text-indent: 2em; }
+
+.chapter_content { width: 70%; margin: auto; border: 1px solid; }
+
+.PageNavigation { font-size: 14px; display: block; width: auto; overflow: hidden; }
+
+.PageNavigation a { display: block; width: 50%; float: left; margin: 1em 0; }
+
+.PageNavigation .next { text-align: right; }
+
+/*# sourceMappingURL=chapter.css.map */
