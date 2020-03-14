@@ -6,7 +6,9 @@
 
 p { text-indent: 2em; }
 
-.chapter_content { width: 70%; margin: auto; border: 1px solid; }
+img { max-width: 70%; height: auto; }
+
+.chapter_content { width: 80%; margin: auto; border: 1px solid; }
 
 .PageNavigation { font-size: 14px; display: block; width: auto; overflow: hidden; }
 
