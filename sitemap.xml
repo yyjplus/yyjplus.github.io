@@ -4,70 +4,70 @@
     
     <url>
         <loc>/about.html</loc>
-        <lastmod>2020-03-14</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
-    </url>
-    
-    <url>
-        <loc>/blog.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/book.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>/category.html</loc>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/assets/css/chapter.css</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/assets/css/post.css</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/sitemap.xml</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/assets/css/styles.css</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/assets/css/chapter.css.map</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/assets/css/post.css.map</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
@@ -76,112 +76,112 @@
     
     <url>
         <loc>/readmemo/economic/read-fact.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-015.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-014.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-013.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-012.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-011.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-010.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-009.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-008.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-007.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-006.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-005.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-004.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-003.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-002.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>/tlow/fl/tlow-f1-001.html</loc>
-        <lastmod>2020-03-14</lastmod>
+        <lastmod>2020-03-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
