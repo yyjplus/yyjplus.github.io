@@ -6,4 +6,10 @@
 
 .chapterList td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
+p { text-indent: 2em; }
+
+img { max-width: 70%; height: auto; }
+
+.page_content { margin: auto; border: 1px solid; }
+
 /*# sourceMappingURL=styles.css.map */

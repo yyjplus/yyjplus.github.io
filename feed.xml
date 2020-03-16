@@ -1,4 +1,1134 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-03-16T11:09:01+08:00</updated><id>/feed.xml</id><entry><title type="html">阅读笔记： 《事实》 - 汉斯</title><link href="/readmemo/read-fact.html" rel="alternate" type="text/html" title="阅读笔记： 《事实》 - 汉斯" /><published>2020-03-14T00:00:00+08:00</published><updated>2020-03-14T00:00:00+08:00</updated><id>/readmemo/read-fact</id><content type="html" xml:base="/readmemo/read-fact.html">&lt;h1 id=&quot;事实-汉斯罗斯林&quot;&gt;《事实》 汉斯罗斯林&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-03-16T20:42:42+08:00</updated><id>/feed.xml</id><entry><title type="html">学习笔记： Python2.7-The official tutorial</title><link href="/studymemo/study-pythonTurorial.html" rel="alternate" type="text/html" title="学习笔记： Python2.7-The official tutorial" /><published>2020-03-15T00:00:00+08:00</published><updated>2020-03-15T00:00:00+08:00</updated><id>/studymemo/study-pythonTurorial</id><content type="html" xml:base="/studymemo/study-pythonTurorial.html">&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/tutorial/&quot;&gt;点这里打开官方教程原文&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1whetting-your-appetite&quot;&gt;1. Whetting Your Appetite&lt;/h2&gt;
+
+&lt;p&gt;Python is an interpreted language，无需编译链接。&lt;/p&gt;
+
+&lt;p&gt;数据处理、GUI、游戏设计都能使用。它处理数据IO快捷，还能调用其他语言。而且有丰富的数据结构。&lt;/p&gt;
+
+&lt;p&gt;Python的程序紧凑而且可读，比起c/c++/java，实现起来更短小，因为：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;高级数据类型，让复杂操作只需一个命令&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;用缩进而不是括号来划分作用域&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;无需预定义变量&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;（PS：Python是用C来implement的）&lt;/p&gt;
+
+&lt;h2 id=&quot;2using-the-python-interpreter&quot;&gt;2. Using the Python Interpreter&lt;/h2&gt;
+
+&lt;h3 id=&quot;21invoking-the-interpreter&quot;&gt;2.1. Invoking the Interpreter&lt;/h3&gt;
+
+&lt;p&gt;在命令窗口输入python即可进入编译器，Control-D on Unix, Control-Z on Windows来退出（或者用quit() )&lt;/p&gt;
+
+&lt;p&gt;执行命令：python -c command [arg] … ，最好用‘’来包着command，防止其中的空格被错用。&lt;/p&gt;
+
+&lt;p&gt;调用module as script：python -m module [arg] …&lt;/p&gt;
+
+&lt;p&gt;其他command line options:  &lt;a href=&quot;https://docs.python.org/2.7/using/cmdline.html#using-on-general&quot;&gt;https://docs.python.org/2.7/using/cmdline.html#using-on-general&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;argument passing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;the script name and additional arguments 都会变成string输入到sys.argv,其中sys.argv[0]是script名，例如“-c”,”printSomething”(module名）。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;interactive mode&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;primary prompt ：»&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;secondary prompt：. . . （代表continuation lines，用于multi-line command）&lt;/p&gt;
+
+&lt;h3 id=&quot;22the-interpreter-and-its-environment&quot;&gt;2.2. The Interpreter and Its Environment&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;source code encoding&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;默认ASCII格式，要更改则使用以下的命令，并放在文件的第一行：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-*- coding: encoding -*- &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;支持的encoding：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/codecs.html#standard-encodings&quot;&gt;https://docs.python.org/2.7/library/codecs.html#standard-encodings&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;如果有Unix Shebang line，则放在第二行：&lt;/p&gt;
+
+&lt;p&gt;#!/usr/bin/env python&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-*- coding: cp1252 -*- &lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3an-informal-introduction-to-python&quot;&gt;3. An Informal Introduction to Python&lt;/h2&gt;
+
+&lt;p&gt;使用#来做注释，+-*/来计算。&lt;/p&gt;
+
+&lt;p&gt;数字输入后，5的类型是int，5.0这种则是float。&lt;/p&gt;
+
+&lt;p&gt;// 取整除法，floor，例如 17 // 3.0 return 5.0&lt;/p&gt;
+
+&lt;p&gt;% 取余， 17 % 3 return 2&lt;/p&gt;
+
+&lt;p&gt;** 指数， 5 ** 2 return 25&lt;/p&gt;
+
+&lt;p&gt;= 赋值&lt;/p&gt;
+
+&lt;p&gt;_ 最近的操作结果存在这里，例如 _ return 25, 不要对 _ 赋值，否则会创建一个本地变量并把这个功能覆盖掉。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;string&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;‘……’ or ”……“ , 用 \ 可以将其例外。&lt;/p&gt;
+
+&lt;p&gt;如果不想例外，在前面标记r，代表是raw string：&lt;/p&gt;
+
+&lt;p&gt;print r’C:\some\name’&lt;/p&gt;
+
+&lt;p&gt;”&quot;”…””“ or ’'’…’'’可以跨行输入string&lt;/p&gt;
+
+&lt;p&gt;用+可以合并string，用*可以重复：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; 3 * 'un' + 'ium'&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;‘unununium’&lt;/p&gt;
+
+&lt;p&gt;或者直接放在一起也可以合并（但不适用于变量），借此可以将长句分行：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; 'Py' 'thon'&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;‘Python’&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;string可以index（但不可以修改）：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+
+
+&amp;gt;&amp;gt;&amp;gt; word = 'Python'
+
+&amp;gt;&amp;gt;&amp;gt; word[0] # character in position 0
+
+'P'
+
+&amp;gt;&amp;gt;&amp;gt; word[5] # character in position 5
+
+'n'
+
+
+
+&amp;gt;&amp;gt;&amp;gt; word[-1] # last character
+
+'n'
+
+&amp;gt;&amp;gt;&amp;gt; word[-2] # second-last character
+
+'o'
+
+&amp;gt;&amp;gt;&amp;gt; word[-6]
+
+'P'
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可以slicing&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; word[:2] + word[2:]
+
+'Python'
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;特殊字符就需要Unicode：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;u' Hello\u0020World !' &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;转换encoding&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;u&quot;äöü&quot;.encode('utf-8') &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;List&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;squares = [1, 4, 9, 16, 25]&lt;/p&gt;
+
+&lt;p&gt;基本跟string一样能用index和slicing，但list可以修改其中的值。&lt;/p&gt;
+
+&lt;p&gt;在末尾增加成员：suqares.append(36)&lt;/p&gt;
+
+&lt;p&gt;List里面也可以有list，变成多维。&lt;/p&gt;
+
+&lt;h2 id=&quot;4more-control-flow-tools&quot;&gt;4. More Control Flow Tools&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;If elif else&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;eg:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+if x &amp;lt; 0:
+
+    x = 0
+
+elif x ==0:
+
+    x = 1
+
+else:
+
+    x = 2
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;for&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;eg:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+for n in squares:
+
+    print n
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果要更改循环体，可以用slice来创建一个临时副本：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+for n in squares[:]:
+
+    if n &amp;gt; 5:
+
+          squares.insert(0,n)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;用&lt;strong&gt;range()&lt;/strong&gt;来生成循环index：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+for I in range(10):
+
+    print I #生成0到9的数
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;range(0, 10, 3):&lt;/p&gt;
+
+&lt;p&gt;[0, 3, 6, 9]&lt;/p&gt;
+
+&lt;p&gt;用&lt;strong&gt;break&lt;/strong&gt;和&lt;strong&gt;continue&lt;/strong&gt;来控制循环的跳转&lt;/p&gt;
+
+&lt;p&gt;用&lt;strong&gt;else&lt;/strong&gt;来控制for正常结束时的动作&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;pass&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;不做任何事，用于占用一行。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;function&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+def myFunc(n):
+
+    print n
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;给函数参数默认值&lt;/strong&gt;：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+def myFunc(n=1, I=2, j=3):
+
+    print n,i,j
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;从而可以在输入时省略某些参数&lt;/p&gt;
+
+&lt;p&gt;参数的初始化只有一次，初始化后更改的值会被保存，例如：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+def f(a, L=[]):
+
+L.append(a)
+
+return L
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;L的值每次调用后都会增加。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;利用keyword&lt;/strong&gt;，例如 myFunc( I=7)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;指针&lt;/strong&gt;：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;def cheeseshop(kind, *arguments, **keywords): &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;*必须在&lt;strong&gt;之前，*输入的是tuple，&lt;/strong&gt;输入的是dictionary：&lt;/p&gt;
+
+&lt;p&gt;或者调用时unpack：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;range(*argv), 其中 argv = [3, 6] &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;使用lambda&lt;/strong&gt;定义小函数：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;return lambda a,b:a+b &lt;/code&gt;，返回两个输入参数的和&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;coding style&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Python use PEP8.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;缩进用4个space，不用tab&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;每行不超过79 characters&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;用空行分割函数和class&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在行尾写备注&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;docstrings，“”“……”“”&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在操作符前后及逗号后加入space，圆括号不用加。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;命名：use CamelCase for classes and lower_case_with_underscores for functions and methods&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;不用fancy encoding，例如emoji。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5data-structures&quot;&gt;5. Data Structures&lt;/h2&gt;
+
+&lt;h3 id=&quot;51more-on-lists&quot;&gt;5.1. More on Lists&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;常用methods&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;list.append(&lt;em&gt;x&lt;/em&gt;) 在末尾增加x&lt;/p&gt;
+
+&lt;p&gt;list.extend(&lt;em&gt;L&lt;/em&gt;) 在末尾增加另一个list L&lt;/p&gt;
+
+&lt;p&gt;list.insert(&lt;em&gt;I&lt;/em&gt;, &lt;em&gt;x&lt;/em&gt;) 在位置I增加x&lt;/p&gt;
+
+&lt;p&gt;list.remove(&lt;em&gt;x&lt;/em&gt;) 移除第一个x&lt;/p&gt;
+
+&lt;p&gt;list.pop([&lt;em&gt;i&lt;/em&gt;]) 移除位置i的数据并返回，i缺省返回末尾&lt;/p&gt;
+
+&lt;p&gt;list.index(&lt;em&gt;x&lt;/em&gt;) 返回第一个等于x的数据位置&lt;/p&gt;
+
+&lt;p&gt;list.count(&lt;em&gt;x&lt;/em&gt;) 返回x出现的次数&lt;/p&gt;
+
+&lt;p&gt;list.sort(&lt;em&gt;cmp=None&lt;/em&gt;, &lt;em&gt;key=None&lt;/em&gt;, &lt;em&gt;reverse=False&lt;/em&gt;) 排序&lt;/p&gt;
+
+&lt;p&gt;list.reverse() 倒序&lt;/p&gt;
+
+&lt;p&gt;借助append和pop，可以&lt;strong&gt;将list用作stack&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;将list用作queue的话效率较低，不如使用collections.deque。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Functional Programming Tools :  filter() ,  map() , and  reduce()&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#filter&quot;&gt;filter()&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#map&quot;&gt;map()&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#reduce&quot;&gt;reduce()&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;filter(function, sequence)，返回所有sequence中令function返回true的，输入值list。&lt;/p&gt;
+
+&lt;p&gt;map(function, sequence)，返回function输入所有sequence中item的，返回值list。&lt;/p&gt;
+
+&lt;p&gt;若输入参数有多个，则sequence也可以有多个，一一对应。&lt;/p&gt;
+
+&lt;p&gt;reduce(function, sequence)，返回递归调用的结果，首先读取头两个item，然后其结果和第三个item作为第二次输入，以此类推。&lt;/p&gt;
+
+&lt;p&gt;也可以输入第三个参数作为初始结果，reduce(function, sequence, initValue)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;List Comprehensions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;List可以用非常巧妙的方式创建：&lt;/p&gt;
+
+&lt;p&gt;squares = [x**2 for x in range(10)]&lt;/p&gt;
+
+&lt;p&gt;甚至使用for和if来构造（注意tuple的话需要有括号）：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+
+[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;52del&quot;&gt;5.2. del&lt;/h3&gt;
+
+&lt;p&gt;删除list中的指定元素&lt;/p&gt;
+
+&lt;p&gt;del a[0]&lt;/p&gt;
+
+&lt;p&gt;del a[2:4]&lt;/p&gt;
+
+&lt;p&gt;del a[:] 清空list a&lt;/p&gt;
+
+&lt;p&gt;del a 删除a变量&lt;/p&gt;
+
+&lt;h3 id=&quot;53tuples&quot;&gt;5.3. Tuples&lt;/h3&gt;
+
+&lt;p&gt;与list一样，tuple是另一种sequence。&lt;/p&gt;
+
+&lt;p&gt;tuple的元素由逗号，分割。可以nest，但&lt;strong&gt;不可以修改&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;构造的时候可以不带括号，但输出总会带着。&lt;/p&gt;
+
+&lt;p&gt;为了构造0 or 1个元素的tuple，需要特别操作：&lt;/p&gt;
+
+&lt;p&gt;empty = ()&lt;/p&gt;
+
+&lt;p&gt;singleton = ‘hello’, #末尾带个逗号&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;pack&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;t = 12345, 54321, 'hello!' &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;unpack&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;x, y, z = t &lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;54sets&quot;&gt;5.4. Sets&lt;/h3&gt;
+
+&lt;p&gt;无序但无重复的数据集。例如将一个list去除重复项，set(list)&lt;/p&gt;
+
+&lt;p&gt;用{}或set()来创建，空set只能用后者创建。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+
+&amp;gt;&amp;gt;&amp;gt; fruit = set(basket) # create a set without duplicates
+
+&amp;gt;&amp;gt;&amp;gt; fruit
+
+set(['orange', 'pear', 'apple', 'banana'])
+
+&amp;gt;&amp;gt;&amp;gt; a = set('abracadabra')
+
+&amp;gt;&amp;gt;&amp;gt; a # unique letters in a
+
+set(['a', 'r', 'b', 'c', 'd'])
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;55dictionaries&quot;&gt;5.5. Dictionaries&lt;/h3&gt;
+
+&lt;p&gt;无序的key: value对, 要求key不可变。&lt;/p&gt;
+
+&lt;p&gt;用dict={}可以创建空的字典。&lt;/p&gt;
+
+&lt;p&gt;用dict()来创建字典。&lt;/p&gt;
+
+&lt;p&gt;可以用del来删除某个key.&lt;/p&gt;
+
+&lt;p&gt;keys()返回所有key的list。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; tel = {'jack': 4098, 'sape': 4139}
+
+&amp;gt;&amp;gt;&amp;gt; tel['guido'] = 4127 #增加元素
+
+&amp;gt;&amp;gt;&amp;gt; dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+
+&amp;gt;&amp;gt;&amp;gt; dict(sape=4139, guido=4127, jack=4098)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;56looping-techniques&quot;&gt;5.6. Looping Techniques&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;enumerate()&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;同时返回index和内容&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; for I, v in enumerate(['tic', 'tac', 'toe']):
+
+...  print I, v
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;zip()&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;两个sequences同时，用zip将它们先组装起来：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; questions = ['name', 'quest', 'favorite color']
+
+&amp;gt;&amp;gt;&amp;gt; answers = ['lancelot', 'the holy grail', 'blue']
+
+&amp;gt;&amp;gt;&amp;gt; for q, a in **zip**(questions, answers):
+
+...  print 'What is your {0}?  It is {1}.'.format(q, a)
+
+...
+
+What is your name?  It is lancelot.
+
+What is your quest?  It is the holy grail.
+
+What is your favorite color?  It is blue.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;特殊的loop操作&lt;/p&gt;
+
+&lt;p&gt;倒序&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; for I in reversed(xrange(1,10,2)): # 用range函数也一样
+
+...  print I
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;排序后&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+
+&amp;gt;&amp;gt;&amp;gt; for f in sorted(set(basket)):
+
+...  print f
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;iteritems()&lt;/p&gt;
+
+&lt;p&gt;同时返回dictionary的key和value&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+
+&amp;gt;&amp;gt;&amp;gt; for k, v in knights.iteritems():
+
+...  print k, v
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;57more-on-conditions&quot;&gt;5.7. More on Conditions&lt;/h3&gt;
+
+&lt;p&gt;条件和比较&lt;/p&gt;
+
+&lt;p&gt;In， not in 用于确定是否存在&lt;/p&gt;
+
+&lt;p&gt;Is, is not 用于对比两个对象是否为同一对象&lt;/p&gt;
+
+&lt;p&gt;比较可以连环，例如 a &amp;lt; b == c，等同于 a &amp;lt; b and b == c&lt;/p&gt;
+
+&lt;p&gt;and, or, not &lt;/p&gt;
+
+&lt;p&gt;注意，条件里面不能赋值，所以不能出现=。&lt;/p&gt;
+
+&lt;h3 id=&quot;58comparing-sequences-and-other-types&quot;&gt;5.8. Comparing Sequences and Other Types&lt;/h3&gt;
+
+&lt;p&gt;同一种sequence可以互相比较（&amp;lt;, ==, &amp;gt;）,从头开始一个个元素进行比较，直到出现结果。&lt;/p&gt;
+
+&lt;h2 id=&quot;6modules&quot;&gt;6. Modules&lt;/h2&gt;
+
+&lt;p&gt;module可以导入其他module和main module之中，使用它所定义的变量和函数。&lt;/p&gt;
+
+&lt;p&gt;在一个module内，它自身的名字存放在一个全局变量 &lt;strong&gt;name&lt;/strong&gt; 之中（执行module时，&lt;strong&gt;name&lt;/strong&gt;=&lt;strong&gt;main&lt;/strong&gt;）。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; import fibo &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;就可以导入，然后用fibo.xxx来使用其中的变量。也可以将它们赋给本地变量f=fibo.xxx,那就可以用f来调用xxx。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; from fibo import * &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这就导入所有变量（除掉那些下划线_开头的）。可以直接引用xxx。&lt;/p&gt;
+
+&lt;p&gt;Or导入其中指定的函数&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; from fibo import fib, fib2 &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;或者给它个新名字&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; import fibo as fib &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;.pyc是.py的二进制编译版，如果时间戳一致，就会用.pyc替代.py执行，从而节省加载时间（运行速度是一样的）。&lt;/p&gt;
+
+&lt;p&gt;从命令行执行script不会生成.pyc，所以如果要加快加载速度，可以考虑用一个script来加载其他modules。&lt;/p&gt;
+
+&lt;p&gt;用compileall可以将一个目录下的所有.py生成对应的.pyc。&lt;/p&gt;
+
+&lt;h3 id=&quot;62standard-modules&quot;&gt;6.2. Standard Modules&lt;/h3&gt;
+
+&lt;p&gt;Sys，最常用的标准库。&lt;/p&gt;
+
+&lt;p&gt;修改系统路径PYTHONPYTH：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; import sys
+
+&amp;gt;&amp;gt;&amp;gt; sys.path.append('/ufs/guido/lib/python')
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;63the-dir-function&quot;&gt;6.3. The  dir()  Function&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#dir&quot;&gt;dir()&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;返回某个module所定义的名称。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; import fibo
+
+&amp;gt;&amp;gt;&amp;gt; dir(fibo)
+
+['__name__', 'fib', 'fib2']
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果不带参数，则返回目前所有定义的名称（除去builtin的，如果要看，则带上参数, dir(&lt;strong&gt;builtin&lt;/strong&gt;)：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; dir()
+
+['__builtins__', '__name__', '__package__', 'a', 'fib', 'fibo', 'sys']
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;64packages&quot;&gt;6.4. Packages&lt;/h3&gt;
+
+&lt;p&gt;将modules打包。如果要将一个目录当成package，那就需要在里面建一个名为”&lt;strong&gt;init&lt;/strong&gt;.py”的文件，空的也没关系。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;import item.subitem.subsubitem &lt;/code&gt;这种使用，除了最后那个外，其他必须是package，而最后那个也不能是function、变量等，也只能是module或package。如果要使用里面具体的变量，用 from xx import xx.&lt;/p&gt;
+
+&lt;p&gt;6.4.1. Importing * From a Package&lt;/p&gt;
+
+&lt;p&gt;除非在”&lt;strong&gt;init&lt;/strong&gt;.py”中定义了__all__ , 否则只会导入这个文件里面的东西。import * 是一种不被推荐的操作。&lt;/p&gt;
+
+&lt;p&gt;6.4.2. Intra-package References&lt;/p&gt;
+
+&lt;p&gt;Package中的module互相引用比较多，可以用绝对地址和相对地址来引用。&lt;/p&gt;
+
+&lt;p&gt;相对地址的使用要注意，如果作为main使用的时候，可能找不到其他module（因为不是整个package都导入了）。&lt;/p&gt;
+
+&lt;h2 id=&quot;7input-and-output&quot;&gt;7. Input and Output&lt;/h2&gt;
+
+&lt;h3 id=&quot;71fancier-output-formatting&quot;&gt;7.1. Fancier Output Formatting&lt;/h3&gt;
+
+&lt;p&gt;用str() repr()来将其他转换成字符串，repr特别是给电脑看的，而str给人看，多数情况差不多。&lt;/p&gt;
+
+&lt;p&gt;很多method用来调整显示：&lt;/p&gt;
+
+&lt;p&gt;.rjust(2), 靠右显示且宽度2&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+print '{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x)  #变量1,2,3 宽度分别是2，3，4，且是整数
+
+ [str.zfill()](https://docs.python.org/2.7/library/stdtypes.html#str.zfill) 用0填充
+
+&amp;gt;&amp;gt;&amp;gt; '12'.zfill(5)
+
+'00012'
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;空着，用数字代表位置，用key指代都可以：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; print 'We are the {} who say &quot;{}!&quot;'.format('knights', 'Ni')
+
+We are the knights who say &quot;Ni!&quot;
+
+
+
+&amp;gt;&amp;gt;&amp;gt; print 'The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',
+
+...                                                    other='Georg')
+
+The story of Bill, Manfred, and Georg.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;用现有的dictionary：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
+
+&amp;gt;&amp;gt;&amp;gt; print ('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '
+
+...        'Dcab: {0[Dcab]:d}'.format(table))
+
+Jack: 4098; Sjoerd: 4127; Dcab: 8637678
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
+
+&amp;gt;&amp;gt;&amp;gt; print 'Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table)
+
+Jack: 4098; Sjoerd: 4127; Dcab: 8637678
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;旧式的print也支持：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; import math
+
+&amp;gt;&amp;gt;&amp;gt; print 'The value of PI is approximately %5.3f.' % math.pi
+
+The value of PI is approximately 3.142.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;72reading-and-writing-files&quot;&gt;7.2. Reading and Writing Files&lt;/h3&gt;
+
+&lt;p&gt;open(filename, mode) 打开并返回一个文件的object，模式：w, r, a, r+, 默认是r。&lt;/p&gt;
+
+&lt;p&gt;注意：读写文本的时候，python会自动改变换行符的格式（Windows和linux有不同格式）。&lt;/p&gt;
+
+&lt;p&gt;7.2.1. Methods of File Objects&lt;/p&gt;
+
+&lt;p&gt;f.read(size) 读取指定大小的数据，size如果是负数或者省略，就会读全部内容。&lt;/p&gt;
+
+&lt;p&gt;f.readline() 读一行&lt;/p&gt;
+
+&lt;p&gt;f.readlins() or list(f) 读取所有行并返回一个list&lt;/p&gt;
+
+&lt;p&gt;f.write(string) 写字符串，不是的先转成string&lt;/p&gt;
+
+&lt;p&gt;f.tell() 返回当前的位置&lt;/p&gt;
+
+&lt;p&gt;f.seek(offset, from_what) 定位到指定位置，from_what默认0（头部），1（当前），2（尾部）。&lt;/p&gt;
+
+&lt;p&gt;f.close() 关闭文件&lt;/p&gt;
+
+&lt;p&gt;用with语句来打开文件，离开with的范围后就会自动close，包括exception跳出的时候。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; with open('workfile', 'r') as f:
+
+...    read_data = f.read()
+
+&amp;gt;&amp;gt;&amp;gt; f.closed
+
+True
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;7.2.2. Saving structured data with  json&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/json.html#module-json&quot;&gt;json&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;JavaScript Object Notation&lt;/p&gt;
+
+&lt;p&gt;查看某个object的json形式：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; import json
+
+&amp;gt;&amp;gt;&amp;gt; json.dumps([1, 'simple', 'list'])
+
+'[1, &quot;simple&quot;, &quot;list&quot;]'
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;写入（code）：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;json.dump(x, f) &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;读取（decode）：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;x = json.load(f) &lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;8errors-and-exceptions&quot;&gt;8. Errors and Exceptions&lt;/h2&gt;
+
+&lt;p&gt;最常见的有两种：&lt;/p&gt;
+
+&lt;p&gt;Syntax Errors: 语法错误。各种调用不正确都是这类。&lt;/p&gt;
+
+&lt;p&gt;Exceptions: 语法没错，但执行是发生错误。例如零除。报错时会带上错误的名称。&lt;/p&gt;
+
+&lt;h3 id=&quot;83handling-exceptions&quot;&gt;8.3. Handling Exceptions&lt;/h3&gt;
+
+&lt;p&gt;用try except语句：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+import sys
+
+
+
+try:
+
+    f = open('myfile.txt')
+
+    s = f.readline()
+
+    i = int(s.strip())
+
+except IOError as e:
+
+    print &quot;I/O error({0}): {1}&quot;.format(e.errno, e.strerror)
+
+except ValueError:
+
+    print &quot;Could not convert data to an integer.&quot;
+
+except:
+
+    print &quot;Unexpected error:&quot;, sys.exc_info()[0]
+
+    Raise #对不知道怎么处理的，抛给系统
+
+else:
+
+    print 'The try clause works fine.'
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;调用的函数出错也会raise exception。&lt;/p&gt;
+
+&lt;h3 id=&quot;84raising-exceptions&quot;&gt;8.4. Raising Exceptions&lt;/h3&gt;
+
+&lt;p&gt;主动raise也可以。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; raise NameError('HiThere')
+
+Traceback (most recent call last):
+
+  File &quot;&amp;lt;stdin&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+
+NameError: HiThere
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;85user-defined-exceptions&quot;&gt;8.5. User-defined Exceptions&lt;/h3&gt;
+
+&lt;p&gt;也可以自己定义。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; class MyError(Exception):
+
+...    def __init__(self, value):
+
+...        self.value = value
+
+...    def __str__(self):
+
+...        return repr(self.value)
+
+...
+
+&amp;gt;&amp;gt;&amp;gt; try:
+
+...    raise MyError(2*2)
+
+... except MyError as e:
+
+...    print 'My exception occurred, value:', e.value
+
+...
+
+My exception occurred, value: 4
+
+&amp;gt;&amp;gt;&amp;gt; raise MyError('oops!')
+
+Traceback (most recent call last):
+
+  File &quot;&amp;lt;stdin&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+
+__main__.MyError: 'oops!'
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;86defining-clean-up-actions&quot;&gt;8.6. Defining Clean-up Actions&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; def divide(x, y):
+
+...    try:
+
+...        result = x / y
+
+...    except ZeroDivisionError:
+
+...        print &quot;division by zero!&quot;
+
+...    else:
+
+...        print &quot;result is&quot;, result
+
+...    finally:
+
+...        print &quot;executing finally clause&quot;
+
+...
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;离开try（无论怎样离开，包括break、exception、正常离开）都会执行finally的语句。&lt;/p&gt;
+
+&lt;h3 id=&quot;87predefined-clean-up-actions&quot;&gt;8.7. Predefined Clean-up Actions&lt;/h3&gt;
+
+&lt;p&gt;某些object会自带清理功能：with&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+with open(&quot;myfile.txt&quot;) as f:
+
+    for line in f:
+
+        print line,
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;9classes&quot;&gt;9. Classes&lt;/h2&gt;
+
+&lt;p&gt;Python的class机制，与C++和Modula-3的类似。&lt;/p&gt;
+
+&lt;p&gt;能够继承多个base class，可以复写继承的method，可以用同样的名字调用base class的method，object能包含任意的结构和数据.&lt;/p&gt;
+
+&lt;p&gt;而且跟module在Python一样具有dynamic nature，class在runtime时create，而且create之后还能被修改。&lt;/p&gt;
+
+&lt;p&gt;C++：所有class members默认是public，所有member functions是virtual。&lt;/p&gt;
+
+&lt;h3 id=&quot;91a-word-about-names-and-objects&quot;&gt;9.1. A Word About Names and Objects&lt;/h3&gt;
+
+&lt;p&gt;object都是独立存在的，而很多name都可以指定到同一个object。这就是aliasing，也被称为pointer。&lt;/p&gt;
+
+&lt;p&gt;Python中可变的数据结构（list、dictionary等）使用aliasing传递数据可以增加效率。因为只需传递一个地址而不用处理两份数据的交互。&lt;/p&gt;
+
+&lt;h3 id=&quot;92python-scopes-and-namespaces&quot;&gt;9.2. Python Scopes and Namespaces&lt;/h3&gt;
+
+&lt;p&gt;A &lt;em&gt;namespace&lt;/em&gt; is a mapping from names to objects.&lt;/p&gt;
+
+&lt;p&gt;Examples of namespaces are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;the set of built-in names (containing functions such as  &lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#abs&quot;&gt;abs()&lt;/a&gt; , and built-in exception names);&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;the global names in a module;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;and the local names in a function invocation. &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Lifetime&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;built-in ：从interpreter开始到结束。&lt;/p&gt;
+
+&lt;p&gt;module： 从导入到interpreter结束。&lt;/p&gt;
+
+&lt;p&gt;function里的name： 从function开始到结束（exception离开也会结束，递归调用的函数都有各自local namespace）&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;scope&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;常见规则。&lt;/p&gt;
+
+&lt;p&gt;注意：只要没有声明是global的，那所有赋值操作都是local的。&lt;/p&gt;
+
+&lt;p&gt;9.3.1. Class Definition Syntax&lt;/p&gt;
+
+&lt;p&gt;跟function一样，使用之前必须定义。而实际上，在函数里面、if里面定义都可以。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+class ClassName:
+
+    &amp;lt;statement-1&amp;gt;
+
+    .
+
+    .
+
+    .
+
+    &amp;lt;statement-N&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;9.3.2. Class Objects&lt;/p&gt;
+
+&lt;p&gt;支持两种操作：attribute reference, instantiation.&lt;/p&gt;
+
+&lt;p&gt;引用（obj.name）, 实例化（ x=MyClass() )&lt;/p&gt;
+
+&lt;p&gt;初始化：定义函数 &lt;strong&gt;init&lt;/strong&gt;()，则每次实例化都会自动初始化。&lt;/p&gt;
+
+&lt;p&gt;9.3.3. Instance Objects&lt;/p&gt;
+
+&lt;p&gt;实例化后的class，依然可以新增attribute，但只对这个实例有效，而不会改变class的定义。&lt;/p&gt;
+
+&lt;p&gt;例如对于 x=MyClass()，可以x.counter=1来增加一个变量，后续可以使用。&lt;/p&gt;
+
+&lt;p&gt;另一种attribute的引用是method，是属于这个object的function。（在python中，除了class外，其他object，如list等也有method。对的，class不是唯一的object）&lt;/p&gt;
+
+&lt;p&gt;9.3.4. Method Objects&lt;/p&gt;
+
+&lt;p&gt;x.f()是method object，不是function object。调用的时候等于MyClass.f(x), 是对这个function的引用，而输入参数是x。输入参数列表在找到function后会进行重构。&lt;/p&gt;
+
+&lt;p&gt;9.3.5. Class and Instance Variables&lt;/p&gt;
+
+&lt;p&gt;class variable是所有class的实例公用的，而instance variable是每个实例单独的。&lt;/p&gt;
+
+&lt;p&gt;当class variable是mutable的时候，就会导致所有实例都能更改这个值。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+class Dog:
+
+
+
+    kind = 'canine'        # class variable shared by all instances
+
+
+
+    def __init__(self, name):
+
+        self.name = name    # instance variable unique to each instance
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面的kind，其实在实例中也能修改，但实际上只是用一个instance variable覆盖掉，所以不会影响到其他实例。而若采用mutable的对象，如kind=[], 作为一个list，就能在不同实例中共享。所以list这种mutable attribute，除非故意，应该放在__init__中，定义成instance variable。&lt;/p&gt;
+
+&lt;h3 id=&quot;94random-remarks&quot;&gt;9.4. Random Remarks&lt;/h3&gt;
+
+&lt;p&gt;由于名字能够被覆盖，所以应该采用不同的命名体系来给它们命名。&lt;/p&gt;
+
+&lt;p&gt;而class里的self，实际上对于python是没有实际意义的，没有也可以，只是为了方便理解。&lt;/p&gt;
+
+&lt;h3 id=&quot;95inheritance&quot;&gt;9.5. Inheritance&lt;/h3&gt;
+
+&lt;p&gt;class DerivedClassName(BaseClassName):&lt;/p&gt;
+
+&lt;p&gt;也可以继承其他module的class&lt;/p&gt;
+
+&lt;p&gt;class DerivedClassName(modname.BaseClassName):&lt;/p&gt;
+
+&lt;p&gt;一个base class调用method，可能会调用了derived class的重构method（因为允许重构）。&lt;/p&gt;
+
+&lt;p&gt;如果要调用base class的method，用BaseClassName.methodname(self, arguments)。&lt;/p&gt;
+
+&lt;p&gt;检查class的type：isinstance(obj, int)，它或它继承的class是int类型的，则返回true。&lt;/p&gt;
+
+&lt;p&gt;检查class的继承关系：issubclass(bool, int)，bool是int的子类，所以这里返回true。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Multiple Inheritance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;多重继承&lt;/p&gt;
+
+&lt;p&gt;class DerivedClassName(Base1, Base2, Base3):&lt;/p&gt;
+
+&lt;p&gt;搜索顺序是depth-first， left to right.&lt;/p&gt;
+
+&lt;p&gt;由于base class可能来源于相同的parent，所以新的搜索方式是动态的，它会线性化搜索路径，防止重复搜索同一个parent，而且这是monotonic的（subclass不会因为搜索顺序而变化）。&lt;/p&gt;
+
+&lt;p&gt;（疑问：如果base1，base2有相同的attribute，搜索顺序的改变会不会影响到采用哪个attribute？目前来看，应该还是depth-first， left to right.）&lt;/p&gt;
+
+&lt;h3 id=&quot;96private-variables-and-class-local-references&quot;&gt;9.6. Private Variables and Class-local References&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;name mangling&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;在Python中，没有private这一类定义，而为了防止继承时错误重构、复写，采用以下机制：&lt;/p&gt;
+
+&lt;p&gt;以 __ 开头的variable和method，后台会自动变成 _classname__xxx.&lt;/p&gt;
+
+&lt;h3 id=&quot;97odds-and-ends&quot;&gt;9.7. Odds and Ends&lt;/h3&gt;
+
+&lt;p&gt;一个空的class就可以用作C里面的struct&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+class Employee:
+
+    pass
+
+
+
+John = Employee()  # Create an empty employee record
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;然后就可以输入想要的成员：&lt;/p&gt;
+
+&lt;p&gt;john.name = ‘John Doe’&lt;/p&gt;
+
+&lt;p&gt;john.dept = ‘computer lab’&lt;/p&gt;
+
+&lt;p&gt;john.salary = 1000&lt;/p&gt;
+
+&lt;h3 id=&quot;98exceptions-are-classes-too&quot;&gt;9.8. Exceptions Are Classes Too&lt;/h3&gt;
+
+&lt;p&gt;也可以被继承。&lt;/p&gt;
+
+&lt;h3 id=&quot;99iterators&quot;&gt;9.9. Iterators&lt;/h3&gt;
+
+&lt;p&gt;For… in 语句其实就是用iter()来实现的，in实际上通过 .next()来获取下一个值。&lt;/p&gt;
+
+&lt;h3 id=&quot;910generators&quot;&gt;9.10. Generators&lt;/h3&gt;
+
+&lt;p&gt;是用来生成iterators的强力道具。&lt;/p&gt;
+
+&lt;p&gt;跟普通function一样，但用yield来输出数据（不用return是因为返回数据后还要继续运行）&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+def reverse(data):
+
+    for index in range(len(data)-1, -1, -1):
+
+        yield data[index]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;911generator-expressions&quot;&gt;9.11. Generator Expressions&lt;/h3&gt;
+
+&lt;p&gt;用一行语句来直接设计并马上使用generator&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;gt;&amp;gt;&amp;gt; sum(I*I for I in range(10))                # sum of squares
+
+285
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;10brief-tour-of-the-standard-library&quot;&gt;10. Brief Tour of the Standard Library&lt;/h2&gt;
+
+&lt;h2 id=&quot;and-11-part2-see-another-note-call-the-standard-library-of-python&quot;&gt;and 11. Part2， see another note call ‘the Standard Library of Python’&lt;/h2&gt;
+
+&lt;h2 id=&quot;and-to-learn-more&quot;&gt;And to learn more:&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/index.html#library-index&quot;&gt;The Python Standard Library&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;库的使用手册&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/install/index.html#install-index&quot;&gt;Installing Python Modules (Legacy version)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;如何安装其他用户的库&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/reference/index.html#reference-index&quot;&gt;The Python Language Reference&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Python语言手册&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.python.org/&quot;&gt;https://www.python.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;官网&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/&quot;&gt;https://docs.python.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;python官方文档&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pypi.org/&quot;&gt;https://pypi.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;python package index，用户提供的库，整理成的目录&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://code.activestate.com/recipes/langs/python/&quot;&gt;https://code.activestate.com/recipes/langs/python/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Python的代码例子、模板等&lt;/p&gt;</content><author><name>杨永杰</name></author><category term="python" /><summary type="html">点这里打开官方教程原文</summary></entry><entry><title type="html">阅读笔记： 《事实》 - 汉斯</title><link href="/readmemo/read-fact.html" rel="alternate" type="text/html" title="阅读笔记： 《事实》 - 汉斯" /><published>2020-03-14T00:00:00+08:00</published><updated>2020-03-14T00:00:00+08:00</updated><id>/readmemo/read-fact</id><content type="html" xml:base="/readmemo/read-fact.html">&lt;h1 id=&quot;事实-汉斯罗斯林&quot;&gt;《事实》 汉斯罗斯林&lt;/h1&gt;
 &lt;p&gt;引言&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;他们都是有知识的，只不过他们所拥有的知识是过时的，而且是几十年前很过时的知识。他们的世界观停留在几十年前——他们的学生时代。&lt;/li&gt;
@@ -147,295 +1277,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/jpg/IMG_4391.JPG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;#Read&lt;/p&gt;</content><author><name>杨永杰</name></author><category term="economic" /><summary type="html">《事实》 汉斯罗斯林 引言 他们都是有知识的，只不过他们所拥有的知识是过时的，而且是几十年前很过时的知识。他们的世界观停留在几十年前——他们的学生时代。 我们情绪化的本能和过分情绪化的世界观，这才是主要原因。 “所以对世界的认识，才比一无所知的猩猩还要差”</summary></entry><entry><title type="html">第二章 守株待兔 X 主动出击</title><link href="/tlow/tlow-f1-002.html" rel="alternate" type="text/html" title="第二章 守株待兔 X 主动出击" /><published>2020-03-13T00:00:00+08:00</published><updated>2020-03-13T00:00:00+08:00</updated><id>/tlow/tlow-f1-002</id><content type="html" xml:base="/tlow/tlow-f1-002.html">&lt;p&gt;立志成为魔导王的魔法生物多如牛毛，起码在魔法生物大量活动的十七世纪为止都如此。记载里面的魔导王，数量极少，最辉煌的当数十三世纪，那时候同时有七位魔导王。而没有一个魔导王出现的十七世纪，则是魔法世界的末法时代。&lt;/p&gt;
-
-&lt;p&gt;魔导王对人类的态度并不统一，但撒旦作为史上最有名的魔导王之一，杀戮上百万人类，所以对魔导王持敌对态度的人占大多数。&lt;/p&gt;
-
-&lt;p&gt;他们把魔导王称为，魔王。&lt;/p&gt;
-
-&lt;p&gt;————《鳄鱼大王有个冒险》&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;黑森林分成五片领地。&lt;/p&gt;
-
-&lt;p&gt;中央山脉周围属于魔女的领地。&lt;/p&gt;
-
-&lt;p&gt;西方靠近人族村庄的区域由狮子王统治。&lt;/p&gt;
-
-&lt;p&gt;南方的是数千头鳄鱼的沼泽区。&lt;/p&gt;
-
-&lt;p&gt;东方是高大树木分布众多的云豹猫的后花园。&lt;/p&gt;
-
-&lt;p&gt;北方大片的荒野是狼群的活动范围。&lt;/p&gt;
-
-&lt;p&gt;昨天我已经让尼古拉斯去通知了其他四位领主，我的领地也暂时交给了它们守护。这样我就不用担心离开期间有动物误闯我的领地，小火也可以不受打扰继续嗮它的太阳。&lt;/p&gt;
-
-&lt;p&gt;“尼古拉斯，既然要去人族领地，你这个形象不太行。”&lt;/p&gt;
-
-&lt;p&gt;只有巴掌大小的尼古拉斯，金发碧眼尖耳朵。这怎样能轻易出现在人前？&lt;/p&gt;
-
-&lt;p&gt;尼古拉斯回到洞里，出来的时候已经变成一个黑发的成年人族，穿着卷轴里记载的燕尾服，还真像一个贵族的管家。今天再看一次，发现这个样子有点眼熟。就好像某个在哪见过的人像，又或者，对，好像里昂经过岁月洗礼后的样子，也许人族都长得很接近吧，我不再多想。&lt;/p&gt;
-
-&lt;p&gt;“主人，这样如何？”&lt;/p&gt;
-
-&lt;p&gt;“先这样吧。”&lt;/p&gt;
-
-&lt;p&gt;“主人，你也需要换一套合适的衣服。”&lt;/p&gt;
-
-&lt;p&gt;听语气，它对我的形象并不满意，不，现在该说他了。他脱下我的斗篷，不知从哪弄来一对长筒皮鞋，一条蓝黑色短裤，一件花领白衬衫和一件蓝黑色西服外套，就如称职的管家一般替我穿上。&lt;/p&gt;
-
-&lt;p&gt;现在，我看起来就像个贵族少爷了吧。&lt;/p&gt;
-
-&lt;p&gt;“尼古拉斯，走吧。在外面，你继续叫我少爷。”&lt;/p&gt;
-
-&lt;p&gt;“好的，少爷。少爷的目的地是哪里？”&lt;/p&gt;
-
-&lt;p&gt;“森林西边的人类村庄。去找那个魔人，里昂·布里奇。”&lt;/p&gt;
-
-&lt;p&gt;“少爷是在怀疑昨天的陷阱跟那个人族有关。可他毕竟把少爷从陷阱里救了出来。”&lt;/p&gt;
-
-&lt;p&gt;我留意到尼古拉斯把里昂说成“人族”，这的确没错，教会承认了魔人是人族的一部分，跟其他普通人族相比，这部分“人族”觉醒了魔人之力，获得了超人的能力。尼古拉斯难道是在提醒我与魔人为敌就是与全部人族为敌？&lt;/p&gt;
-
-&lt;p&gt;“我没有证据。而且他救了我也是事实。但我总觉得他出现在那里太巧合了，可能跟教会有关系。或许是教会在他不知情下引导他去到那个陷阱附近。无论如何，从他身上，或许可以找到引发我魔力暴动的原因。”&lt;/p&gt;
-
-&lt;p&gt;“遵命，少爷。请稍等，马上进行出门的准备。”&lt;/p&gt;
-
-&lt;p&gt;尼古拉斯找来一匹白马，我骑了上去，他从我身后把我抱着，尼古拉斯这个形象比我高大很多，我只到他胸口的位置。这不是一匹普通的白马，速度飞快，不过一会儿就穿过了狮子王的领地。果然成年人族的体格更适合当管家，这一变，连出行方式都换了，以前到其他领地散步，可都是我走路，他坐在我肩膀上。&lt;/p&gt;
-
-&lt;p&gt;这片土地，就像个没有边界的牢笼。&lt;/p&gt;
-
-&lt;p&gt;除了长得一样的树林，和周围一个个从地面凸出来的山丘，剩下的，还是树林和山丘。&lt;/p&gt;
-
-&lt;p&gt;山丘上有些树木，数量取决于这个山丘有多大。方圆几公里的，就长一些宽叶常青树，不高，树干特别粗壮，每一棵树间隔比较大，留下足够的空间给地面的灌木，和更低一层的草地。那些方圆不到一公里的小山丘，几乎都不长树，如果长了，那也只有山顶上的一棵特别孤单的针叶树，它就孤独地长在那，周围没有灌木丛相伴，也没有同类，它有时候会长得特别高，感觉整个山丘也不过是它的树根拔起来的一个土堆，可它从来不知道这一点，毕竟它从来见不到同类，又怎么能知道它算是偏高大的，还是偏矮小的呢？&lt;/p&gt;
-
-&lt;p&gt;我大概不会怀念这片土地。在这里，从不会发生什么意外，今天都是昨天的重复。&lt;/p&gt;
-
-&lt;p&gt;领地我已经分成四份交给其他四位领主，这里也就没有什么东西属于我的了。这个生活了一辈子的地方，离开是有点落寞的，但终于能够前往其他地方冒险，或许我该感谢昨天的意外。若非如此，我大概一辈子都不会离开黑森林。几年来我总想着有一天要外出冒险，可始终没能下定决心。&lt;/p&gt;
-
-&lt;p&gt;我是个不喜欢做抉择的家伙，两边好处都想要，既想着平和安全的自然生活，也向往着书本里精彩刺激的冒险故事。&lt;/p&gt;
-
-&lt;p&gt;嗯？难道我是一个安分守己的家伙？要是我没有以魔女一族的身份出生，我会是教会忠实的教徒？感觉突然对那些没有自己主见，只会按照教会和父母的安排生活的人族，有了更深的理解。&lt;/p&gt;
-
-&lt;p&gt;今天的太阳真烈。&lt;/p&gt;
-
-&lt;p&gt;“我先睡一会，尼古拉斯。”&lt;/p&gt;
-
-&lt;p&gt;“好的，少爷。”&lt;/p&gt;
-
-&lt;p&gt;尼古拉斯将一顶黑色帽子盖住我的脸，终于不用忍受这个烈焰一般的太阳了，把头靠在尼古拉斯胸前，享受着身边清凉起来的风，我渐渐睡去。&lt;/p&gt;
-
-&lt;p&gt;而当我睁开眼，一棵倾斜着生长，没有树叶，却很多褐色树枝的槐树停在了我的眼前，被我背后的夕阳照成了暗橙色。&lt;/p&gt;
-
-&lt;p&gt;这是某个路口，树后的几米处是一栋由石头造起来的两层房子，就好像跟其他房子相处不和，远远的独自落在了村口。而往里看去，是一个大约两百平方米的广场，地面是用一块块扁平宽大的石头铺成，坑坑洼洼的，也许是雨水造成的，又或许是高跟鞋。广场周围都是民居，大概间隔几米不到，可以想象，整个村庄就是个半圆，广场后半圆一圈一圈地盖着民居，前半圈只有一间石头屋和一棵长歪了的槐树。&lt;/p&gt;
-
-&lt;p&gt;“少爷，我去找旅馆。”&lt;/p&gt;
-
-&lt;p&gt;“我们不会留很久，找个没人的空屋，过一晚就行。我不想引人注目。”&lt;/p&gt;
-
-&lt;p&gt;尼古拉斯平静地答道，“少爷，我很怀疑这一点。”&lt;/p&gt;
-
-&lt;p&gt;广场上本来没有人，可不知哪个民居首先打开了门，然后就出现了很多人。他们都朝广场走来，站在我们的对面。&lt;/p&gt;
-
-&lt;p&gt;“你们是什么人？从哪来的？”一个中年光头看起来是这群人的头领，一身肌肉，没穿上衣，却带着个白色围裙。&lt;/p&gt;
-
-&lt;p&gt;“这位是布尔·罗斯切尔子爵，我们正在这一带游历，今天才到贵村，正打算找家合适的旅馆，不知你们可有推荐？”尼古拉斯已经完全是个绅士了。&lt;/p&gt;
-
-&lt;p&gt;光头似乎见过世面，他右手放于胸口，做了个礼，对尼古拉斯这个“大家族管家”，露出一口白牙，“原来是罗斯切尔家族的大人物驾临，有失远迎啊！虽然我也很想推荐个好旅馆，不过本村实在太小，又甚少有游客到来，所以没有旅馆在经营。如果不介意，请到鄙人陋居暂住，鄙人是这里的村长，鲍尔。”&lt;/p&gt;
-
-&lt;p&gt;“鲍尔村长，谢谢你的好意，那就麻烦了。“我想了想，决定答应下来。&lt;/p&gt;
-
-&lt;p&gt;人群大概有几十人，不多，所以我留意到里昂·布里奇并不在其中。或许可以问问鲍尔。&lt;/p&gt;
-
-&lt;p&gt;离开人群和广场，我们沿着广场右侧的山道走了一段路，来到位于一个半山坡上的村长家，对于小村庄的规模来说，这一栋有三层高近十米的屋子是相当豪华了。全部用白色石头制作而成，墙体表面因为年月的流逝，积累了数量众多的黑色刮痕。&lt;/p&gt;
-
-&lt;p&gt;尼古拉斯帮着女主人制作了一份丰盛的晚餐，令村长夫妇，特别是他们的两个女儿非常高兴，以至于现在她们现在还拿着一本故事书缠着尼古拉斯，要他读给她们听。&lt;/p&gt;
-
-&lt;p&gt;我让他好好配合这两个小孩，而自己则在村长书房中休息，趁这个机会了解这个村庄。&lt;/p&gt;</content><author><name>JY罗杰</name></author><category term="f1" /><summary type="html">立志成为魔导王的魔法生物多如牛毛，起码在魔法生物大量活动的十七世纪为止都如此。记载里面的魔导王，数量极少，最辉煌的当数十三世纪，那时候同时有七位魔导王。而没有一个魔导王出现的十七世纪，则是魔法世界的末法时代。</summary></entry><entry><title type="html">第三章 坦白 X 沉默</title><link href="/tlow/tlow-f1-003.html" rel="alternate" type="text/html" title="第三章 坦白 X 沉默" /><published>2020-03-13T00:00:00+08:00</published><updated>2020-03-13T00:00:00+08:00</updated><id>/tlow/tlow-f1-003</id><content type="html" xml:base="/tlow/tlow-f1-003.html">&lt;p&gt;魔法大战后的那段时间，魔法已经被世人遗忘了。&lt;/p&gt;
-
-&lt;p&gt;魔法的踪迹到底有多难觅呢？等于在雪地里面找一片白色羽毛那么难。&lt;/p&gt;
-
-&lt;p&gt;魔法被遗忘到什么程度呢？魔法的最强一族——魔女一族当时的生还者，在离开黑森林，进入凛·罗斯切尔留下来的遗迹之前，竟然只掌握不到十个魔法，而且，还都是第四阶段之前的魔法！&lt;/p&gt;
-
-&lt;p&gt;要知道，魔法大战时期的魔女一族，可以飞天遁地、移山填海的大有人在啊！&lt;/p&gt;
-
-&lt;p&gt;至于传说魔导师——凛·罗斯切尔，更是掌握了不止一个的第十阶段魔法，被誉为最接近魔导王的存在。甚至有野史记载，凛·罗斯切尔其实已经掌握了一个超阶魔法，早已成为了魔导王。&lt;/p&gt;
-
-&lt;p&gt;————《鳄鱼大王有个冒险》&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;“书上的东西，一半是假的，另一半则是被改写的。”&lt;/p&gt;
-
-&lt;p&gt;书房的门被打开，鲍尔光头走了进来，手里拿着两杯麦芽酒。他走到窗边的书桌边，也就是我坐着的椅子前，将酒放在桌上。我正拿着一本褐色皮面的《黑森林历史》，封面已经磨损严重，内页发黄，看来书的主人经常翻看。我以前没有看过这个版本，看的是另一个黑色封面的。他说的书，看来是指我手上这本。&lt;/p&gt;
-
-&lt;p&gt;“这个黑森林啊，本来不是什么邪恶之地。我小时候也到里面玩过，那里全是神奇动物和植物，可好玩了。所以我知道书上写着的，‘黑森林是一片布满凶恶魔兽的凶险之地’，并不是事实。”&lt;/p&gt;
-
-&lt;p&gt;“不，子爵大人，您请坐，我吃饭后喜欢站着。”见我站了起来，鲍尔放下手上的两个木头杯子，对我说。&lt;/p&gt;
-
-&lt;p&gt;“我不喝酒。”我没有坐下，对装着黄色液体，散发酒气的杯子说。&lt;/p&gt;
-
-&lt;p&gt;“我也这么觉得，虽然这么说很失礼，但你毕竟还是个孩子。”鲍尔拿起其中一杯，两个拳头大的木酒杯只一口就见底，“其实两杯都是我的。子爵大人，您相信书上的记载吗？”&lt;/p&gt;
-
-&lt;p&gt;“请叫我布尔。”&lt;/p&gt;
-
-&lt;p&gt;“那布尔，你怎么想的？”&lt;/p&gt;
-
-&lt;p&gt;“人类既然会猎杀动物，那动物就会反抗和反击。黑森林对于一些人来说，也许就是凶险之地呢！”&lt;/p&gt;
-
-&lt;p&gt;“嗯，很多村民也这样想。特别是老猎人，可实际上，很少猎人敢去黑森林打猎，那里的动物有不少能口吐人言呢！所以不能当成普通动物，更加不是食物。”&lt;/p&gt;
-
-&lt;p&gt;“能说人话的动物，那就是魔兽了。的确，没人会把魔兽当成食物。”似乎这个鲍尔对黑森林还是持友好态度的。&lt;/p&gt;
-
-&lt;p&gt;“你可以跟我说说这本书的更多内容吗？村长先生，你似乎知道很多。”&lt;/p&gt;
-
-&lt;p&gt;“这是本很有意思的书，取决于你怎么看，以及你是什么人。”鲍尔笑道，看着我说。&lt;/p&gt;
-
-&lt;p&gt;鲍尔说的这句话让我意外。也不是说因为他外表粗壮，更像一个野蛮人，也不是因为不久前那身白色围裙装扮让我觉得他不像个读书人。只是这句话就似乎在影射着我，他对我的身份有怀疑，是因为怀疑我不是罗斯切尔家族的人，怀疑没有这个家族，还是怀疑其他？我是应该当作没听出试探的味道呢，还是需要作出回应？&lt;/p&gt;
-
-&lt;p&gt;尽管他或许对黑森林有好感，这个时候表明我来自黑森林或许能与他建立一种特殊的关系。但万一我错了，就会把自己和尼古拉斯送入极为危险的境地。特别是现在我和尼古拉斯都处于被削弱的状态。&lt;/p&gt;
-
-&lt;p&gt;“少爷，到休息时间了。“尼古拉斯正站在门边，”床铺我已经收拾好。”&lt;/p&gt;
-
-&lt;p&gt;“明白了。真可惜，希望明天你能继续告诉我更多事情，譬如书上没记载的。”&lt;/p&gt;
-
-&lt;p&gt;“是我的荣幸。希望您今晚好梦。”&lt;/p&gt;
-
-&lt;p&gt;离开鲍尔和书房，在尼古拉斯的引领下我来到西边的房间，朝北的窗户照进来月光，在尼古拉斯手上的烛光衬托下显得那么冰凉。床铺整理的很干净，我换衣躺下，而他则看了我一眼，微微一笑，”少爷，晚安。”&lt;/p&gt;
-
-&lt;p&gt;“谢谢，尼古拉斯。”&lt;/p&gt;
-
-&lt;p&gt;“不客气，少爷。作为罗斯切尔家族的管家，这点事情都处理不好该怎么办呢。”&lt;/p&gt;
-
-&lt;p&gt;他扮演管家是上瘾了，不过，这样更有趣。&lt;/p&gt;
-
-&lt;p&gt;至于这个村庄，看来需要好好调查。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;“你起来了，少爷。今天鲍尔的夫人，凯莉西，邀请你一同享用早餐，马上就准备好了。”之后尼古拉斯帮我将昨天的衣服换上，系好鞋带。&lt;/p&gt;
-
-&lt;p&gt;“鲍尔呢？”&lt;/p&gt;
-
-&lt;p&gt;“他一早就出去了，他们的女儿，莉莉和西西也已经起来了。”&lt;/p&gt;
-
-&lt;p&gt;“这太好了，所以我是比莉莉和西西睡得还要晚了。”&lt;/p&gt;
-
-&lt;p&gt;“是的，少爷。”&lt;/p&gt;
-
-&lt;p&gt;我迅速洗簌，接过尼古拉斯递过来的白色陶瓷杯，漱口，将水吐在一个钢铁水盆里，水与钢铁碰撞的声音我还是头一次听。一般人家只能使用木盘木杯，而村长家却连水盆都是铁制的，村长这个职位并不会有俸禄，那钱从何来？&lt;/p&gt;
-
-&lt;p&gt;来到一层的饭厅，这个放着一张能坐十个人的木头桌子的白色空间，周围挂着一些弓箭和木制矛，在正对面的壁炉上，则是一个老人的画像，老发花白，没有一丝皱纹，鼻子很扁，双下巴，尽管没能看见下半身，我想是个丰硕的女人。&lt;/p&gt;
-
-&lt;p&gt;“那是我的奶奶的奶奶。“大概是因为我看的时间有些长，凯莉西介绍道，”是这个村子的第一任村长。”&lt;/p&gt;
-
-&lt;p&gt;凯莉西跟画像中人有几分相像，皮肤保养的很好，而且深褐的头发由于没有一丝白色，我看不出她的年龄，她尽管体型有点喜欢横向发展，但手脚灵活，口中说着话，同时就将桌面放满了食物。木碗装着白粥，竹篮装着长棍面包。&lt;/p&gt;
-
-&lt;p&gt;她的两个女儿，橙色头发的双胞胎莉莉和西西都已经坐在靠近壁炉的两个位置，位于主人位置的左侧，而另一个放着长条面包和米粥的位置，与主人位置相对，在最靠近门口的位置。&lt;/p&gt;
-
-&lt;p&gt;“尼古拉斯先生，你真的不一起吃个早饭吗？”她从壁炉左侧的门走出去，又带回来一个盛粥用的木婉。&lt;/p&gt;
-
-&lt;p&gt;“今天早饭真清淡。莉莉不喜欢吃。”&lt;/p&gt;
-
-&lt;p&gt;“姐姐你说什么呢，今天早饭比以往的都丰盛多了。西西很喜欢。尼古拉斯，你也一起吃嘛。”&lt;/p&gt;
-
-&lt;p&gt;莉莉和西西，她们是一对长着大眼睛的双胞胎。姐姐莉莉似乎对早餐并不满意，而妹妹西西则很享受地喝起了粥。&lt;/p&gt;
-
-&lt;p&gt;“谢谢你，凯莉西夫人，莉莉和西西小姐，我不过是一个管家，不能与主人一起用膳。”&lt;/p&gt;
-
-&lt;p&gt;尼古拉斯这家伙，说得我好像虐待他似的。他是精灵，吃的是我的魔力，我吃不就代表他吃了。老实说，我到现在才第一次想到，尼古拉斯吃饭的场景。不过，这也提醒了我要加快进度解除封印，好让尼古拉斯补充魔力。&lt;/p&gt;
-
-&lt;p&gt;“子爵大人，你来本村是要游览什么地方呢？”我坐下来，刚拿勺子吃了两口，凯莉西夫人开口问。&lt;/p&gt;
-
-&lt;p&gt;“随便看看。“我哪有计划游览什么地方，不过是想找个人，解决点事情，就走。&lt;/p&gt;
-
-&lt;p&gt;“这一带确实没什么好玩的，呵呵，子爵大人如果要找我推荐，我可实在想不出来，尽管我都在这村子活了一辈子。”凯莉西喝了口粥，又撕了点面包放在粥里。“不过，黑森林还是挺有名的，虽然不是什么好名声。”&lt;/p&gt;
-
-&lt;p&gt;“我也听说过。”&lt;/p&gt;
-
-&lt;p&gt;“哦？子爵大人听到的是怎样的，呵呵，我一介村妇，没见过世面，不知道外面的人是怎么讨论黑森林的。”&lt;/p&gt;
-
-&lt;p&gt;“也就是比较危险，不要轻易进去之类的。具体的事却很少听到，我也是好奇，正想向你们打听。”&lt;/p&gt;
-
-&lt;p&gt;“那地方我不敢进去，我们都不想进去，而事实上，也不知多少年没有人进去过了。所以老实说，我也不太了解。”&lt;/p&gt;
-
-&lt;p&gt;“凯莉西夫人，我刚到你们村的时候，看见一家房屋，就是长着槐树那家，怎么只有那家的房子离大家比较远呢？”喝了口粥，我试着随口问问。&lt;/p&gt;
-
-&lt;p&gt;“那是守护者的家，记得现在是布里奇夫人和他的儿子里昂住着。”&lt;/p&gt;
-
-&lt;p&gt;里昂，里昂·布里奇。那个闯入黑森林的家伙，凯莉西说几年没人进去过了，而住在村口的守护者的家，里面的人，昨天却进去了。&lt;/p&gt;
-
-&lt;p&gt;“守护者？”&lt;/p&gt;
-
-&lt;p&gt;“是的，守护者。其实我们更喜欢叫她们’那一家’，你看，那一家在广场那头，多孤单。”凯莉西笑了笑，“进村的人，或者不是人，都会先经过’那家’，所以就像一个门卫一样，不过老人们传下来的叫法，就是’守护者的家’。”&lt;/p&gt;
-
-&lt;p&gt;“那她们一家是村里最重要的人了，”我瞄了凯莉西一眼，“除了村长家。”&lt;/p&gt;
-
-&lt;p&gt;“子爵大人真会说笑，我虽然也很重视布里奇一家，不过，重要不重要我说了也不算，毕竟抓捕猎物的猎人和擅长料理猎物的厨师，在我们村也非常重要的。而且，子爵大人家的门卫应该不少，可也说不上很重要的人，对吧？”&lt;/p&gt;
-
-&lt;p&gt;布里奇一家看来在布莱克村并不是太受待见。&lt;/p&gt;
-
-&lt;p&gt;我没有附和，终于知道里昂布里奇的所在，这就够了。“谢谢夫人的款待，我想也该是时候到外面走走了。”&lt;/p&gt;
-
-&lt;p&gt;“这样啊。可是，现在天才亮不久，外面雾气重，对身体不是很好。”&lt;/p&gt;
-
-&lt;p&gt;“夫人不必担心，我是来这里游览的，一点雾气不算什么，也算是体验。”我站了起来，“尼古拉斯。”&lt;/p&gt;
-
-&lt;p&gt;“好的，少爷。”尼古拉斯走到凯莉西坐着位置的左手侧，弯腰将一个金币放在木婉边上。“这是少爷给您的谢礼。请务必收下。”&lt;/p&gt;
-
-&lt;p&gt;“这，谢谢子爵大人。如果有任何事情请随时告诉我，无论何时我都乐意效劳。”凯莉西短小多肉的双手拿起金币，用指甲敲了一下，发出清脆的声音。她不再多说，还告诉我目前村里不少人都已经出门了，如果要去周围的山林，可以等午后猎人回来后再一同前往。&lt;/p&gt;
-
-&lt;p&gt;打开门走到外面，迎面是一片白雾，半山上的村长家本来能一览布莱克村，现在却只有个大概的轮廓，半圆形的广场依稀可见。&lt;/p&gt;
-
-&lt;p&gt;我离开村长家，沿着山坡往下走，回到广场，便向着槐树走去。&lt;/p&gt;
-
-&lt;p&gt;我十分期待与里昂·布里奇再次相见。&lt;/p&gt;
-
-&lt;p&gt;“里昂是少爷见到的第一个外人。”尼古拉斯在我身后轻轻说，所以他想说我现在表现得很期待与那个人见面了？&lt;/p&gt;
-
-&lt;p&gt;“我有很多问题要找他。”我解释道，尼古拉斯就觉得我是那种刚从蛋壳里冒出来的鸟类，误把第一个见到的生物当成妈妈。我不是。而且我必须提醒我自己，这个人不但不是妈妈，还很可能会导致我的死，对，最后一个魔女的死。&lt;/p&gt;
-
-&lt;p&gt;但也许我们魔女在某方面跟人族很接近，以致我难以抵抗这种对第一个见到的人族的亲近感。我觉得他是个有趣的朋友，对，也许他还是我了解人族的契机。我希望这个契机是个有趣的开始，所以我希望是他。&lt;/p&gt;
-
-&lt;p&gt;我也了解我内心的矛盾，一方面怀疑他跟教会有联系，另一方面却无法否认被他所救后产生的好感和对第一个遇到的人的好奇。&lt;/p&gt;
-
-&lt;p&gt;“尼古拉斯，什么是守护者？”&lt;/p&gt;
-
-&lt;p&gt;“守护者，我当然知道了，少爷。只是没想到现在还有守护者，而且就在黑森林边上。”&lt;/p&gt;
-
-&lt;p&gt;“你没有回答我的问题，尼古拉斯。”&lt;/p&gt;
-
-&lt;p&gt;“少爷，你也知道什么是守护者，所以无需问我。你只需要想象一下，联想一下，再回忆一下看过的文献。”尼古拉斯又变身成我的家庭教师了，这种时候就只有靠我自己回忆起来了。&lt;/p&gt;
-
-&lt;p&gt;“尼古拉斯，那你觉得昨天那个人为什么跑到我们的领地？”&lt;/p&gt;
-
-&lt;p&gt;“我只是少爷的管家，这个问题少爷想我应该怎样回答呢？”&lt;/p&gt;
-
-&lt;p&gt;好吧，又一个不回答的问题，有时我真怀疑小精灵是不是都这样，还是尼古拉斯在故意戏弄我。&lt;/p&gt;
-
-&lt;p&gt;忽然前方传来交谈声，依稀能看见两个轮廓，随着距离靠近，看见是一男一女。&lt;/p&gt;
-
-&lt;p&gt;“……似乎出现鬼火，这太可怕了，去他X的不会又出现那种东西吧？”说话的是一个黑发寸头近四十岁的瘦弱男人，随之他又说了几句脏话，颇有怒气。他两侧有些白发。这家伙满口脏话，看来脾气暴躁，对魔法很抵触。这村里，果然有对魔法生物持敌对态度的人。&lt;/p&gt;
-
-&lt;p&gt;“不就是嘛！怎么会现在出现，希望不是魔法，毕竟都十几年没出现过了。也许只是磷火呢，别自己吓自己。”隔壁一个老太太拄着拐杖，摇着头说。这老婆婆的话听不出其偏向。单凭第一印象判断是否对魔法生物持敌对态度，话说我是不是太敏感？&lt;/p&gt;
-
-&lt;p&gt;“茉莉大妈，你想得太简单了。磷火能把那个小顽童的眉毛烧掉，我可听说他现在跟村长一样，成了个光头了。”小顽童就是里昂了吧，那所谓的鬼火就是变色龙小火喷的火焰了。里昂现在真成了光头？那头金发看来被小火讨厌了，它不喜欢比它色彩鲜艳的东西。&lt;/p&gt;
-
-&lt;p&gt;“小柴啊，我怎么听说那小子不过是自己理了个头发，而且比你的寸头还是长一些的。”茉莉大妈一声尴尬的咳嗽。&lt;/p&gt;
-
-&lt;p&gt;“大妈，不管怎样，我觉得都必须他X的跟教会联系，让他们派个厉害人物过来看看。”教会？这里果然跟教会有联系。不过，糟糕了，如果教会的人出现，现在我们能对付吗？&lt;/p&gt;
-
-&lt;p&gt;“我不喜欢教会的人。”嗯，茉莉大妈我爱你。什么嘛，教会也不是所有人都喜欢的，也有人这样光明正大说不喜欢教会，难道是因为地方偏远，教会的权威也减弱了？&lt;/p&gt;
-
-&lt;p&gt;“难道你更喜欢魔女那样的鸟东西？”名为柴的中年人完全就是敌对态度了。&lt;/p&gt;
-
-&lt;p&gt;“我都不喜欢，都别来烦我。老太婆我回去屋里躲着好了，别想我跟你去教会。”茉莉大妈打开身后的木门，准备回去。&lt;/p&gt;
-
-&lt;p&gt;大概走的太慢，我被老太太瞟了一眼。那个”小柴“，则朝我来的方向走去，他不是要去教会吗？怎么走向村长家。&lt;/p&gt;
-
-&lt;p&gt;这次的散步比预想还有成果，得到了很多小情报。而现在，最重要的还是那个里昂布里奇。&lt;/p&gt;
-
-&lt;p&gt;于是，我加快脚步继续向“那一家”走去。&lt;/p&gt;</content><author><name>JY罗杰</name></author><category term="f1" /><summary type="html">魔法大战后的那段时间，魔法已经被世人遗忘了。</summary></entry><entry><title type="html">第四章 防范未燃 X 静观其变</title><link href="/tlow/tlow-f1-004.html" rel="alternate" type="text/html" title="第四章 防范未燃 X 静观其变" /><published>2020-03-13T00:00:00+08:00</published><updated>2020-03-13T00:00:00+08:00</updated><id>/tlow/tlow-f1-004</id><content type="html" xml:base="/tlow/tlow-f1-004.html">&lt;p&gt;鳄鱼大王用他那巨大的嘴巴拿起一个蓝布袋，踏上回家的路，那是一个位于黑森林南部的沼泽。&lt;/p&gt;
+&lt;p&gt;#Read&lt;/p&gt;</content><author><name>杨永杰</name></author><category term="economic" /><summary type="html">《事实》 汉斯罗斯林 引言 他们都是有知识的，只不过他们所拥有的知识是过时的，而且是几十年前很过时的知识。他们的世界观停留在几十年前——他们的学生时代。 我们情绪化的本能和过分情绪化的世界观，这才是主要原因。 “所以对世界的认识，才比一无所知的猩猩还要差”</summary></entry><entry><title type="html">第四章 防范未燃 X 静观其变</title><link href="/tlow/tlow-f1-004.html" rel="alternate" type="text/html" title="第四章 防范未燃 X 静观其变" /><published>2020-03-13T00:00:00+08:00</published><updated>2020-03-13T00:00:00+08:00</updated><id>/tlow/tlow-f1-004</id><content type="html" xml:base="/tlow/tlow-f1-004.html">&lt;p&gt;鳄鱼大王用他那巨大的嘴巴拿起一个蓝布袋，踏上回家的路，那是一个位于黑森林南部的沼泽。&lt;/p&gt;
 
 &lt;p&gt;但是，鳄鱼大王可不想被人知道他的老巢所在。&lt;/p&gt;
 
@@ -889,211 +1731,107 @@
 
 &lt;p&gt;尼古拉斯塞给我一个小袋子，“少爷，如果遇到危险，请务必将袋中的东西打碎。”&lt;/p&gt;
 
-&lt;p&gt;将其放入怀中，我点点头，趁神父走远之前跟了上去。&lt;/p&gt;</content><author><name>JY罗杰</name></author><category term="f1" /><summary type="html">魔导王布尔·罗斯切尔，自小在黑森林中修炼魔法，懒惰的他，不，聪明的他为了集中所有精力提高魔法水平，完全不学习高等级武技。</summary></entry><entry><title type="html">第一章 意外陷阱 X 命中注定</title><link href="/tlow/tlow-f1-001.html" rel="alternate" type="text/html" title="第一章 意外陷阱 X 命中注定" /><published>2020-03-13T00:00:00+08:00</published><updated>2020-03-13T00:00:00+08:00</updated><id>/tlow/tlow-f1-001</id><content type="html" xml:base="/tlow/tlow-f1-001.html">&lt;p&gt;十八世纪的伦敦，仍处于教会的绝对统治下，无人违逆。教会通过圣术的神迹，控制人心，消灭异己，没有其他力量可以抵挡。&lt;/p&gt;
+&lt;p&gt;将其放入怀中，我点点头，趁神父走远之前跟了上去。&lt;/p&gt;</content><author><name>JY罗杰</name></author><category term="f1" /><summary type="html">魔导王布尔·罗斯切尔，自小在黑森林中修炼魔法，懒惰的他，不，聪明的他为了集中所有精力提高魔法水平，完全不学习高等级武技。</summary></entry><entry><title type="html">第八章 里昂的潜入 X 布尔的偷袭</title><link href="/tlow/tlow-f1-008.html" rel="alternate" type="text/html" title="第八章 里昂的潜入 X 布尔的偷袭" /><published>2020-03-13T00:00:00+08:00</published><updated>2020-03-13T00:00:00+08:00</updated><id>/tlow/tlow-f1-008</id><content type="html" xml:base="/tlow/tlow-f1-008.html">&lt;p&gt;里昂这天一醒来，就听到了老妈和一堆男人在吵架。&lt;/p&gt;
 
-&lt;p&gt;除了魔法。&lt;/p&gt;
+&lt;p&gt;“他们就不能让我们一家安稳地过一天吗？”里昂穿上鞋，走到窗边，把窗打开，朝声音的来源看去。&lt;/p&gt;
 
-&lt;p&gt;教会名为红光教，也被称为太阳神教，信奉唯一神——太阳神阿波罗。&lt;/p&gt;
+&lt;p&gt;天才刚亮，雾气还没散去，迎面而来的湿气几乎让他免去了找清水洗脸的必要。透过槐树的枯枝，里昂看到了鲍尔村长的光头，还有戴着黑色帽子的约翰神父。“两个最麻烦的人都来了。”&lt;/p&gt;
 
-&lt;p&gt;教会的历史，已一千年。但百年前的文献却一本都找不到，据教会的传道，是因为在十七世纪发生了世界大战——人类和魔法生物的终极大战。而所有古代文献都在那场大战中遭到销毁。&lt;/p&gt;
+&lt;p&gt;“咦？那个魔女和精灵管家，怎么躲在树林那边了？”里昂闭上眼，看见一个金色的小人影和一个银色的更为高大的人影在右侧树林中，“对，老妈让他们天亮前离开。他们的确离开了我们家，却躲在一旁，是因为这群人吗？”&lt;/p&gt;
 
-&lt;p&gt;而，这也就是十八世纪开始，世界上已无魔法生物的原因。&lt;/p&gt;
+&lt;p&gt;里昂决定偷偷地站在窗边，不把身体露出，听一听楼下这群人在说什么。&lt;/p&gt;
 
-&lt;p&gt;但这不过是表面的情况。在教会和民众的赶尽杀绝之下，仍有魔法生物的生还者。&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
 
-&lt;p&gt;距离教会总部所在地伦敦很遥远的东方边境，有座无人踏足的神秘黑森林。黑森林发生鬼火现象已经吸引了教会的注意，而黑森林的居住者却毫不知情。&lt;/p&gt;
+&lt;p&gt;“我在酒里下了，谁知道那家伙不喝酒。真晦气！”&lt;/p&gt;
 
-&lt;p&gt;————《鳄鱼大王有个冒险》&lt;/p&gt;
+&lt;p&gt;“靠！还有不喝酒的家伙？”&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;“那个小鬼头，肯定没喝过酒。”&lt;/p&gt;
 
-&lt;p&gt;我的名字？&lt;/p&gt;
+&lt;p&gt;“都安静点。”约翰神父开口，其他村民都不再说话。&lt;/p&gt;
 
-&lt;p&gt;我是布尔·罗斯切尔，是一名魔女。魔女一族在这个岛国有着很悠久的历史，分散在全国各地。从最东方的黑森林到最西方的黄沙海，从最北方的白冰原到最南方的绿沼泽，我们骑着飞行扫把一天内往返各地进行魔法交流。到十七世纪还是这样。&lt;/p&gt;
+&lt;p&gt;“你们就是喜欢装，不过没事，我也喜欢看你们装。”玛丽亚·布里奇的声音。&lt;/p&gt;
 
-&lt;p&gt;现在是1710年，世人已经认为魔女之类的魔法生物，只存在于过去的故事之中。而我，也已经是最后一个生还的魔女，躲在最东方的的黑森林里，生活了十七年。我的父母当然都是魔女一族，但在我三岁的时候已经离世，我是在精灵尼古拉斯的照顾下独自在黑森林长大的。&lt;/p&gt;
+&lt;p&gt;……&lt;/p&gt;
 
-&lt;p&gt;而今天，是我17岁的生日，我偷偷跑到中央森林领地与西边草原领地的边界地带探索神奇动物。&lt;/p&gt;
+&lt;p&gt;里昂差点笑出声音来，“老妈说话不要这么老实好吗！内心真实想法都完全暴露出来了。不过，下药？是那种让动物失去行动能力的毒药吗？鲍尔这个吝啬鬼，就给了我一瓶，这么少，怎么可能有用啊！神父还说让我抓一头狮子给他，否则这个月的心脏药就不给我，真麻烦！挖了个陷阱，狮子没抓到，反而把一个大活人抓住了，幸亏毒药只对动物有效，那家伙没事，否则我年纪轻轻就变成杀人犯了。这件事绝对不能让老妈知道，要是被她知道我心脏有问题，肯定笑话我。而且她肯定会因此陷入教会之中，难得脱离教会的控制，获得的自由，绝对不能因为这点小事再次失去。”&lt;/p&gt;
 
-&lt;p&gt;“通通显形！”我抽出插在腰间的一条27cm长的木质魔杖，对着周围的灌木丛施放了一个显形咒。&lt;/p&gt;
+&lt;p&gt;与此同时，楼下的约翰神父等众人已经离开。&lt;/p&gt;
 
-&lt;p&gt;“嘶~”一个蛇头缓慢抬了起来，却依然让我吓了一跳。这是一条迷彩毒蛇，它的隐藏色跟灌木的深绿色一样，藏在里面等待经过的敌人，然后突然咬一口，把锋利的毒牙里的毒液注射到敌人体内，它的毒液能在七步内毒死一个成年人。&lt;/p&gt;
+&lt;p&gt;里昂并没有想过他最初之所以开始心痛发作，也是因为约翰神父的诊断，也因此他吃了第一次的药。之后，逐渐变成了固定每个月一次的药。&lt;/p&gt;
 
-&lt;p&gt;“焚烧殆尽。”我把魔杖对着迷彩毒蛇，毒蛇忽然全身从内部冒出炽热的火焰，毒蛇在一瞬间就化成了焦炭。&lt;/p&gt;
+&lt;p&gt;虽然吃了心脏药之后心就不会再疼，但实际上这种药是一种会上瘾的药，只要不定时吃药，心脏病就会发作。这样，里昂就落入了教会的控制之中，失去“英雄”玛丽亚·布里奇，他们很不甘心，而同样掌握强大的魔人之力的里昂，就成为了替代品。&lt;/p&gt;
 
-&lt;p&gt;“呼！真危险，幸好我知道这种地方一般有危险，虽然大多数时候都很浪费魔力。”我把魔杖插回腰间，继续往前。&lt;/p&gt;
+&lt;p&gt;里昂提出不要让他母亲知道他的病的时候，约翰神父不知道多高兴！神父本来正想找借口让玛丽亚相信这件事，但毕竟玛丽亚不好骗，能瞒着她自然最好不过了。&lt;/p&gt;
 
-&lt;p&gt;“小火，你跑去哪了？今天一定要让你答应做我的宠物！”拨开挡路的灌木，来到了一块空地，中央是一块岩石。&lt;/p&gt;
+&lt;p&gt;而里昂对这一切都茫然不知。&lt;/p&gt;
 
-&lt;p&gt;“这里是小火最喜欢的空地，能够嗮太阳，怎么今天不见影了？”我躲在树下，观察起来。小火是一头巨大的变色龙，但不止如此，它是我在黑森林发现的除我和尼古拉斯外的头一个魔法生物。&lt;/p&gt;
+&lt;p&gt;玛丽亚布里奇把正门狠狠关上的声音让里昂从胡思乱想中回到现实世界，他闭上眼睛，看见八团蓝色的人影已经朝广场中央走去，树林里的金银两色人影忽然若隐若现起来，跟着蓝色人影也移动起来。&lt;/p&gt;
 
-&lt;p&gt;“哼哼，原来如此！通通显形！”我对着空无一物的空地施放魔法。&lt;/p&gt;
+&lt;p&gt;八团人影在广场中央分开，只剩下两团还继续走了一段，然后分别朝左右两个方向离去。不远处在后面跟着的金银人影，金色那个往左边，银色那个往右边，也随后分开。&lt;/p&gt;
 
-&lt;p&gt;“吼~”&lt;/p&gt;
+&lt;p&gt;里昂睁开眼。“他们两个跟着那两个人干嘛？”&lt;/p&gt;
 
-&lt;p&gt;空地那块巨大的岩石突然爆出一声怒吼，就像雪花飘散融化一样，岩石一格一格地消退了石头的灰色，露出的是火红的鳞片。&lt;/p&gt;
+&lt;p&gt;他拿毛巾沾了点水在脸上擦一擦，跑到楼下，经过玛丽亚布里奇房间的时候，已经听见了呼噜声，她睡着了。&lt;/p&gt;
 
-&lt;p&gt;“哟！小火，今天又被我抓到你了。”我得意地跟巨型变色龙打招呼，然后我赶紧往一旁跳开。&lt;/p&gt;
+&lt;p&gt;里昂轻手轻脚打开正门，然后关上，再朝教会那个方向跑了过去。&lt;/p&gt;
 
-&lt;p&gt;小火抬起头，嘴巴鼓了起来，对我喷出一口炽热的火球，恰好被我躲开，火球打在地面，露出一个小凹坑。&lt;/p&gt;
+&lt;p&gt;“虽然不知道魔女去找神父做什么，但这是个偷心脏药的好机会！”里昂对教会的服从，基本上来自于这些药，实际并没有忠诚度可言。“神父大人，请务必多备些药，让我自由一年半载啊！你的那些肮脏工作，我可不想继续奉陪。”里昂对这个突发奇想十分自得，他还是头一次想出这么聪明的主意。与大部分听话忠心的教徒不同，他觉得教会有些事情做得不对，虽然在教会学校里面，他并不敢跟其他同学这样说。&lt;/p&gt;
 
-&lt;p&gt;小火的见面礼总是这样。&lt;/p&gt;
+&lt;p&gt;“嘿嘿，竟然敢从教会偷东西，要是让同学们知道，估计他们会封我为英雄。”里昂一边跑一边笑起来，就似乎那些药已经到手了一样。&lt;/p&gt;
 
-&lt;p&gt;“火球！”我也拿出魔杖，对着敌人射出。火球眼看就要射在它身上，忽然一个黑影闪过，火球在半空被拍散消失。&lt;/p&gt;
+&lt;p&gt;跑上半山腰，布莱克村的教堂就在这个地方。一座十米高的白石建筑，中间完全镂空，有两层，一层除了礼拜堂的讲台，剩下的是放满长椅的教徒座位，能坐五十人，整个村子的人都能坐进来。而在讲台右侧有一扇门，那里就是约翰神父的起居室，里昂这次的目标就在那里。&lt;/p&gt;
 
-&lt;p&gt;是它的尾巴，火红色的尾巴能够将我的魔法直接打散，而它本身一丝伤痕都没有。&lt;/p&gt;
+&lt;p&gt;“神父进教堂了，那个魔女跟在他背后，是想偷袭吗？”里昂闭上眼，虽然隔着墙壁，他依然清楚看见那团金色人影和蓝色人影。“不过现在我要先确保入侵路线！啊，好酷，‘入侵路线’听起来，就好像怪盗一样，真想跟彼得说说这个冒险！”&lt;/p&gt;
 
-&lt;p&gt;“吼啊~”巨大的嘴巴再次鼓起，同时两侧竟然发出白色的光。&lt;/p&gt;
+&lt;p&gt;里昂沿着教会的墙壁走起来，“从里面那扇门进入起居室是不行的，虽然我很想这样做，直接冲进去！不过，那门肯定锁着，我见神父每次进入都要用钥匙开。”里昂平时做事虽然冲动，甚至鲁莽，但替教会做了这么几年工作，还是让他精明了不少，“今天一大早就出门来我们家找魔女，肯定很匆忙，起居室的正门或许来得及锁上，但晚上开着通风的窗户可就不一定了！去看看！”&lt;/p&gt;
 
-&lt;p&gt;我心道不好，它来真的了！&lt;/p&gt;
+&lt;p&gt;里昂来到起居室唯一一扇窗户附近。&lt;/p&gt;
 
-&lt;p&gt;“移形换影！”&lt;/p&gt;
+&lt;p&gt;“嘿嘿，果然，布尔啊，你真是我的幸运星！”窗户开了一条缝，并没有关紧。“剩下的问题就是，怎么爬上去。”&lt;/p&gt;
 
-&lt;p&gt;一个白色火球被射向我原来的位置，那背后的一棵树被正面击中，来不及燃烧就变成了黑炭，风吹过后飘散掉了。&lt;/p&gt;
+&lt;p&gt;教堂的墙壁很高，起居室的窗开的也相对一般民居高不少，里昂站在窗户前，都看不见里面的，虽然伸手勉强能摸得到。&lt;/p&gt;
 
-&lt;p&gt;“好险！小火，我下次再来找你玩！”出现在它背后的我，马上狂奔起来，朝西方领地跑去。这头变色龙太可怕了，不过正因如此，才能成为珍贵的战斗力！&lt;/p&gt;
+&lt;p&gt;“不管了，跳上去！他们听不见的。”里昂用手抓着窗沿，双脚啪啪地踩着墙壁，终于爬上了窗台。从这里看，神父的起居室很简陋，只有一张木床，一张木桌子和凳子，还有一个书柜。&lt;/p&gt;
 
-&lt;p&gt;“我还会再来的！”我不忘发出宣言。&lt;/p&gt;
+&lt;p&gt;“那个魔女行动了！”里昂闭着眼，看到金色人影发生变化。金色人影冲了起来，双手形状像是拿着一把匕首，插入蓝色人影身上。&lt;/p&gt;
 
-&lt;p&gt;忽然，脚下一空。&lt;/p&gt;
+&lt;p&gt;可一瞬间，金色人影跟撞到了墙壁一样，冲势毫无征兆地完全停止，然后被反推力推到了地上。&lt;/p&gt;
 
-&lt;p&gt;“啊！！！！！！”&lt;/p&gt;
+&lt;p&gt;“魔女，你以为我不知道你跟着我吗？”约翰神父的声音隐约能听得见。&lt;/p&gt;
 
-&lt;p&gt;脖子好痛！腰也很痛！&lt;/p&gt;
+&lt;p&gt;“你是什么时候发现的？”魔女，也就是布尔·罗斯切尔，站起来说，声音听起来像是受了伤。&lt;/p&gt;
 
-&lt;p&gt;我抬起头，看着那变得遥远的天空，的确原来也很遥远，可现在更加遥远，“真倒霉，怎么会有个地洞？”&lt;/p&gt;
+&lt;p&gt;“说吧，你送上门来，是想做什么？圣骑士还有一天才能到呢，没想到你就送上门来了，真是省了我的功夫。”神父无视了布尔的提问，继续自己的发问，“不过，也没关系了。反正只要把你抓下，审讯可以慢慢享受。”&lt;/p&gt;
 
-&lt;p&gt;掉落土洞的时候，我双手还抓掉很多泥巴，湿润的褐色泥土里竟然还爬着蚯蚓。我马上扔掉了这些土，拍打双手，试图把手弄干净一些，但我没在身上的衣服擦，因为这样只会把自己弄的更脏。&lt;/p&gt;
+&lt;p&gt;“什么？原来早就通知了圣骑士！糟糕，要是我在这里这件事被发现，麻烦就大了！哎呀！”里昂蹲在薄薄的窗台上，突然重心不稳，好在他反应灵敏，马上跳到窗户下的书桌上。&lt;/p&gt;
 
-&lt;p&gt;“怎么爬上去？算了，还是用浮空吧。”&lt;/p&gt;
+&lt;p&gt;“什么人？！”约翰神父的声音传来。&lt;/p&gt;
 
-&lt;p&gt;“浮空。”&lt;/p&gt;
+&lt;p&gt;“糟糕，被发现了！”里昂嘀咕，“既然都到了，赶紧找找那些药藏在哪。”&lt;/p&gt;
 
-&lt;p&gt;然而什么都没有发生。&lt;/p&gt;
+&lt;p&gt;一个玻璃瓶碎裂的声音响起。&lt;/p&gt;
 
-&lt;p&gt;“浮空！”&lt;/p&gt;
+&lt;p&gt;“什么？可恶的魔女，你做了什么？咳，咳！”神父难受的咳嗽声随之响起。&lt;/p&gt;
 
-&lt;p&gt;忽然出现一股强大的气流，但不是往上而是往下，我身上像突然背了两个人一样，压得我膝盖都弯了。&lt;/p&gt;
+&lt;p&gt;“布尔，你要撑住啊！起码等我找到，啊！是这瓶，找到了！”里昂在书桌抽屉里发现了自己一直从约翰神父手上拿到的心脏药，他马上将这瓶药塞到口袋里，“可惜，就只有这么一瓶。”&lt;/p&gt;
 
-&lt;p&gt;“怎么回事？”我感觉到魔力的紊乱，这是一个很简单的魔法，平常一直在用，现在突然失灵？&lt;/p&gt;
+&lt;p&gt;里昂动作敏捷得连猴子都要自愧不如，他从书桌上爬到窗户，然后纵身一跃落到教堂外，撒腿就跑，一会儿就不见了人影。&lt;/p&gt;
 
-&lt;p&gt;“喂～有人吗？”头顶传来陌生的声音。&lt;/p&gt;
+&lt;p&gt;至于布尔·罗斯切尔，他在打碎一个小袋子的烟雾弹后，趁着冒出的一堆浓烟掩护，也已经逃出了教堂，与里昂的方向相反，朝树林钻了进去。&lt;/p&gt;
 
-&lt;p&gt;“有人～我掉下来了，你能帮个忙把我弄上去吗？”我赶紧回应。&lt;/p&gt;
+&lt;p&gt;“布尔似乎受了伤，要不要去看看他？”里昂回到自己家里，发现玛丽亚已经不见了人影，坐在大厅的沙发上，不禁想起刚才的事情。多得布尔分散了神父的注意力，他才顺利拿到压制自己心脏疼痛的药，而且还是足够吃一年的分量，一年后的事情，他就管不了啦。&lt;/p&gt;
 
-&lt;p&gt;“好的，你等等，我把绳子绑好就放下去给你。”那人这么说，声音变小，大概走开了。&lt;/p&gt;
+&lt;p&gt;而因此，他决定要去看看布尔的伤势，或许家里的伤药能帮上忙。“除了上次害他掉到陷阱里之外，这次又欠了他一个人情。唉，他还一直感激我把他从陷阱救了出来，我都不好意思说‘陷阱是我挖的’了。”&lt;/p&gt;
 
-&lt;p&gt;绳子？哪来的绳子，这人话说是哪里来的，这片森林怎么会有人进来？&lt;/p&gt;
+&lt;p&gt;里昂从药箱拿出最好用的伤药，正准备出门，“哎呀！我真是笨蛋，约翰神父肯定知道是我偷的药！除了我，谁还想要这种苦不拉几的药。估计当他发现药不见了，就会来找我的，我得躲一段时间。写封信给老妈吧，免得她多想，虽然多半不会多想的。”&lt;/p&gt;
 
-&lt;p&gt;“好了，你抓紧了，我把你拉上来。”那人的声音很快就再度响起，带点磁性，似乎年纪不大，听着很舒服。是我多想了吧，先上去再说。&lt;/p&gt;
+&lt;p&gt;里昂又回到屋里，拿来纸笔写了个留言，然后回房间拿上自己的零钱和惯用剑，顺便从他老妈房间里拿走一把用于纪念他父亲的武器，这才出发去找布尔罗斯切尔。&lt;/p&gt;
 
-&lt;p&gt;我抓住放下来的麻绳，踩着泥土往上爬，那人也把绳子往上拉，他的力气很大，拉的很快，不一会儿我就见到了地洞口。&lt;/p&gt;
+&lt;p&gt;离开教堂的时候，他看到金色人影是往西边的森林跑去的。&lt;/p&gt;
 
-&lt;p&gt;也见到了他。&lt;/p&gt;
-
-&lt;p&gt;金色的头发，翡翠一样的眼睛，看起来很小孩的脸。他伸出了手，我抓住，然后他用力一拉，把我拉到地面上。&lt;/p&gt;
-
-&lt;p&gt;“嗯，谢谢你，帮大忙了。”我松开手，站在他跟前，才发现他比我矮了半个头。&lt;/p&gt;
-
-&lt;p&gt;“不客气，就算我不出手，你朋友也马上就会把你救上来。”他收起麻绳，一卷一卷地在手肘上缠绕，在他还没收好之前，我就感觉到了尼古拉斯的接近。&lt;/p&gt;
-
-&lt;p&gt;“少爷，尼古拉斯保护不周。可有大碍？”尼古拉斯一出现就抓住我的双肩，仔细观察起来，“还好，没受伤，只是弄脏了，要赶紧回去清洗！”&lt;/p&gt;
-
-&lt;p&gt;尼古拉斯是我的契约精灵，可这一点不能让这个突然出现的人知道，魔法生物在现在这个教会统治的时代，是一种禁忌。&lt;/p&gt;
-
-&lt;p&gt;不对，这个不是人？&lt;/p&gt;
-
-&lt;p&gt;我再仔细看了一下，怎么今天的魔力似乎怪怪的，连感知都迟钝了，眼前这个哪里是普通人，这是魔人啊！&lt;/p&gt;
-
-&lt;p&gt;“魔女一族的小哥哥，怎么称呼呢？我是里昂·布里奇，是一名魔人。”自报姓名的里昂布里奇伸出右手，自我介绍道。&lt;/p&gt;
-
-&lt;p&gt;魔女一族的小哥哥？这是什么称呼，等一下，魔女？他怎么知道我是魔女一族的，我不自觉用了魔法被他看见了？&lt;/p&gt;
-
-&lt;p&gt;“等，等一下！谁告诉你我是魔女了，别乱说。”我赶紧澄清，虽然是事实，可这是能轻易承认的事情吗？这名魔人，虽然看起来是挺可爱的小弟弟，可说话还真直中要害。&lt;/p&gt;
-
-&lt;p&gt;“我听说，魔女都能感知到魔力，所以能轻易分辩出魔女和魔人这两个种族的身份。而我作为魔人，肯定已经被你发现了，所以我才自报家门啊！嘿嘿。魔女哥哥，我也可以看到你的魔力，这就是我的魔人之力——魔力感知。”里昂露出牙齿笑着看着我和尼古拉斯，说道。&lt;/p&gt;
-
-&lt;p&gt;的确，这样就说得通了，而且他知道的也很多，看来没办法隐瞒我的身份了。&lt;/p&gt;
-
-&lt;p&gt;“好吧，你知道的真多。”我抿嘴道，“你在救我之前就发现了？”&lt;/p&gt;
-
-&lt;p&gt;“嘿嘿，是啊。”&lt;/p&gt;
-
-&lt;p&gt;“那你还救我？”&lt;/p&gt;
-
-&lt;p&gt;“为什么不救呢？不过多半是我多管闲事，你的魔力这么强大，怎么需要我的帮忙呢？更何况还有厉害的精灵先生在。”&lt;/p&gt;
-
-&lt;p&gt;他指的是尼古拉斯。而他说的都没错，除了我的一身魔力，现在出了问题，使用不能。这一点还是不告诉他了，回去再想清楚到底是什么问题。&lt;/p&gt;
-
-&lt;p&gt;“嗯，不过还是谢谢你。你怎么会来这里？我以前没见有人进来过，你还是头一个。”我转移话题，打听起他来这里的原因。&lt;/p&gt;
-
-&lt;p&gt;“嘿嘿，我是在进行一次冒险！村长说黑森林自古生活着很多神奇的生物，但很危险，没一个人敢来，学校里的同学也都不敢一起来。其实也没什么嘛！环境挺好的，下次我把他们也带上。”里昂得意说道。&lt;/p&gt;
-
-&lt;p&gt;“尼古拉斯？”我转头看向我的契约精灵尼古拉斯，守护黑森林是他的职责。&lt;/p&gt;
-
-&lt;p&gt;“少爷，迷幻法阵还在正常工作中。”尼古拉斯平静地回复道。&lt;/p&gt;
-
-&lt;p&gt;正常工作中？这叫正常啊？这哪里正常了！一个大活人跑进来了！&lt;/p&gt;
-
-&lt;p&gt;“迷幻法阵？原来有这个东西。不管啦，你也没事了，而我的冒险也差不多，就先回去咯。下次再见的时候，告诉我你的名字，不知道名字很难称呼的。”他向我眨了眨眼睛，挥手告别。&lt;/p&gt;
-
-&lt;p&gt;“小火呢？”里昂的身影没入树林后，我想起刚才那头巨型变色龙，里昂走的这个方向好像是它所在的位置？&lt;/p&gt;
-
-&lt;p&gt;“哇，好大的变色龙！靠！还会喷火，别，别烧我，哇靠，都说别烧我了……”&lt;/p&gt;
-
-&lt;p&gt;声音逐渐遥远，哈，小火一般不会真的伤害普通动物，除非它饿了。&lt;/p&gt;
-
-&lt;p&gt;“我们回去吧！对了，尼古拉斯，我的魔力好像出了问题。”&lt;/p&gt;
-
-&lt;p&gt;“的确，少爷，你的魔力紊乱失控，再不处理随时会爆炸。”尼古拉斯平静的语气说，他跟在我身后慢慢走着。&lt;/p&gt;
-
-&lt;p&gt;“这么危险！要怎么处理？”&lt;/p&gt;
-
-&lt;p&gt;“只能用封印术，通过封印魔法消除暴动的魔力来源，魔力自然会逐渐平复下来。”&lt;/p&gt;
-
-&lt;p&gt;“封印了岂不是不能用魔法了？”&lt;/p&gt;
-
-&lt;p&gt;“是的，魔力之所以暴动失控，似乎是一种专门针对魔法生物的毒药的作用，毒药的效果只是暂时的，消退之后，就可以解除封印。”&lt;/p&gt;
-
-&lt;p&gt;“怎么突然在黑森林里面出现？这种人为的陷阱加上针对魔法生物的毒药，是教会发现我们了？”我最担心就是教会对黑森林出手，到时不但会对付我和尼古拉斯，连变色龙小火，甚至不是魔法生物的其他动物都受到牵连。&lt;/p&gt;
-
-&lt;p&gt;“少爷，看来不能继续在黑森林修炼魔法了。不说教会这次失手后会采取什么行动，这种针对魔法生物的毒药，我必须找出来毁掉！”尼古拉斯作为一名魔法生物，对这种毒药深恶痛绝。&lt;/p&gt;
-
-&lt;p&gt;“尼古拉斯，我突然腿软。”由于体内的魔力暴动，我感到魔力在迅速流失。&lt;/p&gt;
-
-&lt;p&gt;“少爷，魔力再继续流失，你马上就会昏迷不醒然后再也不会醒来的。”尼古拉斯语气平静地说。&lt;/p&gt;
-
-&lt;p&gt;“尼古拉斯！不要把死掉说得这么轻描淡写！封印殆尽！”我马上使用了封印，将自身的魔法暂时封印起来，这是一个强力魔法，能够将一切魔力波动封锁。&lt;/p&gt;
-
-&lt;p&gt;“少爷，你做什么？”尼古拉斯对突然藏在他背后的我问道。&lt;/p&gt;
-
-&lt;p&gt;“我不能用魔法了。”我义正言辞地说。&lt;/p&gt;
-
-&lt;p&gt;“我知道这个，那你为什么抓着我的衣服？”尼古拉斯转过头，低头看着我。&lt;/p&gt;
-
-&lt;p&gt;“躲避危险啊！你看这世上危险这么多，有毒蛇、狮子，还有会喷火把人烧成黑炭的巨型变色龙，地上还有地洞陷阱。。。”&lt;/p&gt;
-
-&lt;p&gt;尼古拉斯阻止我继续数下去，他把我移到身旁，说，“少爷，你可是世上最强大的生物之一，将来要成为魔导王，你现在这个样子，万一被记入史册怎么办？”&lt;/p&gt;
-
-&lt;p&gt;“可用不了魔法的魔导王，也不强大吧？”我嘀咕道。&lt;/p&gt;
-
-&lt;p&gt;“不，正好趁这个机会，让少爷锻炼一下身体能力。每一个魔导王，同时也是一个武道高手。接下来，我会开始教你使用各种武器！”尼古拉斯露出了微笑。&lt;/p&gt;
-
-&lt;p&gt;虽然这么说，可失去魔法让我感到恐惧，我强忍着躲到尼古拉斯身后的冲动，点了点头。&lt;/p&gt;
-
-&lt;p&gt;“少爷，魔力被封印期间，暂时会无法使用魔法，难道你打算躲起来等待解除封印吗？”尼古拉斯问了个有趣的问题，难道趁着自己最弱的时候，跑去陌生的世界，陌生即是危险，我似乎应该留在安全的地方等待魔力的恢复吧？&lt;/p&gt;
-
-&lt;p&gt;等等，“安全的地方？”我想起这个黑森林已经被教会盯上了，作为这世界的统治者——教会的敌人，我的存在一旦被确定，这世上就再无安全的地方。&lt;/p&gt;
-
-&lt;p&gt;必须趁教会行动之前，先发制人。&lt;/p&gt;
-
-&lt;p&gt;尽管恐惧没有消失，但理智告诉我明天就应该去最近的人类村庄打探情况。&lt;/p&gt;
-
-&lt;p&gt;目标有两个。&lt;/p&gt;
-
-&lt;p&gt;其一，最后一个魔女生还者的存在是否已被教会得知。&lt;/p&gt;
-
-&lt;p&gt;其二，找到并销毁全部魔力毒药。&lt;/p&gt;</content><author><name>JY罗杰</name></author><category term="f1" /><summary type="html">十八世纪的伦敦，仍处于教会的绝对统治下，无人违逆。教会通过圣术的神迹，控制人心，消灭异己，没有其他力量可以抵挡。</summary></entry><entry><title type="html">第九章 里昂参上 X 尼古拉斯的过去</title><link href="/tlow/tlow-f1-009.html" rel="alternate" type="text/html" title="第九章 里昂参上 X 尼古拉斯的过去" /><published>2020-03-13T00:00:00+08:00</published><updated>2020-03-13T00:00:00+08:00</updated><id>/tlow/tlow-f1-009</id><content type="html" xml:base="/tlow/tlow-f1-009.html">&lt;p&gt;从教堂逃出来，我一路向西，跑了快半个小时，估摸着应该摆脱那个神父了，才敢停下来，喘口气。&lt;/p&gt;
+&lt;p&gt;“这把父亲留下来的武器，魔女，或者那个精灵应该能用。”里昂得意一笑，朝着记忆中的方位跑去。&lt;/p&gt;</content><author><name>JY罗杰</name></author><category term="f1" /><summary type="html">里昂这天一醒来，就听到了老妈和一堆男人在吵架。</summary></entry><entry><title type="html">第九章 里昂参上 X 尼古拉斯的过去</title><link href="/tlow/tlow-f1-009.html" rel="alternate" type="text/html" title="第九章 里昂参上 X 尼古拉斯的过去" /><published>2020-03-13T00:00:00+08:00</published><updated>2020-03-13T00:00:00+08:00</updated><id>/tlow/tlow-f1-009</id><content type="html" xml:base="/tlow/tlow-f1-009.html">&lt;p&gt;从教堂逃出来，我一路向西，跑了快半个小时，估摸着应该摆脱那个神父了，才敢停下来，喘口气。&lt;/p&gt;
 
 &lt;p&gt;“第一次偷袭就失败了。”我不禁苦笑，“尼古拉斯的隐身法术明明这么完美，竟然还是被敌人发现了，教会的人不容小觑。不过，本来是想着阻止神父通知教会，防止圣骑士出现的，既然对方早已经通知过，而且圣骑士马上就要到了，我还是马上跟尼古拉斯商量一下，尽早离开这一带！”&lt;/p&gt;
 
@@ -1295,4 +2033,86 @@
 
 &lt;p&gt;洞口很小，不用担心被人发现。精神放松下来，我才感到身体传来极度的疲惫，于是睡了过去。&lt;/p&gt;
 
-&lt;p&gt;当我醒来的时候，竟然发现尼古拉斯消失了！&lt;/p&gt;</content><author><name>JY罗杰</name></author><category term="f1" /><summary type="html">里昂完全不知道我们在说什么，靠着树闭着眼，看来是在休息。</summary></entry></feed>
+&lt;p&gt;当我醒来的时候，竟然发现尼古拉斯消失了！&lt;/p&gt;</content><author><name>JY罗杰</name></author><category term="f1" /><summary type="html">里昂完全不知道我们在说什么，靠着树闭着眼，看来是在休息。</summary></entry><entry><title type="html">第十一章 里昂的恐惧 X 尼古拉斯的无畏</title><link href="/tlow/tlow-f1-011.html" rel="alternate" type="text/html" title="第十一章 里昂的恐惧 X 尼古拉斯的无畏" /><published>2020-03-13T00:00:00+08:00</published><updated>2020-03-13T00:00:00+08:00</updated><id>/tlow/tlow-f1-011</id><content type="html" xml:base="/tlow/tlow-f1-011.html">&lt;p&gt;作为教会最高战力的圣骑士团，地位超越是必然的吧？&lt;/p&gt;
+
+&lt;p&gt;但这仅限于高位的黄金圣骑士，他们呼风唤雨，相当于教会内地位崇高的红衣大主教。&lt;/p&gt;
+
+&lt;p&gt;这之下的是白银圣骑士，他们各自拥有自己的名号，相当于白衣主教。&lt;/p&gt;
+
+&lt;p&gt;再下一级的是黑铁圣骑士，相当于教会的黑衣神父。&lt;/p&gt;
+
+&lt;p&gt;黑铁圣骑士没有名号，穿着一身黑铁铠甲，彷如行走在黑夜中的影子。&lt;/p&gt;
+
+&lt;p&gt;至于连黑铁都没达到的圣骑士团成员，连数量有多少都没人清楚，听说他们拿着不足以饱饭的俸禄，做着微小繁琐的任务，分布在你我身边。他们除了圣骑士团成员的身份，还有铁匠、理发师、水手，甚至学生这种普通人的表面身份。&lt;/p&gt;
+
+&lt;p&gt;————《鳄鱼大王有个冒险》&lt;/p&gt;
+
+&lt;p&gt;“是圣骑士！”里昂喊道。&lt;/p&gt;
+
+&lt;p&gt;“我是圣骑士尼翁。你们两个，还不出来！”自称尼翁的铠甲人喊道，举起手中近一米八的盾牌朝布尔和尼古拉斯冲来。身高近两米的他身穿一身银色铠甲，将全身上下包围得滴水不漏，银光闪闪的铠甲上，在胸口位置印着一个红色的纹章——三角里燃烧着一团火。他的样子被全封闭的头盔遮挡起来，看不见是什么模样，听声音，是个中年男子。这个头盔颇为特别，口部位置密密麻麻地开着缝隙，那样细小的缝隙估计连手指都伸不进去。但最为注目的地方，是头盔顶部的紫色冠羽，那似乎是一种特别鸟类的尾羽，色彩艳丽，在阳光下熠熠生辉。&lt;/p&gt;
+
+&lt;p&gt;在他身后，冲出另一个身穿黑铁铠甲的男人，身高一米八左右，褐色短发，国字脸，并没有戴头盔，看起来二十多岁的样子，他手中拿着黑铁所制作的双手大剑。&lt;/p&gt;
+
+&lt;p&gt;而在里昂和布尔之间的树林中又冲出另一个同样身穿黑铁铠甲的男人，灰色头发，也是国字脸，年龄在三十多的样子，他拿着一把单手剑和一个单手盾牌。&lt;/p&gt;
+
+&lt;p&gt;三名圣骑士迅速朝里昂等人靠近。&lt;/p&gt;
+
+&lt;p&gt;“来者不善，只能迎战了，尼古拉斯！”布尔拿出银翼魔枪，朝最近的那个剑盾铠甲人头部射了一枪，同时跟尼古拉斯说。&lt;/p&gt;
+
+&lt;p&gt;“抱歉！”里昂喊了一声，转身跑到树林的掩护之中。&lt;/p&gt;
+
+&lt;p&gt;圣骑士是无敌的存在，是教会中最强的战斗力。里昂自小在教会学校中学习，这个观念也被不断强化，他从来没有想过会跟圣骑士对抗，所以一看见圣骑士出现，除了马上逃跑之外没有出现其他想法。&lt;/p&gt;
+
+&lt;p&gt;因为圣骑士的目标只是魔女和精灵，并不是他这个普通市民，里昂逃走之后，的确没有任何一个圣骑士向他追来。他跑了一段距离，靠着树干坐到地上，除了感受自己剧烈的心跳之外，什么都做不了。&lt;/p&gt;
+
+&lt;p&gt;里昂闭上眼睛，通过“魔力感知”看向战斗发生的地方，正好看见蓝色的圣骑士挥剑砍向银色的精灵尼古拉斯，后者被砍中后化成一片光消失，然后金色的魔女跑了起来，一会儿就脱离了自己的观察范围。&lt;/p&gt;
+
+&lt;p&gt;“那个精灵怎么了？”里昂担心起来，“怎么突然不见了。不会是，死了吧？”&lt;/p&gt;
+
+&lt;p&gt;里昂站起来，朝金色人影离开的方向慢慢小跑过去，他不敢跑太快，以免发出声音让附近的圣骑士听见。尽管对于圣骑士的恐惧丝毫没有降低，但对尼古拉斯的担忧让里昂的身体行动起来，他在第一次见到那个精灵的时候，就觉得有种十分熟悉的亲切感，要不是对方是精灵一族，这个样子长得跟自己有几分相似的尼古拉斯·道恩，里昂会相信他跟自己有血缘关系。&lt;/p&gt;
+
+&lt;p&gt;“老妈当着尼古拉斯的面说，‘李·布里奇是守护者联盟的叛徒，他叛变到魔女那边，所以被我从这个世界抹除了。’所以，尼古拉斯肯定不是我的老爸了。虽然知道跟尼古拉斯没有血缘关系，可我心里就是没办法不在意他的生死！”里昂从不是一个老好人，乐于助人这种事情就没出现过在他身上。&lt;/p&gt;
+
+&lt;p&gt;把布尔·罗斯切尔从地洞陷阱里救出来，是因为陷阱本就是他挖来抓狮子的。刚才拿伤药给他，是因为全靠了布尔的帮助才能偷到心脏药，里昂打算做个快意恩仇的魔人，所有有恩必报。&lt;/p&gt;
+
+&lt;p&gt;而现在赶去布尔·罗斯切尔和尼古拉斯·道恩那里，则完全只是因为他想这么做，没有恩仇，全凭一己爱好。&lt;/p&gt;
+
+&lt;p&gt;这几年替教会工作，本以为自己已经不会在意别人生死的里昂，竟然会对一个只见过三次的精灵在意起来，他不禁“嘿嘿”一笑，本来缓慢的小跑不自觉就变成了狂奔。&lt;/p&gt;
+
+&lt;p&gt;里昂在奔跑中必须偶尔停下来，闭上眼睛查看周围的魔力波动，他虽然有时做事冲动，像现在这样不顾被圣骑士发现的后果靠近这个危险的漩涡。可他也不是个没有头脑的家伙，时刻留意周围的动静，他的魔人之力“魔力感知”，不但可以防止敌人的偷袭，还能轻易搜索友方的所在。&lt;/p&gt;
+
+&lt;p&gt;“找到了！嘿嘿，圣骑士三人完全跑到错误的方向去了，看来魔女暂时不用担心被他们发现。嗯，魔女现在一动不动，那个波动，是睡着了。而他怀里的那个银色小人影，现在看清楚了，是那个精灵！太好了，他也没事！”里昂闭着眼露出微笑，呼出一口气。&lt;/p&gt;
+
+&lt;p&gt;“哎呀！糟糕了！我才想起来，刚才我也被圣骑士看见长相了。”里昂刚把心头一块大石放下，才发现大石上面还有一块岩石。“我虽然马上就逃走了，可是一旦在村里被他们看见，绝对会被当成魔女的同党被抓起来的。唉，不但约翰神父那边，现在连无敌的圣骑士们都要找我麻烦……真是陷入大危机里头了。”&lt;/p&gt;
+
+&lt;p&gt;“所以，里昂少爷，你要不要跟我联手，把圣骑士解决掉？”一个熟悉的声音忽然在身后响起，里昂马上转身看去，却是一个黑发黑衣的高大男子，正是尼古拉斯·道恩。在里昂胡思乱想的期间，尼古拉斯从那个树洞里来到了他身后，并恢复了人族的身体外形。&lt;/p&gt;
+
+&lt;p&gt;“你没事吧？”里昂开口第一句就说出了自己最关心的问题，竟然连“把圣骑士解决掉”这种不可思议的事情都没有吐槽。&lt;/p&gt;
+
+&lt;p&gt;尼古拉斯微微一笑，“我没事。我知道你会再来的，我有这种感觉。刚才圣骑士的确差点砍中我了，但那只是我装出来给他们看的假象，他们太强了，只靠我自己和不能使用魔法的布尔，打不过他们。所以我才假装受伤，趁机释放烟雾弹，让布尔暂时躲起来。他现在不适合参与到与圣骑士的战斗。”&lt;/p&gt;
+
+&lt;p&gt;“啊？”里昂惊讶，“不能使用魔法的布尔？他怎么了？”&lt;/p&gt;
+
+&lt;p&gt;“只是小问题，再过两天就会恢复的，但是圣骑士不会给我们这个时间。”尼古拉斯说道，“教会的神父可以使用追踪法术，刚才我的头发被那个用剑的家伙切了一小撮，毫无疑问很快就会被他们发现我们的位置，在这之前，我必须先发制人。”&lt;/p&gt;
+
+&lt;p&gt;“你好厉害！对战的时候还能留意到敌人的小动作！”里昂对这个年长的精灵越发尊敬，“如果布尔现在无法使用魔法，那的确还是不要参与战斗，再说了，那些圣骑士也不是人可以打败的对手啊！我们不如赶紧逃吧！”&lt;/p&gt;
+
+&lt;p&gt;“你也要一起？”尼古拉斯露出了惊讶，他可没想过跟里昂一起离开布莱克村。&lt;/p&gt;
+
+&lt;p&gt;“嘿嘿，发生了很多事情，我暂时不方便留在布莱克村。”里昂尴尬笑道。&lt;/p&gt;
+
+&lt;p&gt;尼古拉斯明白了这个小家伙肯定惹了很大麻烦，正打算外出躲避。“不过，我不能逃。既然对方可以追踪我的位置，那我再带着布尔前行的话就等于把布尔送入危险中。只能趁敌人追来之前，把他们打败了。”&lt;/p&gt;
+
+&lt;p&gt;“什么？你打算跟圣骑士打？认真的吗？”里昂自己除了“逃”这个选项外，都没想过“战”这个可能。&lt;/p&gt;
+
+&lt;p&gt;“圣骑士也不是什么无敌的化身，他们也分不同等级的。刚才出现的是一个白银级和两个青铜级的圣骑士，那个叫‘尼翁’的白银级圣骑士的确不好对付，但另外两个，并不用太在意。”尼古拉斯似乎对圣骑士的等级体系有所了解。&lt;/p&gt;
+
+&lt;p&gt;“哦哦？青铜级听起来似乎是最弱的？”里昂对无敌圣骑士的恐惧降低了些，从尼古拉斯这个无畏的长辈身上得到了些许勇气。&lt;/p&gt;
+
+&lt;p&gt;“虽然是圣骑士里面最弱的，但都是以一当十的好手，你还是不要随便出手。”尼古拉斯对里昂说。“刚才说跟你联手，但你不需要跟他们正面对抗。到时候，你这样做。”&lt;/p&gt;
+
+&lt;p&gt;尼古拉斯跳过询问里昂是否同意参与这场战斗，直接开始安排各自的任务。&lt;/p&gt;
+
+&lt;p&gt;里昂在尼古拉斯面前，就像个听从教导的好学生，只会一直点头，在他回想起对圣骑士的恐惧之前，就已经就位，等待尼古拉斯发出指示了。&lt;/p&gt;
+
+&lt;p&gt;“这场战斗，可以加一个人吗？”一个女人的声音传来。&lt;/p&gt;</content><author><name>JY罗杰</name></author><category term="f1" /><summary type="html">作为教会最高战力的圣骑士团，地位超越是必然的吧？</summary></entry></feed>

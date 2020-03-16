@@ -8,4 +8,8 @@
 
 p { text-indent: 2em; }
 
+img { max-width: 70%; height: auto; }
+
+.page_content { margin: auto; border: 1px solid; }
+
 /*# sourceMappingURL=post.css.map */

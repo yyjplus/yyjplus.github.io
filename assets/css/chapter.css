@@ -10,7 +10,7 @@ p { text-indent: 2em; }
 
 img { max-width: 70%; height: auto; }
 
-.chapter_content { margin: auto; border: 1px solid; }
+.page_content { margin: auto; border: 1px solid; }
 
 .PageNavigation { font-size: 14px; display: block; width: auto; overflow: hidden; }
 

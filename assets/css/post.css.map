@@ -6,9 +6,9 @@
 		"_sass/main.scss"
 	],
 	"sourcesContent": [
-		"@import \"main\";\np{\n\ntext-indent:2em;\n\n}\n",
-		".current {\r\n  color: orange;\r\n}\r\n.outsideLinks {\r\n  float: right;\r\n}\r\n.chapterList{\r\n  width: 100%;\r\n  margin: auto;\r\n  // white-space:nowrap;overflow:hidden;text-overflow: ellipsis;\r\n  // word-break: keep-all;\r\n  table-layout: fixed;\r\n  td {white-space:nowrap;overflow:hidden;text-overflow: ellipsis; }\r\n}\r\n"
+		"@import \"main\";\n",
+		".current {\n  color: orange;\n}\n.outsideLinks {\n  float: right;\n}\n.chapterList{\n  width: 100%;\n  margin: auto;\n  // white-space:nowrap;overflow:hidden;text-overflow: ellipsis;\n  // word-break: keep-all;\n  table-layout: fixed;\n  td {white-space:nowrap;overflow:hidden;text-overflow: ellipsis; }\n}\np{\n text-indent:2em;\n\n}\n\nimg {\n    max-width: 70%;\n    height: auto;\n}\n\n.page_content{\n // width: 80%;\n margin: auto;\n border: 1px solid ;\n}\n"
 	],
 	"names": [],
-	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,MAAM,GACd;;AACD,AAAA,aAAa,CAAC,EACZ,KAAK,EAAE,KAAK,GACb;;AACD,AAAA,YAAY,CAAA,EACV,KAAK,EAAE,IAAI,EACX,MAAM,EAAE,IAAI,EAGZ,YAAY,EAAE,KAAK,GAEpB;;AAPD,AAME,YANU,CAMV,EAAE,CAAC,EAAC,WAAW,EAAC,MAAM,EAAC,QAAQ,EAAC,MAAM,EAAC,aAAa,EAAE,QAAQ,GAAI;;ADXpE,AAAA,CAAC,CAAA,EAED,WAAW,EAAC,GAAG,GAEd"
+	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,MAAM,GACd;;AACD,AAAA,aAAa,CAAC,EACZ,KAAK,EAAE,KAAK,GACb;;AACD,AAAA,YAAY,CAAA,EACV,KAAK,EAAE,IAAI,EACX,MAAM,EAAE,IAAI,EAGZ,YAAY,EAAE,KAAK,GAEpB;;AAPD,AAME,YANU,CAMV,EAAE,CAAC,EAAC,WAAW,EAAC,MAAM,EAAC,QAAQ,EAAC,MAAM,EAAC,aAAa,EAAE,QAAQ,GAAI;;AAEpE,AAAA,CAAC,CAAA,EACA,WAAW,EAAC,GAAG,GAEf;;AAED,AAAA,GAAG,CAAC,EACA,SAAS,EAAE,GAAG,EACd,MAAM,EAAE,IAAI,GACf;;AAED,AAAA,aAAa,CAAA,EAEZ,MAAM,EAAE,IAAI,EACZ,MAAM,EAAE,SAAU,GAClB"
 }
