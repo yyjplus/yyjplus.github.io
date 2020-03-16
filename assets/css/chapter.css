@@ -6,11 +6,11 @@
 
 .chapterList td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
+.page_content { margin: auto; background-color: #CCE8CF; padding: 1em; }
+
 p { text-indent: 2em; }
 
 img { max-width: 70%; height: auto; }
-
-.page_content { margin: auto; border: 1px solid; }
 
 .PageNavigation { font-size: 14px; display: block; width: auto; overflow: hidden; }
 

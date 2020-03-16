@@ -1,280 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-03-16T20:42:42+08:00</updated><id>/feed.xml</id><entry><title type="html">学习笔记： Python2.7-The official tutorial</title><link href="/studymemo/study-pythonTurorial.html" rel="alternate" type="text/html" title="学习笔记： Python2.7-The official tutorial" /><published>2020-03-15T00:00:00+08:00</published><updated>2020-03-15T00:00:00+08:00</updated><id>/studymemo/study-pythonTurorial</id><content type="html" xml:base="/studymemo/study-pythonTurorial.html">&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/tutorial/&quot;&gt;点这里打开官方教程原文&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-03-16T23:24:28+08:00</updated><id>/feed.xml</id><entry><title type="html">学习笔记： Python2.7-The official tutorial</title><link href="/studymemo/study-pythonTurorial.html" rel="alternate" type="text/html" title="学习笔记： Python2.7-The official tutorial" /><published>2020-03-15T00:00:00+08:00</published><updated>2020-03-15T00:00:00+08:00</updated><id>/studymemo/study-pythonTurorial</id><content type="html" xml:base="/studymemo/study-pythonTurorial.html">&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/tutorial/&quot;&gt;点这里打开官方教程原文&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;1whetting-your-appetite&quot;&gt;1. Whetting Your Appetite&lt;/h2&gt;
 
-&lt;p&gt;Python is an interpreted language，无需编译链接。&lt;/p&gt;
-
-&lt;p&gt;数据处理、GUI、游戏设计都能使用。它处理数据IO快捷，还能调用其他语言。而且有丰富的数据结构。&lt;/p&gt;
+&lt;p&gt;Python is an interpreted language，无需编译链接。
+数据处理、GUI、游戏设计都能使用。它处理数据IO快捷，还能调用其他语言。而且有丰富的数据结构。&lt;/p&gt;
 
 &lt;p&gt;Python的程序紧凑而且可读，比起c/c++/java，实现起来更短小，因为：&lt;/p&gt;
-
 &lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;高级数据类型，让复杂操作只需一个命令&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;用缩进而不是括号来划分作用域&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;无需预定义变量&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;高级数据类型，让复杂操作只需一个命令&lt;/li&gt;
+  &lt;li&gt;用缩进而不是括号来划分作用域&lt;/li&gt;
+  &lt;li&gt;无需预定义变量&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;（PS：Python是用C来implement的）&lt;/p&gt;
 
 &lt;h2 id=&quot;2using-the-python-interpreter&quot;&gt;2. Using the Python Interpreter&lt;/h2&gt;
-
 &lt;h3 id=&quot;21invoking-the-interpreter&quot;&gt;2.1. Invoking the Interpreter&lt;/h3&gt;
+&lt;p&gt;在命令窗口输入python即可进入编译器，Control-D on Unix, Control-Z on Windows来退出（或者用quit() )
+执行命令：python -c command [arg] … ，最好用‘’来包着command，防止其中的空格被错用。
+调用module as script：python -m module [arg] …
+其他command line options:  &lt;a href=&quot;https://docs.python.org/2.7/using/cmdline.html#using-on-general&quot;&gt;https://docs.python.org/2.7/using/cmdline.html#using-on-general&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;在命令窗口输入python即可进入编译器，Control-D on Unix, Control-Z on Windows来退出（或者用quit() )&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;argument passing&lt;/strong&gt;
+the script name and additional arguments 都会变成string输入到sys.argv,其中sys.argv[0]是script名，例如“-c”,”printSomething”(module名）。&lt;/p&gt;
 
-&lt;p&gt;执行命令：python -c command [arg] … ，最好用‘’来包着command，防止其中的空格被错用。&lt;/p&gt;
-
-&lt;p&gt;调用module as script：python -m module [arg] …&lt;/p&gt;
-
-&lt;p&gt;其他command line options:  &lt;a href=&quot;https://docs.python.org/2.7/using/cmdline.html#using-on-general&quot;&gt;https://docs.python.org/2.7/using/cmdline.html#using-on-general&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;argument passing&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;the script name and additional arguments 都会变成string输入到sys.argv,其中sys.argv[0]是script名，例如“-c”,”printSomething”(module名）。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;interactive mode&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;primary prompt ：»&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;secondary prompt：. . . （代表continuation lines，用于multi-line command）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;interactive mode&lt;/strong&gt;
+primary prompt ：»&amp;gt;
+secondary prompt：. . . （代表continuation lines，用于multi-line command）&lt;/p&gt;
 
 &lt;h3 id=&quot;22the-interpreter-and-its-environment&quot;&gt;2.2. The Interpreter and Its Environment&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;source code encoding&lt;/strong&gt;
+默认ASCII格式，要更改则使用以下的命令，并放在文件的第一行：
+&lt;code class=&quot;highlighter-rouge&quot;&gt;-*- coding: encoding -*- &lt;/code&gt;
+支持的encoding：
+ &lt;a href=&quot;https://docs.python.org/2.7/library/codecs.html#standard-encodings&quot;&gt;https://docs.python.org/2.7/library/codecs.html#standard-encodings&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;source code encoding&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;默认ASCII格式，要更改则使用以下的命令，并放在文件的第一行：&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-*- coding: encoding -*- &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;支持的encoding：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/codecs.html#standard-encodings&quot;&gt;https://docs.python.org/2.7/library/codecs.html#standard-encodings&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;如果有Unix Shebang line，则放在第二行：&lt;/p&gt;
-
-&lt;p&gt;#!/usr/bin/env python&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-*- coding: cp1252 -*- &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如果有Unix Shebang line，则放在第二行：
+#!/usr/bin/env python
+&lt;code class=&quot;highlighter-rouge&quot;&gt;-*- coding: cp1252 -*- &lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;3an-informal-introduction-to-python&quot;&gt;3. An Informal Introduction to Python&lt;/h2&gt;
+&lt;p&gt;使用#来做注释，+-*/来计算。
+数字输入后，5的类型是int，5.0这种则是float。
+// 取整除法，floor，例如 17 // 3.0 return 5.0
+% 取余， 17 % 3 return 2
+** 指数， 5 ** 2 return 25
+= 赋值
+_ 最近的操作结果存在这里，例如 _ return 25, 不要对 _ 赋值，否则会创建一个本地变量并把这个功能覆盖掉。&lt;/p&gt;
 
-&lt;p&gt;使用#来做注释，+-*/来计算。&lt;/p&gt;
-
-&lt;p&gt;数字输入后，5的类型是int，5.0这种则是float。&lt;/p&gt;
-
-&lt;p&gt;// 取整除法，floor，例如 17 // 3.0 return 5.0&lt;/p&gt;
-
-&lt;p&gt;% 取余， 17 % 3 return 2&lt;/p&gt;
-
-&lt;p&gt;** 指数， 5 ** 2 return 25&lt;/p&gt;
-
-&lt;p&gt;= 赋值&lt;/p&gt;
-
-&lt;p&gt;_ 最近的操作结果存在这里，例如 _ return 25, 不要对 _ 赋值，否则会创建一个本地变量并把这个功能覆盖掉。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;string&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;‘……’ or ”……“ , 用 \ 可以将其例外。&lt;/p&gt;
-
-&lt;p&gt;如果不想例外，在前面标记r，代表是raw string：&lt;/p&gt;
-
-&lt;p&gt;print r’C:\some\name’&lt;/p&gt;
-
-&lt;p&gt;”&quot;”…””“ or ’'’…’'’可以跨行输入string&lt;/p&gt;
-
-&lt;p&gt;用+可以合并string，用*可以重复：&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; 3 * 'un' + 'ium'&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;‘unununium’&lt;/p&gt;
-
-&lt;p&gt;或者直接放在一起也可以合并（但不适用于变量），借此可以将长句分行：&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; 'Py' 'thon'&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;‘Python’&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;string&lt;/strong&gt;
+‘……’ or ”……“ , 用 \ 可以将其例外。
+如果不想例外，在前面标记r，代表是raw string：
+print r’C:\some\name’
+“&quot;”…””“ or ’'’…’'’可以跨行输入string
+用+可以合并string，用*可以重复：
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; 3 * 'un' + 'ium'&lt;/code&gt;
+‘unununium’
+或者直接放在一起也可以合并（但不适用于变量），借此可以将长句分行：
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; 'Py' 'thon'&lt;/code&gt;
+‘Python’&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;string可以index（但不可以修改）：&lt;/strong&gt;&lt;/p&gt;
-
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-
-
 &amp;gt;&amp;gt;&amp;gt; word = 'Python'
-
 &amp;gt;&amp;gt;&amp;gt; word[0] # character in position 0
-
 'P'
-
 &amp;gt;&amp;gt;&amp;gt; word[5] # character in position 5
-
 'n'
-
-
 
 &amp;gt;&amp;gt;&amp;gt; word[-1] # last character
-
 'n'
-
 &amp;gt;&amp;gt;&amp;gt; word[-2] # second-last character
-
 'o'
-
 &amp;gt;&amp;gt;&amp;gt; word[-6]
-
 'P'
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;可以slicing&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; word[:2] + word[2:]
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; word[:2] + word[2:]
 'Python'
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;特殊字符就需要Unicode：&lt;/p&gt;
+&lt;p&gt;特殊字符就需要Unicode：
+&lt;code class=&quot;highlighter-rouge&quot;&gt;u' Hello\u0020World !' &lt;/code&gt;
+转换encoding
+&lt;code class=&quot;highlighter-rouge&quot;&gt;u&quot;äöü&quot;.encode('utf-8') &lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;u' Hello\u0020World !' &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;转换encoding&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;u&quot;äöü&quot;.encode('utf-8') &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;List&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;squares = [1, 4, 9, 16, 25]&lt;/p&gt;
-
-&lt;p&gt;基本跟string一样能用index和slicing，但list可以修改其中的值。&lt;/p&gt;
-
-&lt;p&gt;在末尾增加成员：suqares.append(36)&lt;/p&gt;
-
-&lt;p&gt;List里面也可以有list，变成多维。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;List&lt;/strong&gt;
+squares = [1, 4, 9, 16, 25]
+基本跟string一样能用index和slicing，但list可以修改其中的值。
+在末尾增加成员：suqares.append(36)
+List里面也可以有list，变成多维。&lt;/p&gt;
 
 &lt;h2 id=&quot;4more-control-flow-tools&quot;&gt;4. More Control Flow Tools&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;If elif else&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;eg:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-if x &amp;lt; 0:
-
+&lt;p&gt;&lt;strong&gt;If elif else&lt;/strong&gt;
+eg:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if x &amp;lt; 0:
     x = 0
-
 elif x ==0:
-
     x = 1
-
 else:
-
     x = 2
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;for&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;eg:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-for n in squares:
-
+&lt;p&gt;&lt;strong&gt;for&lt;/strong&gt;
+eg:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for n in squares:
     print n
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;如果要更改循环体，可以用slice来创建一个临时副本：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-for n in squares[:]:
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for n in squares[:]:
     if n &amp;gt; 5:
-
           squares.insert(0,n)
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;用&lt;strong&gt;range()&lt;/strong&gt;来生成循环index：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-for I in range(10):
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for I in range(10):
     print I #生成0到9的数
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;range(0, 10, 3):
+[0, 3, 6, 9]&lt;/p&gt;
 
-&lt;p&gt;range(0, 10, 3):&lt;/p&gt;
+&lt;p&gt;用&lt;strong&gt;break&lt;/strong&gt;和&lt;strong&gt;continue&lt;/strong&gt;来控制循环的跳转
+用&lt;strong&gt;else&lt;/strong&gt;来控制for正常结束时的动作&lt;/p&gt;
 
-&lt;p&gt;[0, 3, 6, 9]&lt;/p&gt;
-
-&lt;p&gt;用&lt;strong&gt;break&lt;/strong&gt;和&lt;strong&gt;continue&lt;/strong&gt;来控制循环的跳转&lt;/p&gt;
-
-&lt;p&gt;用&lt;strong&gt;else&lt;/strong&gt;来控制for正常结束时的动作&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;pass&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;不做任何事，用于占用一行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;pass&lt;/strong&gt;
+不做任何事，用于占用一行。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;function&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-def myFunc(n):
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def myFunc(n):
     print n
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;&lt;strong&gt;给函数参数默认值&lt;/strong&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-def myFunc(n=1, I=2, j=3):
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def myFunc(n=1, I=2, j=3):
     print n,i,j
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;从而可以在输入时省略某些参数&lt;/p&gt;
-
-&lt;p&gt;参数的初始化只有一次，初始化后更改的值会被保存，例如：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-def f(a, L=[]):
-
+&lt;p&gt;从而可以在输入时省略某些参数
+参数的初始化只有一次，初始化后更改的值会被保存，例如：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def f(a, L=[]):
 L.append(a)
-
 return L
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;L的值每次调用后都会增加。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;利用keyword&lt;/strong&gt;，例如 myFunc( I=7)&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;指针&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;指针&lt;/strong&gt;：
+&lt;code class=&quot;highlighter-rouge&quot;&gt;def cheeseshop(kind, *arguments, **keywords): &lt;/code&gt;
+*必须在&lt;strong&gt;之前，*输入的是tuple，&lt;/strong&gt;输入的是dictionary：
+或者调用时unpack：
+&lt;code class=&quot;highlighter-rouge&quot;&gt;range(*argv), 其中 argv = [3, 6] &lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;def cheeseshop(kind, *arguments, **keywords): &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用lambda&lt;/strong&gt;定义小函数：
+&lt;code class=&quot;highlighter-rouge&quot;&gt;return lambda a,b:a+b &lt;/code&gt;，返回两个输入参数的和&lt;/p&gt;
 
-&lt;p&gt;*必须在&lt;strong&gt;之前，*输入的是tuple，&lt;/strong&gt;输入的是dictionary：&lt;/p&gt;
-
-&lt;p&gt;或者调用时unpack：&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;range(*argv), 其中 argv = [3, 6] &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;使用lambda&lt;/strong&gt;定义小函数：&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;return lambda a,b:a+b &lt;/code&gt;，返回两个输入参数的和&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;coding style&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Python use PEP8.&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;coding style&lt;/strong&gt;
+Python use PEP8.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;缩进用4个space，不用tab&lt;/p&gt;
@@ -303,32 +183,19 @@ return L
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;5data-structures&quot;&gt;5. Data Structures&lt;/h2&gt;
-
 &lt;h3 id=&quot;51more-on-lists&quot;&gt;5.1. More on Lists&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;常用methods&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;list.append(&lt;em&gt;x&lt;/em&gt;) 在末尾增加x&lt;/p&gt;
-
-&lt;p&gt;list.extend(&lt;em&gt;L&lt;/em&gt;) 在末尾增加另一个list L&lt;/p&gt;
-
-&lt;p&gt;list.insert(&lt;em&gt;I&lt;/em&gt;, &lt;em&gt;x&lt;/em&gt;) 在位置I增加x&lt;/p&gt;
-
-&lt;p&gt;list.remove(&lt;em&gt;x&lt;/em&gt;) 移除第一个x&lt;/p&gt;
-
-&lt;p&gt;list.pop([&lt;em&gt;i&lt;/em&gt;]) 移除位置i的数据并返回，i缺省返回末尾&lt;/p&gt;
-
-&lt;p&gt;list.index(&lt;em&gt;x&lt;/em&gt;) 返回第一个等于x的数据位置&lt;/p&gt;
-
-&lt;p&gt;list.count(&lt;em&gt;x&lt;/em&gt;) 返回x出现的次数&lt;/p&gt;
-
-&lt;p&gt;list.sort(&lt;em&gt;cmp=None&lt;/em&gt;, &lt;em&gt;key=None&lt;/em&gt;, &lt;em&gt;reverse=False&lt;/em&gt;) 排序&lt;/p&gt;
-
-&lt;p&gt;list.reverse() 倒序&lt;/p&gt;
-
-&lt;p&gt;借助append和pop，可以&lt;strong&gt;将list用作stack&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;将list用作queue的话效率较低，不如使用collections.deque。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;常用methods&lt;/strong&gt;
+list.append(&lt;em&gt;x&lt;/em&gt;) 在末尾增加x
+list.extend(&lt;em&gt;L&lt;/em&gt;) 在末尾增加另一个list L
+list.insert(&lt;em&gt;I&lt;/em&gt;, &lt;em&gt;x&lt;/em&gt;) 在位置I增加x
+list.remove(&lt;em&gt;x&lt;/em&gt;) 移除第一个x
+list.pop([&lt;em&gt;i&lt;/em&gt;]) 移除位置i的数据并返回，i缺省返回末尾
+list.index(&lt;em&gt;x&lt;/em&gt;) 返回第一个等于x的数据位置
+list.count(&lt;em&gt;x&lt;/em&gt;) 返回x出现的次数
+list.sort(&lt;em&gt;cmp=None&lt;/em&gt;, &lt;em&gt;key=None&lt;/em&gt;, &lt;em&gt;reverse=False&lt;/em&gt;) 排序
+list.reverse() 倒序
+借助append和pop，可以&lt;strong&gt;将list用作stack&lt;/strong&gt;。
+将list用作queue的话效率较低，不如使用collections.deque。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Functional Programming Tools :  filter() ,  map() , and  reduce()&lt;/strong&gt;&lt;/p&gt;
 
@@ -336,579 +203,317 @@ return L
 
 &lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#map&quot;&gt;map()&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#reduce&quot;&gt;reduce()&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#reduce&quot;&gt;reduce()&lt;/a&gt;
+filter(function, sequence)，返回所有sequence中令function返回true的，输入值list。&lt;/p&gt;
 
-&lt;p&gt;filter(function, sequence)，返回所有sequence中令function返回true的，输入值list。&lt;/p&gt;
+&lt;p&gt;map(function, sequence)，返回function输入所有sequence中item的，返回值list。
+若输入参数有多个，则sequence也可以有多个，一一对应。&lt;/p&gt;
 
-&lt;p&gt;map(function, sequence)，返回function输入所有sequence中item的，返回值list。&lt;/p&gt;
+&lt;p&gt;reduce(function, sequence)，返回递归调用的结果，首先读取头两个item，然后其结果和第三个item作为第二次输入，以此类推。
+也可以输入第三个参数作为初始结果，reduce(function, sequence, initValue)&lt;/p&gt;
 
-&lt;p&gt;若输入参数有多个，则sequence也可以有多个，一一对应。&lt;/p&gt;
-
-&lt;p&gt;reduce(function, sequence)，返回递归调用的结果，首先读取头两个item，然后其结果和第三个item作为第二次输入，以此类推。&lt;/p&gt;
-
-&lt;p&gt;也可以输入第三个参数作为初始结果，reduce(function, sequence, initValue)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;List Comprehensions&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;List可以用非常巧妙的方式创建：&lt;/p&gt;
-
-&lt;p&gt;squares = [x**2 for x in range(10)]&lt;/p&gt;
-
-&lt;p&gt;甚至使用for和if来构造（注意tuple的话需要有括号）：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
-
+&lt;p&gt;&lt;strong&gt;List Comprehensions&lt;/strong&gt;
+List可以用非常巧妙的方式创建：
+squares = [x**2 for x in range(10)]
+甚至使用for和if来构造（注意tuple的话需要有括号）：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
 [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;52del&quot;&gt;5.2. del&lt;/h3&gt;
-
-&lt;p&gt;删除list中的指定元素&lt;/p&gt;
-
-&lt;p&gt;del a[0]&lt;/p&gt;
-
-&lt;p&gt;del a[2:4]&lt;/p&gt;
-
-&lt;p&gt;del a[:] 清空list a&lt;/p&gt;
-
-&lt;p&gt;del a 删除a变量&lt;/p&gt;
+&lt;p&gt;删除list中的指定元素
+del a[0]
+del a[2:4]
+del a[:] 清空list a
+del a 删除a变量&lt;/p&gt;
 
 &lt;h3 id=&quot;53tuples&quot;&gt;5.3. Tuples&lt;/h3&gt;
+&lt;p&gt;与list一样，tuple是另一种sequence。
+tuple的元素由逗号，分割。可以nest，但&lt;strong&gt;不可以修改&lt;/strong&gt;。
+构造的时候可以不带括号，但输出总会带着。&lt;/p&gt;
 
-&lt;p&gt;与list一样，tuple是另一种sequence。&lt;/p&gt;
+&lt;p&gt;为了构造0 or 1个元素的tuple，需要特别操作：
+empty = ()
+singleton = ‘hello’, #末尾带个逗号&lt;/p&gt;
 
-&lt;p&gt;tuple的元素由逗号，分割。可以nest，但&lt;strong&gt;不可以修改&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;构造的时候可以不带括号，但输出总会带着。&lt;/p&gt;
-
-&lt;p&gt;为了构造0 or 1个元素的tuple，需要特别操作：&lt;/p&gt;
-
-&lt;p&gt;empty = ()&lt;/p&gt;
-
-&lt;p&gt;singleton = ‘hello’, #末尾带个逗号&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;pack&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;t = 12345, 54321, 'hello!' &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;unpack&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;x, y, z = t &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;pack&lt;/strong&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;t = 12345, 54321, 'hello!' &lt;/code&gt;
+&lt;strong&gt;unpack&lt;/strong&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;x, y, z = t &lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;54sets&quot;&gt;5.4. Sets&lt;/h3&gt;
-
-&lt;p&gt;无序但无重复的数据集。例如将一个list去除重复项，set(list)&lt;/p&gt;
-
-&lt;p&gt;用{}或set()来创建，空set只能用后者创建。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
-
+&lt;p&gt;无序但无重复的数据集。例如将一个list去除重复项，set(list)
+用{}或set()来创建，空set只能用后者创建。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
 &amp;gt;&amp;gt;&amp;gt; fruit = set(basket) # create a set without duplicates
-
 &amp;gt;&amp;gt;&amp;gt; fruit
-
 set(['orange', 'pear', 'apple', 'banana'])
-
 &amp;gt;&amp;gt;&amp;gt; a = set('abracadabra')
-
 &amp;gt;&amp;gt;&amp;gt; a # unique letters in a
-
 set(['a', 'r', 'b', 'c', 'd'])
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;55dictionaries&quot;&gt;5.5. Dictionaries&lt;/h3&gt;
-
-&lt;p&gt;无序的key: value对, 要求key不可变。&lt;/p&gt;
-
-&lt;p&gt;用dict={}可以创建空的字典。&lt;/p&gt;
-
-&lt;p&gt;用dict()来创建字典。&lt;/p&gt;
-
-&lt;p&gt;可以用del来删除某个key.&lt;/p&gt;
-
-&lt;p&gt;keys()返回所有key的list。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; tel = {'jack': 4098, 'sape': 4139}
-
+&lt;p&gt;无序的key: value对, 要求key不可变。
+用dict={}可以创建空的字典。
+用dict()来创建字典。
+可以用del来删除某个key.
+keys()返回所有key的list。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; tel = {'jack': 4098, 'sape': 4139}
 &amp;gt;&amp;gt;&amp;gt; tel['guido'] = 4127 #增加元素
-
 &amp;gt;&amp;gt;&amp;gt; dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
-
 &amp;gt;&amp;gt;&amp;gt; dict(sape=4139, guido=4127, jack=4098)
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;56looping-techniques&quot;&gt;5.6. Looping Techniques&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;enumerate()&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;同时返回index和内容&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; for I, v in enumerate(['tic', 'tac', 'toe']):
-
+&lt;p&gt;&lt;strong&gt;enumerate()&lt;/strong&gt;
+同时返回index和内容&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; for I, v in enumerate(['tic', 'tac', 'toe']):
 ...  print I, v
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;zip()&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;两个sequences同时，用zip将它们先组装起来：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; questions = ['name', 'quest', 'favorite color']
-
+&lt;p&gt;&lt;strong&gt;zip()&lt;/strong&gt;
+两个sequences同时，用zip将它们先组装起来：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; questions = ['name', 'quest', 'favorite color']
 &amp;gt;&amp;gt;&amp;gt; answers = ['lancelot', 'the holy grail', 'blue']
-
 &amp;gt;&amp;gt;&amp;gt; for q, a in **zip**(questions, answers):
-
 ...  print 'What is your {0}?  It is {1}.'.format(q, a)
-
 ...
-
 What is your name?  It is lancelot.
-
 What is your quest?  It is the holy grail.
-
 What is your favorite color?  It is blue.
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;特殊的loop操作&lt;/p&gt;
-
-&lt;p&gt;倒序&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; for I in reversed(xrange(1,10,2)): # 用range函数也一样
-
+&lt;p&gt;特殊的loop操作
+倒序&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; for I in reversed(xrange(1,10,2)): # 用range函数也一样
 ...  print I
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;排序后&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
 &amp;gt;&amp;gt;&amp;gt; for f in sorted(set(basket)):
-
 ...  print f
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;iteritems()&lt;/p&gt;
-
-&lt;p&gt;同时返回dictionary的key和value&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; knights = {'gallahad': 'the pure', 'robin': 'the brave'}
-
+&lt;p&gt;iteritems()
+同时返回dictionary的key和value&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; knights = {'gallahad': 'the pure', 'robin': 'the brave'}
 &amp;gt;&amp;gt;&amp;gt; for k, v in knights.iteritems():
-
 ...  print k, v
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;57more-on-conditions&quot;&gt;5.7. More on Conditions&lt;/h3&gt;
-
-&lt;p&gt;条件和比较&lt;/p&gt;
-
-&lt;p&gt;In， not in 用于确定是否存在&lt;/p&gt;
-
-&lt;p&gt;Is, is not 用于对比两个对象是否为同一对象&lt;/p&gt;
-
-&lt;p&gt;比较可以连环，例如 a &amp;lt; b == c，等同于 a &amp;lt; b and b == c&lt;/p&gt;
-
-&lt;p&gt;and, or, not &lt;/p&gt;
-
-&lt;p&gt;注意，条件里面不能赋值，所以不能出现=。&lt;/p&gt;
+&lt;p&gt;条件和比较
+In， not in 用于确定是否存在
+Is, is not 用于对比两个对象是否为同一对象
+比较可以连环，例如 a &amp;lt; b == c，等同于 a &amp;lt; b and b == c
+and, or, not 
+注意，条件里面不能赋值，所以不能出现=。&lt;/p&gt;
 
 &lt;h3 id=&quot;58comparing-sequences-and-other-types&quot;&gt;5.8. Comparing Sequences and Other Types&lt;/h3&gt;
-
 &lt;p&gt;同一种sequence可以互相比较（&amp;lt;, ==, &amp;gt;）,从头开始一个个元素进行比较，直到出现结果。&lt;/p&gt;
 
 &lt;h2 id=&quot;6modules&quot;&gt;6. Modules&lt;/h2&gt;
+&lt;p&gt;module可以导入其他module和main module之中，使用它所定义的变量和函数。
+在一个module内，它自身的名字存放在一个全局变量 &lt;strong&gt;name&lt;/strong&gt; 之中（执行module时，&lt;strong&gt;name&lt;/strong&gt;=&lt;strong&gt;main&lt;/strong&gt;）。
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; import fibo &lt;/code&gt;
+就可以导入，然后用fibo.xxx来使用其中的变量。也可以将它们赋给本地变量f=fibo.xxx,那就可以用f来调用xxx。
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; from fibo import * &lt;/code&gt;
+这就导入所有变量（除掉那些下划线_开头的）。可以直接引用xxx。
+Or导入其中指定的函数
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; from fibo import fib, fib2 &lt;/code&gt;
+或者给它个新名字
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; import fibo as fib &lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;module可以导入其他module和main module之中，使用它所定义的变量和函数。&lt;/p&gt;
-
-&lt;p&gt;在一个module内，它自身的名字存放在一个全局变量 &lt;strong&gt;name&lt;/strong&gt; 之中（执行module时，&lt;strong&gt;name&lt;/strong&gt;=&lt;strong&gt;main&lt;/strong&gt;）。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; import fibo &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;就可以导入，然后用fibo.xxx来使用其中的变量。也可以将它们赋给本地变量f=fibo.xxx,那就可以用f来调用xxx。&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; from fibo import * &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;这就导入所有变量（除掉那些下划线_开头的）。可以直接引用xxx。&lt;/p&gt;
-
-&lt;p&gt;Or导入其中指定的函数&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; from fibo import fib, fib2 &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;或者给它个新名字&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&amp;gt; import fibo as fib &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;.pyc是.py的二进制编译版，如果时间戳一致，就会用.pyc替代.py执行，从而节省加载时间（运行速度是一样的）。&lt;/p&gt;
-
-&lt;p&gt;从命令行执行script不会生成.pyc，所以如果要加快加载速度，可以考虑用一个script来加载其他modules。&lt;/p&gt;
-
-&lt;p&gt;用compileall可以将一个目录下的所有.py生成对应的.pyc。&lt;/p&gt;
+&lt;p&gt;.pyc是.py的二进制编译版，如果时间戳一致，就会用.pyc替代.py执行，从而节省加载时间（运行速度是一样的）。
+从命令行执行script不会生成.pyc，所以如果要加快加载速度，可以考虑用一个script来加载其他modules。
+用compileall可以将一个目录下的所有.py生成对应的.pyc。&lt;/p&gt;
 
 &lt;h3 id=&quot;62standard-modules&quot;&gt;6.2. Standard Modules&lt;/h3&gt;
-
-&lt;p&gt;Sys，最常用的标准库。&lt;/p&gt;
-
-&lt;p&gt;修改系统路径PYTHONPYTH：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; import sys
-
+&lt;p&gt;Sys，最常用的标准库。
+修改系统路径PYTHONPYTH：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; import sys
 &amp;gt;&amp;gt;&amp;gt; sys.path.append('/ufs/guido/lib/python')
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;63the-dir-function&quot;&gt;6.3. The  dir()  Function&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#dir&quot;&gt;dir()&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;返回某个module所定义的名称。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; import fibo
-
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#dir&quot;&gt;dir()&lt;/a&gt;
+返回某个module所定义的名称。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; import fibo
 &amp;gt;&amp;gt;&amp;gt; dir(fibo)
-
 ['__name__', 'fib', 'fib2']
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;如果不带参数，则返回目前所有定义的名称（除去builtin的，如果要看，则带上参数, dir(&lt;strong&gt;builtin&lt;/strong&gt;)：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; dir()
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; dir()
 ['__builtins__', '__name__', '__package__', 'a', 'fib', 'fibo', 'sys']
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;64packages&quot;&gt;6.4. Packages&lt;/h3&gt;
+&lt;p&gt;将modules打包。如果要将一个目录当成package，那就需要在里面建一个名为”&lt;strong&gt;init&lt;/strong&gt;.py”的文件，空的也没关系。
+&lt;code class=&quot;highlighter-rouge&quot;&gt;import item.subitem.subsubitem &lt;/code&gt;这种使用，除了最后那个外，其他必须是package，而最后那个也不能是function、变量等，也只能是module或package。如果要使用里面具体的变量，用 from xx import xx.&lt;/p&gt;
 
-&lt;p&gt;将modules打包。如果要将一个目录当成package，那就需要在里面建一个名为”&lt;strong&gt;init&lt;/strong&gt;.py”的文件，空的也没关系。&lt;/p&gt;
+&lt;p&gt;6.4.1. Importing * From a Package
+除非在”&lt;strong&gt;init&lt;/strong&gt;.py”中定义了__all__ , 否则只会导入这个文件里面的东西。import * 是一种不被推荐的操作。&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;import item.subitem.subsubitem &lt;/code&gt;这种使用，除了最后那个外，其他必须是package，而最后那个也不能是function、变量等，也只能是module或package。如果要使用里面具体的变量，用 from xx import xx.&lt;/p&gt;
-
-&lt;p&gt;6.4.1. Importing * From a Package&lt;/p&gt;
-
-&lt;p&gt;除非在”&lt;strong&gt;init&lt;/strong&gt;.py”中定义了__all__ , 否则只会导入这个文件里面的东西。import * 是一种不被推荐的操作。&lt;/p&gt;
-
-&lt;p&gt;6.4.2. Intra-package References&lt;/p&gt;
-
-&lt;p&gt;Package中的module互相引用比较多，可以用绝对地址和相对地址来引用。&lt;/p&gt;
-
-&lt;p&gt;相对地址的使用要注意，如果作为main使用的时候，可能找不到其他module（因为不是整个package都导入了）。&lt;/p&gt;
+&lt;p&gt;6.4.2. Intra-package References
+Package中的module互相引用比较多，可以用绝对地址和相对地址来引用。
+相对地址的使用要注意，如果作为main使用的时候，可能找不到其他module（因为不是整个package都导入了）。&lt;/p&gt;
 
 &lt;h2 id=&quot;7input-and-output&quot;&gt;7. Input and Output&lt;/h2&gt;
-
 &lt;h3 id=&quot;71fancier-output-formatting&quot;&gt;7.1. Fancier Output Formatting&lt;/h3&gt;
-
-&lt;p&gt;用str() repr()来将其他转换成字符串，repr特别是给电脑看的，而str给人看，多数情况差不多。&lt;/p&gt;
-
-&lt;p&gt;很多method用来调整显示：&lt;/p&gt;
-
-&lt;p&gt;.rjust(2), 靠右显示且宽度2&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-print '{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x)  #变量1,2,3 宽度分别是2，3，4，且是整数
-
+&lt;p&gt;用str() repr()来将其他转换成字符串，repr特别是给电脑看的，而str给人看，多数情况差不多。
+很多method用来调整显示：
+.rjust(2), 靠右显示且宽度2&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print '{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x)  #变量1,2,3 宽度分别是2，3，4，且是整数
  [str.zfill()](https://docs.python.org/2.7/library/stdtypes.html#str.zfill) 用0填充
-
 &amp;gt;&amp;gt;&amp;gt; '12'.zfill(5)
-
 '00012'
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;空着，用数字代表位置，用key指代都可以：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; print 'We are the {} who say &quot;{}!&quot;'.format('knights', 'Ni')
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; print 'We are the {} who say &quot;{}!&quot;'.format('knights', 'Ni')
 We are the knights who say &quot;Ni!&quot;
 
-
-
 &amp;gt;&amp;gt;&amp;gt; print 'The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',
-
 ...                                                    other='Georg')
-
 The story of Bill, Manfred, and Georg.
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;用现有的dictionary：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
 &amp;gt;&amp;gt;&amp;gt; print ('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '
-
 ...        'Dcab: {0[Dcab]:d}'.format(table))
-
 Jack: 4098; Sjoerd: 4127; Dcab: 8637678
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;or&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
 &amp;gt;&amp;gt;&amp;gt; print 'Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table)
-
 Jack: 4098; Sjoerd: 4127; Dcab: 8637678
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;旧式的print也支持：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; import math
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; import math
 &amp;gt;&amp;gt;&amp;gt; print 'The value of PI is approximately %5.3f.' % math.pi
-
 The value of PI is approximately 3.142.
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;72reading-and-writing-files&quot;&gt;7.2. Reading and Writing Files&lt;/h3&gt;
-
-&lt;p&gt;open(filename, mode) 打开并返回一个文件的object，模式：w, r, a, r+, 默认是r。&lt;/p&gt;
-
-&lt;p&gt;注意：读写文本的时候，python会自动改变换行符的格式（Windows和linux有不同格式）。&lt;/p&gt;
-
-&lt;p&gt;7.2.1. Methods of File Objects&lt;/p&gt;
-
-&lt;p&gt;f.read(size) 读取指定大小的数据，size如果是负数或者省略，就会读全部内容。&lt;/p&gt;
-
-&lt;p&gt;f.readline() 读一行&lt;/p&gt;
-
-&lt;p&gt;f.readlins() or list(f) 读取所有行并返回一个list&lt;/p&gt;
-
-&lt;p&gt;f.write(string) 写字符串，不是的先转成string&lt;/p&gt;
-
-&lt;p&gt;f.tell() 返回当前的位置&lt;/p&gt;
-
-&lt;p&gt;f.seek(offset, from_what) 定位到指定位置，from_what默认0（头部），1（当前），2（尾部）。&lt;/p&gt;
-
-&lt;p&gt;f.close() 关闭文件&lt;/p&gt;
-
-&lt;p&gt;用with语句来打开文件，离开with的范围后就会自动close，包括exception跳出的时候。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; with open('workfile', 'r') as f:
-
+&lt;p&gt;open(filename, mode) 打开并返回一个文件的object，模式：w, r, a, r+, 默认是r。
+注意：读写文本的时候，python会自动改变换行符的格式（Windows和linux有不同格式）。
+7.2.1. Methods of File Objects
+f.read(size) 读取指定大小的数据，size如果是负数或者省略，就会读全部内容。
+f.readline() 读一行
+f.readlins() or list(f) 读取所有行并返回一个list
+f.write(string) 写字符串，不是的先转成string
+f.tell() 返回当前的位置
+f.seek(offset, from_what) 定位到指定位置，from_what默认0（头部），1（当前），2（尾部）。
+f.close() 关闭文件
+用with语句来打开文件，离开with的范围后就会自动close，包括exception跳出的时候。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; with open('workfile', 'r') as f:
 ...    read_data = f.read()
-
 &amp;gt;&amp;gt;&amp;gt; f.closed
-
 True
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;7.2.2. Saving structured data with  json&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/json.html#module-json&quot;&gt;json&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;JavaScript Object Notation&lt;/p&gt;
-
-&lt;p&gt;查看某个object的json形式：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; import json
-
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/json.html#module-json&quot;&gt;json&lt;/a&gt;
+JavaScript Object Notation
+查看某个object的json形式：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; import json
 &amp;gt;&amp;gt;&amp;gt; json.dumps([1, 'simple', 'list'])
-
 '[1, &quot;simple&quot;, &quot;list&quot;]'
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;写入（code）：&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;json.dump(x, f) &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;读取（decode）：&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;x = json.load(f) &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;写入（code）：
+&lt;code class=&quot;highlighter-rouge&quot;&gt;json.dump(x, f) &lt;/code&gt;
+读取（decode）：
+&lt;code class=&quot;highlighter-rouge&quot;&gt;x = json.load(f) &lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;8errors-and-exceptions&quot;&gt;8. Errors and Exceptions&lt;/h2&gt;
-
-&lt;p&gt;最常见的有两种：&lt;/p&gt;
-
-&lt;p&gt;Syntax Errors: 语法错误。各种调用不正确都是这类。&lt;/p&gt;
-
-&lt;p&gt;Exceptions: 语法没错，但执行是发生错误。例如零除。报错时会带上错误的名称。&lt;/p&gt;
+&lt;p&gt;最常见的有两种：
+Syntax Errors: 语法错误。各种调用不正确都是这类。
+Exceptions: 语法没错，但执行是发生错误。例如零除。报错时会带上错误的名称。&lt;/p&gt;
 
 &lt;h3 id=&quot;83handling-exceptions&quot;&gt;8.3. Handling Exceptions&lt;/h3&gt;
-
 &lt;p&gt;用try except语句：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-import sys
-
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import sys
 
 try:
-
     f = open('myfile.txt')
-
     s = f.readline()
-
     i = int(s.strip())
-
 except IOError as e:
-
     print &quot;I/O error({0}): {1}&quot;.format(e.errno, e.strerror)
-
 except ValueError:
-
     print &quot;Could not convert data to an integer.&quot;
-
 except:
-
     print &quot;Unexpected error:&quot;, sys.exc_info()[0]
-
     Raise #对不知道怎么处理的，抛给系统
-
 else:
-
     print 'The try clause works fine.'
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;调用的函数出错也会raise exception。&lt;/p&gt;
 
 &lt;h3 id=&quot;84raising-exceptions&quot;&gt;8.4. Raising Exceptions&lt;/h3&gt;
-
 &lt;p&gt;主动raise也可以。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; raise NameError('HiThere')
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; raise NameError('HiThere')
 Traceback (most recent call last):
-
   File &quot;&amp;lt;stdin&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
-
 NameError: HiThere
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;85user-defined-exceptions&quot;&gt;8.5. User-defined Exceptions&lt;/h3&gt;
-
 &lt;p&gt;也可以自己定义。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; class MyError(Exception):
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; class MyError(Exception):
 ...    def __init__(self, value):
-
 ...        self.value = value
-
 ...    def __str__(self):
-
 ...        return repr(self.value)
-
 ...
-
 &amp;gt;&amp;gt;&amp;gt; try:
-
 ...    raise MyError(2*2)
-
 ... except MyError as e:
-
 ...    print 'My exception occurred, value:', e.value
-
 ...
-
 My exception occurred, value: 4
-
 &amp;gt;&amp;gt;&amp;gt; raise MyError('oops!')
-
 Traceback (most recent call last):
-
   File &quot;&amp;lt;stdin&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
-
 __main__.MyError: 'oops!'
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;86defining-clean-up-actions&quot;&gt;8.6. Defining Clean-up Actions&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; def divide(x, y):
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; def divide(x, y):
 ...    try:
-
 ...        result = x / y
-
 ...    except ZeroDivisionError:
-
 ...        print &quot;division by zero!&quot;
-
 ...    else:
-
 ...        print &quot;result is&quot;, result
-
 ...    finally:
-
 ...        print &quot;executing finally clause&quot;
-
 ...
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;离开try（无论怎样离开，包括break、exception、正常离开）都会执行finally的语句。&lt;/p&gt;
 
 &lt;h3 id=&quot;87predefined-clean-up-actions&quot;&gt;8.7. Predefined Clean-up Actions&lt;/h3&gt;
-
 &lt;p&gt;某些object会自带清理功能：with&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-with open(&quot;myfile.txt&quot;) as f:
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;with open(&quot;myfile.txt&quot;) as f:
     for line in f:
-
         print line,
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;9classes&quot;&gt;9. Classes&lt;/h2&gt;
-
-&lt;p&gt;Python的class机制，与C++和Modula-3的类似。&lt;/p&gt;
-
-&lt;p&gt;能够继承多个base class，可以复写继承的method，可以用同样的名字调用base class的method，object能包含任意的结构和数据.&lt;/p&gt;
-
-&lt;p&gt;而且跟module在Python一样具有dynamic nature，class在runtime时create，而且create之后还能被修改。&lt;/p&gt;
-
-&lt;p&gt;C++：所有class members默认是public，所有member functions是virtual。&lt;/p&gt;
+&lt;p&gt;Python的class机制，与C++和Modula-3的类似。
+能够继承多个base class，可以复写继承的method，可以用同样的名字调用base class的method，object能包含任意的结构和数据.
+而且跟module在Python一样具有dynamic nature，class在runtime时create，而且create之后还能被修改。
+C++：所有class members默认是public，所有member functions是virtual。&lt;/p&gt;
 
 &lt;h3 id=&quot;91a-word-about-names-and-objects&quot;&gt;9.1. A Word About Names and Objects&lt;/h3&gt;
-
-&lt;p&gt;object都是独立存在的，而很多name都可以指定到同一个object。这就是aliasing，也被称为pointer。&lt;/p&gt;
-
-&lt;p&gt;Python中可变的数据结构（list、dictionary等）使用aliasing传递数据可以增加效率。因为只需传递一个地址而不用处理两份数据的交互。&lt;/p&gt;
+&lt;p&gt;object都是独立存在的，而很多name都可以指定到同一个object。这就是aliasing，也被称为pointer。
+Python中可变的数据结构（list、dictionary等）使用aliasing传递数据可以增加效率。因为只需传递一个地址而不用处理两份数据的交互。&lt;/p&gt;
 
 &lt;h3 id=&quot;92python-scopes-and-namespaces&quot;&gt;9.2. Python Scopes and Namespaces&lt;/h3&gt;
-
-&lt;p&gt;A &lt;em&gt;namespace&lt;/em&gt; is a mapping from names to objects.&lt;/p&gt;
-
-&lt;p&gt;Examples of namespaces are:&lt;/p&gt;
-
+&lt;p&gt;A &lt;em&gt;namespace&lt;/em&gt; is a mapping from names to objects.
+Examples of namespaces are:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;the set of built-in names (containing functions such as  &lt;a href=&quot;https://docs.python.org/2.7/library/functions.html#abs&quot;&gt;abs()&lt;/a&gt; , and built-in exception names);&lt;/p&gt;
@@ -921,214 +526,128 @@ with open(&quot;myfile.txt&quot;) as f:
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Lifetime&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lifetime&lt;/strong&gt;
+built-in ：从interpreter开始到结束。
+module： 从导入到interpreter结束。
+function里的name： 从function开始到结束（exception离开也会结束，递归调用的函数都有各自local namespace）
+&lt;strong&gt;scope&lt;/strong&gt;
+常见规则。
+注意：只要没有声明是global的，那所有赋值操作都是local的。&lt;/p&gt;
 
-&lt;p&gt;built-in ：从interpreter开始到结束。&lt;/p&gt;
-
-&lt;p&gt;module： 从导入到interpreter结束。&lt;/p&gt;
-
-&lt;p&gt;function里的name： 从function开始到结束（exception离开也会结束，递归调用的函数都有各自local namespace）&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;scope&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;常见规则。&lt;/p&gt;
-
-&lt;p&gt;注意：只要没有声明是global的，那所有赋值操作都是local的。&lt;/p&gt;
-
-&lt;p&gt;9.3.1. Class Definition Syntax&lt;/p&gt;
-
-&lt;p&gt;跟function一样，使用之前必须定义。而实际上，在函数里面、if里面定义都可以。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-class ClassName:
-
+&lt;p&gt;9.3.1. Class Definition Syntax
+跟function一样，使用之前必须定义。而实际上，在函数里面、if里面定义都可以。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class ClassName:
     &amp;lt;statement-1&amp;gt;
-
     .
-
     .
-
     .
-
     &amp;lt;statement-N&amp;gt;
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;9.3.2. Class Objects&lt;/p&gt;
+&lt;p&gt;9.3.2. Class Objects
+支持两种操作：attribute reference, instantiation.
+引用（obj.name）, 实例化（ x=MyClass() )
+初始化：定义函数 &lt;strong&gt;init&lt;/strong&gt;()，则每次实例化都会自动初始化。&lt;/p&gt;
 
-&lt;p&gt;支持两种操作：attribute reference, instantiation.&lt;/p&gt;
+&lt;p&gt;9.3.3. Instance Objects
+实例化后的class，依然可以新增attribute，但只对这个实例有效，而不会改变class的定义。
+例如对于 x=MyClass()，可以x.counter=1来增加一个变量，后续可以使用。
+另一种attribute的引用是method，是属于这个object的function。（在python中，除了class外，其他object，如list等也有method。对的，class不是唯一的object）&lt;/p&gt;
 
-&lt;p&gt;引用（obj.name）, 实例化（ x=MyClass() )&lt;/p&gt;
+&lt;p&gt;9.3.4. Method Objects
+x.f()是method object，不是function object。调用的时候等于MyClass.f(x), 是对这个function的引用，而输入参数是x。输入参数列表在找到function后会进行重构。&lt;/p&gt;
 
-&lt;p&gt;初始化：定义函数 &lt;strong&gt;init&lt;/strong&gt;()，则每次实例化都会自动初始化。&lt;/p&gt;
-
-&lt;p&gt;9.3.3. Instance Objects&lt;/p&gt;
-
-&lt;p&gt;实例化后的class，依然可以新增attribute，但只对这个实例有效，而不会改变class的定义。&lt;/p&gt;
-
-&lt;p&gt;例如对于 x=MyClass()，可以x.counter=1来增加一个变量，后续可以使用。&lt;/p&gt;
-
-&lt;p&gt;另一种attribute的引用是method，是属于这个object的function。（在python中，除了class外，其他object，如list等也有method。对的，class不是唯一的object）&lt;/p&gt;
-
-&lt;p&gt;9.3.4. Method Objects&lt;/p&gt;
-
-&lt;p&gt;x.f()是method object，不是function object。调用的时候等于MyClass.f(x), 是对这个function的引用，而输入参数是x。输入参数列表在找到function后会进行重构。&lt;/p&gt;
-
-&lt;p&gt;9.3.5. Class and Instance Variables&lt;/p&gt;
-
-&lt;p&gt;class variable是所有class的实例公用的，而instance variable是每个实例单独的。&lt;/p&gt;
-
-&lt;p&gt;当class variable是mutable的时候，就会导致所有实例都能更改这个值。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-class Dog:
-
-
+&lt;p&gt;9.3.5. Class and Instance Variables
+class variable是所有class的实例公用的，而instance variable是每个实例单独的。
+当class variable是mutable的时候，就会导致所有实例都能更改这个值。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Dog:
 
     kind = 'canine'        # class variable shared by all instances
 
-
-
     def __init__(self, name):
-
         self.name = name    # instance variable unique to each instance
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;上面的kind，其实在实例中也能修改，但实际上只是用一个instance variable覆盖掉，所以不会影响到其他实例。而若采用mutable的对象，如kind=[], 作为一个list，就能在不同实例中共享。所以list这种mutable attribute，除非故意，应该放在__init__中，定义成instance variable。&lt;/p&gt;
 
 &lt;h3 id=&quot;94random-remarks&quot;&gt;9.4. Random Remarks&lt;/h3&gt;
-
-&lt;p&gt;由于名字能够被覆盖，所以应该采用不同的命名体系来给它们命名。&lt;/p&gt;
-
-&lt;p&gt;而class里的self，实际上对于python是没有实际意义的，没有也可以，只是为了方便理解。&lt;/p&gt;
+&lt;p&gt;由于名字能够被覆盖，所以应该采用不同的命名体系来给它们命名。
+而class里的self，实际上对于python是没有实际意义的，没有也可以，只是为了方便理解。&lt;/p&gt;
 
 &lt;h3 id=&quot;95inheritance&quot;&gt;9.5. Inheritance&lt;/h3&gt;
+&lt;p&gt;class DerivedClassName(BaseClassName):
+也可以继承其他module的class
+class DerivedClassName(modname.BaseClassName):
+一个base class调用method，可能会调用了derived class的重构method（因为允许重构）。
+如果要调用base class的method，用BaseClassName.methodname(self, arguments)。&lt;/p&gt;
 
-&lt;p&gt;class DerivedClassName(BaseClassName):&lt;/p&gt;
+&lt;p&gt;检查class的type：isinstance(obj, int)，它或它继承的class是int类型的，则返回true。
+检查class的继承关系：issubclass(bool, int)，bool是int的子类，所以这里返回true。&lt;/p&gt;
 
-&lt;p&gt;也可以继承其他module的class&lt;/p&gt;
-
-&lt;p&gt;class DerivedClassName(modname.BaseClassName):&lt;/p&gt;
-
-&lt;p&gt;一个base class调用method，可能会调用了derived class的重构method（因为允许重构）。&lt;/p&gt;
-
-&lt;p&gt;如果要调用base class的method，用BaseClassName.methodname(self, arguments)。&lt;/p&gt;
-
-&lt;p&gt;检查class的type：isinstance(obj, int)，它或它继承的class是int类型的，则返回true。&lt;/p&gt;
-
-&lt;p&gt;检查class的继承关系：issubclass(bool, int)，bool是int的子类，所以这里返回true。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Multiple Inheritance&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;多重继承&lt;/p&gt;
-
-&lt;p&gt;class DerivedClassName(Base1, Base2, Base3):&lt;/p&gt;
-
-&lt;p&gt;搜索顺序是depth-first， left to right.&lt;/p&gt;
-
-&lt;p&gt;由于base class可能来源于相同的parent，所以新的搜索方式是动态的，它会线性化搜索路径，防止重复搜索同一个parent，而且这是monotonic的（subclass不会因为搜索顺序而变化）。&lt;/p&gt;
-
-&lt;p&gt;（疑问：如果base1，base2有相同的attribute，搜索顺序的改变会不会影响到采用哪个attribute？目前来看，应该还是depth-first， left to right.）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multiple Inheritance&lt;/strong&gt;
+多重继承
+class DerivedClassName(Base1, Base2, Base3):
+搜索顺序是depth-first， left to right.
+由于base class可能来源于相同的parent，所以新的搜索方式是动态的，它会线性化搜索路径，防止重复搜索同一个parent，而且这是monotonic的（subclass不会因为搜索顺序而变化）。
+（疑问：如果base1，base2有相同的attribute，搜索顺序的改变会不会影响到采用哪个attribute？目前来看，应该还是depth-first， left to right.）&lt;/p&gt;
 
 &lt;h3 id=&quot;96private-variables-and-class-local-references&quot;&gt;9.6. Private Variables and Class-local References&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;name mangling&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;在Python中，没有private这一类定义，而为了防止继承时错误重构、复写，采用以下机制：&lt;/p&gt;
-
-&lt;p&gt;以 __ 开头的variable和method，后台会自动变成 _classname__xxx.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;name mangling&lt;/strong&gt;
+在Python中，没有private这一类定义，而为了防止继承时错误重构、复写，采用以下机制：
+以 __ 开头的variable和method，后台会自动变成 _classname__xxx.&lt;/p&gt;
 
 &lt;h3 id=&quot;97odds-and-ends&quot;&gt;9.7. Odds and Ends&lt;/h3&gt;
-
 &lt;p&gt;一个空的class就可以用作C里面的struct&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-class Employee:
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Employee:
     pass
 
-
-
 John = Employee()  # Create an empty employee record
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;然后就可以输入想要的成员：&lt;/p&gt;
-
-&lt;p&gt;john.name = ‘John Doe’&lt;/p&gt;
-
-&lt;p&gt;john.dept = ‘computer lab’&lt;/p&gt;
-
-&lt;p&gt;john.salary = 1000&lt;/p&gt;
+&lt;p&gt;然后就可以输入想要的成员：
+john.name = ‘John Doe’
+john.dept = ‘computer lab’
+john.salary = 1000&lt;/p&gt;
 
 &lt;h3 id=&quot;98exceptions-are-classes-too&quot;&gt;9.8. Exceptions Are Classes Too&lt;/h3&gt;
-
 &lt;p&gt;也可以被继承。&lt;/p&gt;
 
 &lt;h3 id=&quot;99iterators&quot;&gt;9.9. Iterators&lt;/h3&gt;
-
 &lt;p&gt;For… in 语句其实就是用iter()来实现的，in实际上通过 .next()来获取下一个值。&lt;/p&gt;
 
 &lt;h3 id=&quot;910generators&quot;&gt;9.10. Generators&lt;/h3&gt;
-
-&lt;p&gt;是用来生成iterators的强力道具。&lt;/p&gt;
-
-&lt;p&gt;跟普通function一样，但用yield来输出数据（不用return是因为返回数据后还要继续运行）&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-def reverse(data):
-
+&lt;p&gt;是用来生成iterators的强力道具。
+跟普通function一样，但用yield来输出数据（不用return是因为返回数据后还要继续运行）&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def reverse(data):
     for index in range(len(data)-1, -1, -1):
-
         yield data[index]
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;911generator-expressions&quot;&gt;9.11. Generator Expressions&lt;/h3&gt;
-
 &lt;p&gt;用一行语句来直接设计并马上使用generator&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;gt;&amp;gt;&amp;gt; sum(I*I for I in range(10))                # sum of squares
-
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; sum(I*I for I in range(10))                # sum of squares
 285
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;10brief-tour-of-the-standard-library&quot;&gt;10. Brief Tour of the Standard Library&lt;/h2&gt;
-
 &lt;h2 id=&quot;and-11-part2-see-another-note-call-the-standard-library-of-python&quot;&gt;and 11. Part2， see another note call ‘the Standard Library of Python’&lt;/h2&gt;
 
 &lt;h2 id=&quot;and-to-learn-more&quot;&gt;And to learn more:&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/index.html#library-index&quot;&gt;The Python Standard Library&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/library/index.html#library-index&quot;&gt;The Python Standard Library&lt;/a&gt;
+库的使用手册
+ &lt;a href=&quot;https://docs.python.org/2.7/install/index.html#install-index&quot;&gt;Installing Python Modules (Legacy version)&lt;/a&gt;
+如何安装其他用户的库
+ &lt;a href=&quot;https://docs.python.org/2.7/reference/index.html#reference-index&quot;&gt;The Python Language Reference&lt;/a&gt;
+Python语言手册&lt;/p&gt;
 
-&lt;p&gt;库的使用手册&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/install/index.html#install-index&quot;&gt;Installing Python Modules (Legacy version)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;如何安装其他用户的库&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/2.7/reference/index.html#reference-index&quot;&gt;The Python Language Reference&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Python语言手册&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.python.org/&quot;&gt;https://www.python.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;官网&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.python.org/&quot;&gt;https://docs.python.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;python官方文档&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://pypi.org/&quot;&gt;https://pypi.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;python package index，用户提供的库，整理成的目录&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://code.activestate.com/recipes/langs/python/&quot;&gt;https://code.activestate.com/recipes/langs/python/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Python的代码例子、模板等&lt;/p&gt;</content><author><name>杨永杰</name></author><category term="python" /><summary type="html">点这里打开官方教程原文</summary></entry><entry><title type="html">阅读笔记： 《事实》 - 汉斯</title><link href="/readmemo/read-fact.html" rel="alternate" type="text/html" title="阅读笔记： 《事实》 - 汉斯" /><published>2020-03-14T00:00:00+08:00</published><updated>2020-03-14T00:00:00+08:00</updated><id>/readmemo/read-fact</id><content type="html" xml:base="/readmemo/read-fact.html">&lt;h1 id=&quot;事实-汉斯罗斯林&quot;&gt;《事实》 汉斯罗斯林&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.python.org/&quot;&gt;https://www.python.org&lt;/a&gt;
+官网
+ &lt;a href=&quot;https://docs.python.org/&quot;&gt;https://docs.python.org&lt;/a&gt;
+python官方文档
+ &lt;a href=&quot;https://pypi.org/&quot;&gt;https://pypi.org&lt;/a&gt;
+python package index，用户提供的库，整理成的目录
+ &lt;a href=&quot;https://code.activestate.com/recipes/langs/python/&quot;&gt;https://code.activestate.com/recipes/langs/python/&lt;/a&gt;
+Python的代码例子、模板等&lt;/p&gt;</content><author><name>杨永杰</name></author><category term="python" /><summary type="html">点这里打开官方教程原文</summary></entry><entry><title type="html">阅读笔记： 《事实》 - 汉斯</title><link href="/readmemo/read-fact.html" rel="alternate" type="text/html" title="阅读笔记： 《事实》 - 汉斯" /><published>2020-03-14T00:00:00+08:00</published><updated>2020-03-14T00:00:00+08:00</updated><id>/readmemo/read-fact</id><content type="html" xml:base="/readmemo/read-fact.html">&lt;h1 id=&quot;事实-汉斯罗斯林&quot;&gt;《事实》 汉斯罗斯林&lt;/h1&gt;
 &lt;p&gt;引言&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;他们都是有知识的，只不过他们所拥有的知识是过时的，而且是几十年前很过时的知识。他们的世界观停留在几十年前——他们的学生时代。&lt;/li&gt;
