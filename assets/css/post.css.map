@@ -7,8 +7,8 @@
 	],
 	"sourcesContent": [
 		"@import \"main\";\np{\n\ntext-indent:2em;\n\n}\n",
-		".current {\r\n  color: orange;\r\n}\r\n.outsideLinks {\r\n  float: right;\r\n}\r\n.chapterList{\r\n  width: 90%;\r\n  margin: auto;\r\n  // white-space:nowrap;overflow:hidden;text-overflow: ellipsis;\r\n  // word-break: keep-all;\r\n  table-layout: fixed;\r\n  td {white-space:nowrap;overflow:hidden;text-overflow: ellipsis; }\r\n}\r\n"
+		".current {\r\n  color: orange;\r\n}\r\n.outsideLinks {\r\n  float: right;\r\n}\r\n.chapterList{\r\n  width: 100%;\r\n  margin: auto;\r\n  // white-space:nowrap;overflow:hidden;text-overflow: ellipsis;\r\n  // word-break: keep-all;\r\n  table-layout: fixed;\r\n  td {white-space:nowrap;overflow:hidden;text-overflow: ellipsis; }\r\n}\r\n"
 	],
 	"names": [],
-	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,MAAM,GACd;;AACD,AAAA,aAAa,CAAC,EACZ,KAAK,EAAE,KAAK,GACb;;AACD,AAAA,YAAY,CAAA,EACV,KAAK,EAAE,GAAG,EACV,MAAM,EAAE,IAAI,EAGZ,YAAY,EAAE,KAAK,GAEpB;;AAPD,AAME,YANU,CAMV,EAAE,CAAC,EAAC,WAAW,EAAC,MAAM,EAAC,QAAQ,EAAC,MAAM,EAAC,aAAa,EAAE,QAAQ,GAAI;;ADXpE,AAAA,CAAC,CAAA,EAED,WAAW,EAAC,GAAG,GAEd"
+	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,MAAM,GACd;;AACD,AAAA,aAAa,CAAC,EACZ,KAAK,EAAE,KAAK,GACb;;AACD,AAAA,YAAY,CAAA,EACV,KAAK,EAAE,IAAI,EACX,MAAM,EAAE,IAAI,EAGZ,YAAY,EAAE,KAAK,GAEpB;;AAPD,AAME,YANU,CAMV,EAAE,CAAC,EAAC,WAAW,EAAC,MAAM,EAAC,QAAQ,EAAC,MAAM,EAAC,aAAa,EAAE,QAAQ,GAAI;;ADXpE,AAAA,CAAC,CAAA,EAED,WAAW,EAAC,GAAG,GAEd"
 }
