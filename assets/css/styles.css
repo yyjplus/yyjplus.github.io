@@ -1,3 +1,5 @@
+body { background-color: #CCE8CF; }
+
 .current { color: orange; }
 
 .outsideLinks { float: right; }
@@ -6,6 +8,6 @@
 
 .chapterList td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-.page_content { margin: auto; background-color: #CCE8CF; padding: 1em; }
+.page_content { margin: auto; border: 1px solid; padding: 1em; }
 
 /*# sourceMappingURL=styles.css.map */
