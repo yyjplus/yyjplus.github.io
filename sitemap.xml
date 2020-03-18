@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/novels/tlow.html</loc>
-<lastmod>2020-03-17T13:10:42+08:00</lastmod>
+<lastmod>2020-03-18T20:32:29+08:00</lastmod>
 </url>
 <url>
 <loc>/idea/ev1.html</loc>
@@ -87,6 +87,10 @@
 <url>
 <loc>/studymemo/study-pythonTurorial.html</loc>
 <lastmod>2020-03-15T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/idea/adas-L3.html</loc>
+<lastmod>2020-03-18T00:00:00+08:00</lastmod>
 </url>
 <url>
 <loc>/about.html</loc>

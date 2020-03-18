@@ -7,7 +7,7 @@
 	],
 	"sourcesContent": [
 		"@import \"main\";\n",
-		"body{\r\n  background-color: #CCE8CF;\r\n}\r\n\r\n.current {\r\n  color: orange;\r\n}\r\n.outsideLinks {\r\n  float: right;\r\n}\r\n.chapterList{\r\n  width: 100%;\r\n  margin: auto;\r\n  // white-space:nowrap;overflow:hidden;text-overflow: ellipsis;\r\n  // word-break: keep-all;\r\n  table-layout: fixed;\r\n  td {white-space:nowrap;overflow:hidden;text-overflow: ellipsis; }\r\n}\r\n\r\n.page_content{\r\n // width: 80%;\r\n margin: auto;\r\n border: 1px solid ;\r\n // background-color: #CCE8CF;\r\n padding: 1em;\r\n}\r\n"
+		"body{\n  background-color: #CCE8CF;\n}\n\n.current {\n  color: orange;\n}\n.outsideLinks {\n  float: right;\n}\n.chapterList{\n  width: 100%;\n  margin: auto;\n  // white-space:nowrap;overflow:hidden;text-overflow: ellipsis;\n  // word-break: keep-all;\n  table-layout: fixed;\n  td {white-space:nowrap;overflow:hidden;text-overflow: ellipsis; }\n}\n\n.page_content{\n // width: 80%;\n margin: auto;\n border: 1px solid ;\n // background-color: #CCE8CF;\n padding: 1em;\n}\n"
 	],
 	"names": [],
 	"mappings": "ACAA,AAAA,IAAI,CAAA,EACF,gBAAgB,EAAE,OAAO,GAC1B;;AAED,AAAA,QAAQ,CAAC,EACP,KAAK,EAAE,MAAM,GACd;;AACD,AAAA,aAAa,CAAC,EACZ,KAAK,EAAE,KAAK,GACb;;AACD,AAAA,YAAY,CAAA,EACV,KAAK,EAAE,IAAI,EACX,MAAM,EAAE,IAAI,EAGZ,YAAY,EAAE,KAAK,GAEpB;;AAPD,AAME,YANU,CAMV,EAAE,CAAC,EAAC,WAAW,EAAC,MAAM,EAAC,QAAQ,EAAC,MAAM,EAAC,aAAa,EAAE,QAAQ,GAAI;;AAGpE,AAAA,aAAa,CAAA,EAEZ,MAAM,EAAE,IAAI,EACZ,MAAM,EAAE,SAAU,EAElB,OAAO,EAAE,GAAG,GACZ"
