@@ -1,4 +1,8 @@
-body { background-color: #CCE8CF; }
+nav a { color: #5a5a5a; font-weight: bold; letter-spacing: 1.2px; }
+
+body { color: #585959; }
+
+a { color: #7d46a2; text-decoration: none; }
 
 .current { color: orange; }
 
@@ -8,7 +12,9 @@ body { background-color: #CCE8CF; }
 
 .chapterList td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-.page_content { margin: auto; border: 1px solid; padding: 1em; }
+.page_content { margin: auto; border: 1px solid; color: #405959; padding: 1em; }
+
+.page_content a { color: green; }
 
 p { text-indent: 2em; }
 
